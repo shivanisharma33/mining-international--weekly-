@@ -1,21 +1,21 @@
 import IMWHeader from "@/components/imw/IMWHeader";
-import IMWHero from "@/components/imw/IMWHero";
+import AboutHero from "@/components/imw/AboutHero";
+import OurMission from "@/components/imw/OurMission";
 import IMWByTheNumbers from "@/components/imw/IMWByTheNumbers";
-import FoundingPartners from "@/components/imw/FoundingPartners";
-import ExploreWeek from "@/components/imw/ExploreWeek";
-import CitySection from "@/components/imw/CitySection";
+import WhyAttend from "@/components/imw/WhyAttend";
+import HostCity from "@/components/imw/HostCity";
 import IMWFooter from "@/components/imw/IMWFooter";
 
-export default function HomePage() {
+export default function AboutPage() {
   return (
     <>
       <IMWHeader />
       <main className="flex flex-col flex-grow w-full bg-white dark:bg-[#090d16] transition-colors duration-300">
-        <IMWHero />
+        <AboutHero />
+        <OurMission />
         <IMWByTheNumbers />
-        <FoundingPartners />
-        <ExploreWeek />
-        <CitySection />
+        <WhyAttend />
+        <HostCity />
       </main>
       <IMWFooter />
     </>
