@@ -16,13 +16,25 @@ export default function OurMission() {
               <div className="w-8 h-[2px] bg-[#C6112F] mt-2"></div>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 dark:text-white tracking-tight leading-[1.1] my-6">
-              Driving Connections. <br />
-              Creating Opportunities.
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 dark:text-white tracking-tight leading-[1.1] my-4">
+              THE Nexus of <br />
+              International Mining
             </h2>
 
-            <p className="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed mb-8">
-              International Mining Week brings the global mining industry together in Québec City for a dynamic week of high-impact events, world-class content and meaningful connections.
+            <div className="font-bold text-[#C6112F] tracking-wide text-xs sm:text-sm uppercase mb-4">
+              INVESTORS – ISSUERS – GOVERNMENTS – SUPPLY CHAINS
+            </div>
+
+            <p className="text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm leading-relaxed mb-3">
+              Join us for North America's first International Mining Week, taking place from June 1 to 5, 2026, in Quebec City, Canada.
+            </p>
+
+            <p className="text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm leading-relaxed mb-3">
+              IMW will showcase a collaboration among key partners hosting concurrent activities alongside THE Mining Investment Event.
+            </p>
+
+            <p className="text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm leading-relaxed mb-6">
+              This unique partnership aims to unite global mining firms, related industries, supply chain specialists, investors, and governmental representatives.
             </p>
 
             <div>

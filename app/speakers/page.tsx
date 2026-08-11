@@ -1,14 +1,14 @@
 import IMWHeader from "@/components/imw/IMWHeader";
-import PartnersView from "@/components/imw/PartnersView";
+import SpeakersView from "@/components/imw/SpeakersView";
 import StayConnected from "@/components/imw/StayConnected";
 import IMWFooter from "@/components/imw/IMWFooter";
 
-export default function PartnersPage() {
+export default function SpeakersPage() {
   return (
     <>
       <IMWHeader />
       <main className="flex flex-col flex-grow w-full bg-white">
-        <PartnersView />
+        <SpeakersView />
         <StayConnected />
       </main>
       <IMWFooter />

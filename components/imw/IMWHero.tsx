@@ -2,20 +2,21 @@ import Link from "next/link";
 
 export default function IMWHero() {
   return (
-    <section className="relative w-full min-h-[580px] sm:min-h-[640px] md:min-h-[680px] flex flex-col justify-between overflow-hidden bg-[#0a0d14] pt-24 sm:pt-28 pb-10">
+    <section className="relative w-full min-h-[580px] sm:min-h-[640px] md:min-h-[680px] flex flex-col justify-between overflow-hidden bg-[#070c16] pt-24 sm:pt-28 pb-10">
       {/* Background Image & Gradients */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-95"
         style={{ backgroundImage: "url('/imw_hero.png')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14]/90 via-transparent to-black/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-transparent max-w-[65%]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070c16] via-[#0d1726]/90 to-transparent max-w-[70%]"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070c16] via-[#03516E]/20 to-transparent"></div>
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#03516E]/30 blur-3xl rounded-full pointer-events-none"></div>
       </div>
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 pt-10 sm:pt-14 pb-8 w-full my-auto text-left flex flex-col justify-between h-full">
         <div>
-          <span className="text-[#C6112F] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
+          <span className="text-white text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
             INTERNATIONAL MINING WEEK
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">

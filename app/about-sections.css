@@ -1,0 +1,358 @@
+/* ============================================================ ABOUT: MISSION SECTION */
+.mission {
+  padding: 80px 0 70px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(3, 81, 110, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.mission-grid h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 18px 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.mp {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.72;
+}
+
+.mission-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- Feature Rows (right column) -------- */
+.feat-row {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  transition: transform 0.2s ease;
+}
+
+.feat-row:last-child {
+  border-bottom: none;
+}
+
+.feat-row:hover {
+  transform: translateX(4px);
+}
+
+.feat-ic {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red-soft);
+  border-radius: 14px;
+  border: 1px solid rgba(3, 81, 110, 0.1);
+  transition: all 0.2s ease;
+}
+
+.feat-row:hover .feat-ic {
+  background: var(--red);
+}
+
+.feat-row:hover .feat-ic svg {
+  stroke: #fff;
+}
+
+.feat-ic svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--red);
+  transition: stroke 0.2s ease;
+}
+
+.feat-row b {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.feat-row p {
+  font-size: 13.5px;
+  color: var(--body);
+  line-height: 1.6;
+}
+
+/* -------- Outline Button -------- */
+.btn-outline-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 14px 26px;
+  border-radius: 30px;
+  border: 2px solid var(--red);
+  color: var(--red);
+  background: transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.btn-outline-red:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(3, 81, 110, 0.3);
+}
+
+.btn-outline-red svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.btn-outline-red:hover svg {
+  transform: translateX(4px);
+}
+
+/* ============================================================ ABOUT: NUMBERS SECTION */
+.numbers {
+  padding: 60px 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.numbers::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 120%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(3, 81, 110, 0.20) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  align-items: center;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.num-label {
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  padding-right: 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-roboto), 'Roboto', sans-serif;
+}
+
+.nb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.25s ease;
+}
+
+.nb-item:last-child {
+  border-right: none;
+}
+
+.nb-item:hover {
+  transform: translateY(-4px);
+}
+
+.nb-item svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--red);
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+
+.nb-item b {
+  display: block;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-family: var(--font-roboto), 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #fff 60%, rgba(3, 81, 110, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nb-item span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ============================================================ ABOUT: WHY ATTEND SECTION */
+.why {
+  padding: 80px 0 70px;
+  background: var(--bg-soft);
+  position: relative;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.why-grid h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.1;
+  margin: 16px 0 18px;
+  letter-spacing: -0.02em;
+}
+
+.wp {
+  font-size: 15.5px;
+  color: var(--body);
+  line-height: 1.72;
+  margin-bottom: 28px;
+}
+
+.why-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.why-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--red-dark));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover::before {
+  transform: scaleX(1);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(13, 23, 38, 0.10);
+  border-color: rgba(3, 81, 110, 0.15);
+}
+
+.why-card svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--red);
+  margin-bottom: 14px;
+}
+
+.why-card b {
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 13.5px;
+  color: var(--body);
+  line-height: 1.6;
+}
+
+/* ============================================================ ABOUT: RESPONSIVE */
+@media (max-width: 1024px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .num-label {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nb-item {
+    border-right: none;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

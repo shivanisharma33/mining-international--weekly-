@@ -34,14 +34,15 @@ export default function PartnersHero() {
   ];
 
   return (
-    <section className="relative w-full min-h-[500px] sm:min-h-[560px] md:min-h-[600px] flex items-center overflow-hidden bg-[#070a10] pt-32 sm:pt-40 pb-16">
+    <section className="relative w-full min-h-[500px] sm:min-h-[560px] md:min-h-[600px] flex items-center overflow-hidden bg-[#070c16] pt-32 sm:pt-40 pb-16">
       {/* Background Image & Gradient Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-90"
         style={{ backgroundImage: "url('/imw_hero.png')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06090f] via-[#06090f]/85 to-transparent max-w-4xl"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#06090f] via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070c16] via-[#0d1726]/90 to-transparent max-w-4xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070c16] via-[#03516E]/20 to-transparent"></div>
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#03516E]/25 blur-3xl rounded-full pointer-events-none"></div>
       </div>
 
       {/* Hero Content */}

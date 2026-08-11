@@ -1,21 +1,15 @@
 import IMWHeader from "@/components/imw/IMWHeader";
-import IMWHero from "@/components/imw/IMWHero";
-import IMWByTheNumbers from "@/components/imw/IMWByTheNumbers";
-import FoundingPartners from "@/components/imw/FoundingPartners";
-import ExploreWeek from "@/components/imw/ExploreWeek";
-import CitySection from "@/components/imw/CitySection";
+import HomeView from "@/components/imw/HomeView";
+import StayConnected from "@/components/imw/StayConnected";
 import IMWFooter from "@/components/imw/IMWFooter";
 
 export default function HomePage() {
   return (
     <>
       <IMWHeader />
-      <main className="flex flex-col flex-grow w-full bg-white dark:bg-[#090d16] transition-colors duration-300">
-        <IMWHero />
-        <IMWByTheNumbers />
-        <FoundingPartners />
-        <ExploreWeek />
-        <CitySection />
+      <main className="flex flex-col flex-grow w-full bg-white">
+        <HomeView />
+        <StayConnected />
       </main>
       <IMWFooter />
     </>

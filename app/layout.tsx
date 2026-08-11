@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Karla } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const karla = Karla({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-karla",
+  weight: ["300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "The Mining Investment Event",
-  description: "Canada's Only Tier I Global Mining Investment Conference",
+  title: "International Mining Week — June 1–5, 2026 · Québec City",
+  description: "The global mining industry comes together in Québec City for a week of events, connections and opportunities.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -22,26 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${karla.variable} h-full antialiased`} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function() {
-              try {
-                var stored = localStorage.getItem('theme');
-                if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-              } catch (e) {}
-            })();`,
-          }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col font-sans bg-white dark:bg-[#09090b] text-neutral-900 dark:text-white transition-colors duration-300">
+    <html lang="en" className={`${roboto.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col font-sans bg-white text-[#4a5364]">
         {children}
       </body>
     </html>
   );
 }
+
