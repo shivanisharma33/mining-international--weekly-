@@ -158,35 +158,49 @@ header.site {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  text-decoration: none;
 }
 
-.brand:hover {
-  transform: scale(1.02);
+.imw-logo-box {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: #03516E;
+  border: 2.5px solid #ffffff;
+  padding: 6px 14px 7px 14px;
+  border-radius: 3px;
+  box-shadow: 0 4px 14px rgba(3, 81, 110, 0.28), 0 0 0 1px rgba(3, 81, 110, 0.15);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  text-decoration: none;
 }
 
-.imw {
-  font-family: var(--font-roboto), 'Roboto', sans-serif;
+.brand:hover .imw-logo-box {
+  background: #023d54;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(3, 81, 110, 0.40), 0 0 0 1px rgba(3, 81, 110, 0.25);
+}
+
+.imw-logo-top {
+  font-family: var(--font-roboto), 'Roboto', -apple-system, sans-serif;
+  font-size: 16.5px;
   font-weight: 900;
-  font-size: 30px;
-  letter-spacing: -.03em;
-  color: var(--ink);
-  line-height: 1;
-  background: linear-gradient(135deg, #0d1726 0%, #03516E 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
-.brand-sub {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .07em;
-  color: #1e293b;
-  line-height: 1.4;
-  border-left: 2px solid var(--red);
-  padding-left: 10px;
+.imw-logo-bottom {
+  font-family: var(--font-roboto), 'Roboto', -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
 nav.main {
@@ -749,18 +763,9 @@ footer.site {
 
 .ft {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.1fr 1.1fr 1fr 1.5fr;
-  gap: 36px;
+  grid-template-columns: 2fr 1.2fr 1.8fr;
+  gap: 48px;
   padding: 58px 0 44px;
-}
-
-.ft-brand .imw {
-  color: #fff;
-  font-size: 30px;
-}
-
-.ft-brand .brand-sub {
-  color: #fff;
 }
 
 .ft-brand p {

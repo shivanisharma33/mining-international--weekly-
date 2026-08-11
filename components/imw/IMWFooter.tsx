@@ -7,11 +7,11 @@ export default function IMWFooter() {
       <div className="wrap">
         <div className="ft">
           <div className="ft-brand">
-            <Link className="brand" href="/">
-              <span className="imw">IMW</span>
-              <span className="brand-sub">
-                INTERNATIONAL<br />MINING WEEK
-              </span>
+            <Link className="brand" href="/" aria-label="International Mining Week">
+              <div className="imw-logo-box">
+                <span className="imw-logo-top">International</span>
+                <span className="imw-logo-bottom">MINING WEEK</span>
+              </div>
             </Link>
             <p>Uniting the global mining industry for one week of events, connections and opportunities.</p>
             <div className="ft-social">
@@ -41,29 +41,6 @@ export default function IMWFooter() {
             <Link className="lnk" href="/about">Host City</Link>
             <Link className="lnk" href="/about">Sustainability</Link>
             <Link className="lnk" href="/about">Media Kit</Link>
-          </div>
-          <div>
-            <h4>EVENTS</h4>
-            <Link className="lnk" href="/agenda">All Events</Link>
-            <Link className="lnk" href="/agenda">THE Event</Link>
-            <Link className="lnk" href="/agenda">QMA Conference</Link>
-            <Link className="lnk" href="/agenda">Supply Chain Forum</Link>
-            <Link className="lnk" href="/agenda">Innovation Summit</Link>
-          </div>
-          <div>
-            <h4>ATTENDEES</h4>
-            <Link className="lnk" href="/about">Why Attend</Link>
-            <Link className="lnk" href="/register">Register</Link>
-            <Link className="lnk" href="/about">Plan Your Visit</Link>
-            <Link className="lnk" href="/about">Accommodation</Link>
-            <Link className="lnk" href="/about">Travel</Link>
-          </div>
-          <div>
-            <h4>NEWS</h4>
-            <Link className="lnk" href="/#news">News</Link>
-            <Link className="lnk" href="/#news">Press Releases</Link>
-            <Link className="lnk" href="/#news">Photo Gallery</Link>
-            <Link className="lnk" href="/#contact">Contact Us</Link>
           </div>
           <div>
             <h4>GET IN TOUCH</h4>

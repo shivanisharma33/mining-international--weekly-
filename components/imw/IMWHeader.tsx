@@ -58,11 +58,11 @@ export default function IMWHeader() {
       {/* ================= HEADER ================= */}
       <header className="site">
         <div className="wrap hdr">
-          <Link className="brand" href="/">
-            <span className="imw">IMW</span>
-            <span className="brand-sub">
-              INTERNATIONAL<br />MINING WEEK
-            </span>
+          <Link className="brand" href="/" aria-label="International Mining Week">
+            <div className="imw-logo-box">
+              <span className="imw-logo-top">International</span>
+              <span className="imw-logo-bottom">MINING WEEK</span>
+            </div>
           </Link>
           <nav className="main" aria-label="Primary">
             <div className="nav-item">

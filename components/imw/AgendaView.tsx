@@ -14,6 +14,7 @@ type EventItem = {
 
 type FeaturedEvent = {
   art: string;
+  img?: string;
   title: string;
   date: string;
   time: string;
@@ -93,152 +94,21 @@ const AG_ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
-function RenderArt({ theme }: { theme: string }) {
-  if (theme === "golf") {
-    return (
-      <svg viewBox="0 0 560 320" preserveAspectRatio="xMidYMid slice" className="w-full h-full block">
-        <defs>
-          <linearGradient id="gsky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#f5c46b" />
-            <stop offset=".55" stopColor="#e89a4e" />
-            <stop offset="1" stopColor="#c9762f" />
-          </linearGradient>
-        </defs>
-        <rect width="560" height="320" fill="url(#gsky)" />
-        <circle cx="470" cy="88" r="40" fill="#fbe7ac" />
-        <g fill="#2f4a20">
-          <ellipse cx="70" cy="160" rx="34" ry="48" />
-          <ellipse cx="120" cy="150" rx="26" ry="40" />
-          <ellipse cx="500" cy="150" rx="30" ry="44" />
-          <ellipse cx="540" cy="164" rx="22" ry="34" />
-        </g>
-        <g fill="#3d2a1a">
-          <rect x="200" y="120" width="180" height="60" />
-          <path d="M200 120 L290 78 L380 120 Z" />
-          <rect x="248" y="96" width="14" height="24" />
-        </g>
-        <g fill="#f3d98c" opacity=".85">
-          <rect x="216" y="136" width="10" height="12" />
-          <rect x="244" y="136" width="10" height="12" />
-          <rect x="272" y="136" width="10" height="12" />
-          <rect x="300" y="136" width="10" height="12" />
-          <rect x="328" y="136" width="10" height="12" />
-          <rect x="356" y="136" width="10" height="12" />
-        </g>
-        <path d="M0 320 L0 210 Q140 180 280 196 Q430 212 560 190 L560 320 Z" fill="#4c7a2e" />
-        <path d="M0 320 L0 258 Q200 236 380 252 Q490 260 560 248 L560 320 Z" fill="#5d9138" />
-        <ellipse cx="330" cy="268" rx="90" ry="18" fill="#6da344" />
-        <circle cx="300" cy="262" r="9" fill="#fff" />
-        <ellipse cx="300" cy="273" rx="12" ry="3" fill="#3f6a26" opacity=".5" />
-        <g>
-          <rect x="368" y="216" width="3" height="44" fill="#333" />
-          <path d="M371 216 L392 223 L371 230 Z" fill="#03516E" />
-        </g>
-      </svg>
-    );
+function RenderArt({ theme, src }: { theme: string; src?: string }) {
+  let imageSrc = src;
+  if (!imageSrc) {
+    if (theme === "golf") imageSrc = "/golf_featured_event.png";
+    else if (theme === "gala") imageSrc = "/our_mission_networking.png";
+    else if (theme === "stage") imageSrc = "/quebec_city_host.png";
+    else imageSrc = "/imw_hero.png";
   }
-  if (theme === "gala") {
-    return (
-      <svg viewBox="0 0 560 320" preserveAspectRatio="xMidYMid slice" className="w-full h-full block">
-        <defs>
-          <linearGradient id="gala" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#160f22" />
-            <stop offset="1" stopColor="#301631" />
-          </linearGradient>
-        </defs>
-        <rect width="560" height="320" fill="url(#gala)" />
-        <g fill="#f3b95c" opacity=".7">
-          <circle cx="80" cy="60" r="2" />
-          <circle cx="180" cy="40" r="1.6" />
-          <circle cx="300" cy="66" r="2" />
-          <circle cx="420" cy="44" r="1.6" />
-          <circle cx="500" cy="70" r="2" />
-        </g>
-        <g fill="#f0c96a">
-          <path d="M280 60 l6 12 13 2-9.5 9 2.3 13-11.8-6.3-11.8 6.3 2.3-13-9.5-9 13-2z" />
-        </g>
-        <g opacity=".85">
-          <ellipse cx="150" cy="250" rx="60" ry="12" fill="#3a2340" />
-          <ellipse cx="400" cy="262" rx="76" ry="14" fill="#3a2340" />
-        </g>
-        <g fill="#1d1428">
-          <circle cx="140" cy="200" r="16" />
-          <rect x="126" y="216" width="28" height="52" rx="8" />
-          <circle cx="190" cy="206" r="14" />
-          <rect x="178" y="220" width="24" height="46" rx="7" />
-          <circle cx="380" cy="196" r="16" />
-          <rect x="366" y="212" width="28" height="54" rx="8" />
-          <circle cx="430" cy="204" r="14" />
-          <rect x="418" y="218" width="24" height="48" rx="7" />
-        </g>
-        <g fill="#e8cdd2" opacity=".25">
-          <path d="M60 320 L110 160 L160 320 Z" />
-          <path d="M330 320 L380 150 L430 320 Z" />
-        </g>
-      </svg>
-    );
-  }
-  if (theme === "stage") {
-    return (
-      <svg viewBox="0 0 560 320" preserveAspectRatio="xMidYMid slice" className="w-full h-full block">
-        <defs>
-          <linearGradient id="stg" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#101a2c" />
-            <stop offset="1" stopColor="#1c2c4a" />
-          </linearGradient>
-        </defs>
-        <rect width="560" height="320" fill="url(#stg)" />
-        <g fill="#e8cdd2" opacity=".18">
-          <path d="M120 320 L180 100 L240 320 Z" />
-          <path d="M320 320 L380 100 L440 320 Z" />
-        </g>
-        <rect x="90" y="220" width="380" height="26" rx="4" fill="#0b1322" />
-        <rect x="110" y="150" width="340" height="70" rx="6" fill="#22314e" />
-        <g fill="#101a2c">
-          <circle cx="180" cy="130" r="13" />
-          <rect x="169" y="143" width="22" height="34" rx="6" />
-          <circle cx="280" cy="126" r="14" />
-          <rect x="268" y="140" width="24" height="37" rx="6" />
-          <circle cx="380" cy="130" r="13" />
-          <rect x="369" y="143" width="22" height="34" rx="6" />
-        </g>
-        <g fill="#03516E">
-          <rect x="252" y="176" width="56" height="8" rx="2" />
-        </g>
-        <g fill="#f3b95c" opacity=".8">
-          <rect x="130" y="162" width="8" height="8" />
-          <rect x="422" y="162" width="8" height="8" />
-        </g>
-      </svg>
-    );
-  }
+
   return (
-    <svg viewBox="0 0 560 320" preserveAspectRatio="xMidYMid slice" className="w-full h-full block">
-      <defs>
-        <linearGradient id="tsk" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#8fb6d9" />
-          <stop offset=".7" stopColor="#cfe0ee" />
-          <stop offset="1" stopColor="#a8bfd2" />
-        </linearGradient>
-      </defs>
-      <rect width="560" height="320" fill="url(#tsk)" />
-      <circle cx="110" cy="70" r="34" fill="#fdf3d0" />
-      <path d="M0 230 L120 140 L230 230 Z" fill="#5a6b7d" />
-      <path d="M170 230 L300 120 L440 230 Z" fill="#41505f" />
-      <path d="M380 230 L480 160 L560 230 Z" fill="#5a6b7d" />
-      <path d="M282 138 L300 120 L318 138 L300 152 Z" fill="#e8eef4" />
-      <rect y="230" width="560" height="90" fill="#7a5a3a" />
-      <path d="M0 250 Q140 238 280 248 Q430 258 560 246 L560 262 Q420 272 270 262 Q130 254 0 264 Z" fill="#5e4127" />
-      <g>
-        <rect x="200" y="196" width="160" height="46" rx="8" fill="#03516E" />
-        <rect x="212" y="204" width="30" height="18" rx="3" fill="#e8eef4" />
-        <rect x="250" y="204" width="30" height="18" rx="3" fill="#e8eef4" />
-        <rect x="288" y="204" width="30" height="18" rx="3" fill="#e8eef4" />
-        <rect x="326" y="204" width="22" height="18" rx="3" fill="#e8eef4" />
-        <circle cx="228" cy="244" r="10" fill="#1a1a1a" />
-        <circle cx="332" cy="244" r="10" fill="#1a1a1a" />
-      </g>
-    </svg>
+    <img
+      src={imageSrc}
+      alt="Featured Event"
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+    />
   );
 }
 
@@ -425,7 +295,7 @@ export default function AgendaView() {
         <div className="wrap mb-12 sm:mb-16">
           <div className="feat-card">
             <div className="fc-img">
-              <RenderArt theme={featured.art} />
+              <RenderArt theme={featured.art} src={featured.img} />
             </div>
             <div className="fc-body">
               <span className="fc-pill">FEATURED EVENT</span>
