@@ -121,13 +121,12 @@ export default function HostCity() {
                 {highlights.map((item, idx) => (
                   <div
                     key={idx}
-                    className={`flex items-center gap-3 py-1 ${
-                      idx === 0
+                    className={`flex items-center gap-3 py-1 ${idx === 0
                         ? "sm:pr-4"
                         : idx === highlights.length - 1
-                        ? "sm:pl-4"
-                        : "sm:px-4"
-                    }`}
+                          ? "sm:pl-4"
+                          : "sm:px-4"
+                      }`}
                   >
                     {item.icon}
                     <div className="flex flex-col text-xs sm:text-sm font-extrabold text-[#131720] leading-tight">

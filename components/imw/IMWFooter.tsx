@@ -69,7 +69,7 @@ export default function IMWFooter() {
           </div>
         </div>
         <div className="ft-bottom">
-          <div className="ft-bottom-inner">
+          <div className="ft-bottom-inner justify-center text-center">
             <span>© 2026 International Mining Week. All rights reserved.</span>
           </div>
         </div>
