@@ -12,7 +12,7 @@ export default function PartnerWithUsBanner() {
           {/* Left: Handshake Red Circle & Text */}
           <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6">
             {/* Red Circle with Handshake Icon */}
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#C6112F] flex items-center justify-center shrink-0 shadow-lg">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#005B82] flex items-center justify-center shrink-0 shadow-lg">
               <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
@@ -28,14 +28,25 @@ export default function PartnerWithUsBanner() {
             </div>
           </div>
 
-          {/* Right: Gold Outlined Button */}
-          <div className="relative z-10 shrink-0 w-full sm:w-auto">
+          {/* Right: Buttons */}
+          <div className="relative z-10 shrink-0 w-full sm:w-auto flex flex-col sm:flex-row gap-3">
+            <a
+              href="/assets/images/IMW+SPONSORS.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#005B82] hover:bg-[#007baf] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-md group"
+            >
+              <span>VIEW SPONSORS PDF</span>
+              <svg className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+              </svg>
+            </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 rounded-xl border border-[#f59e0b] hover:border-amber-400 bg-transparent hover:bg-white/10 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-md group"
+              className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 rounded-xl border border-[#005B82] hover:border-[#007baf] bg-transparent hover:bg-white/10 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-md group"
             >
               <span>BECOME A PARTNER</span>
-              <svg className="w-4 h-4 text-amber-400 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#005B82] transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
               </svg>
             </Link>

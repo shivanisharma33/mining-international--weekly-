@@ -1,3 +1,4 @@
+@layer components {
 /* ============================================================ ABOUT: MISSION SECTION */
 .mission {
   padding: 80px 0 70px;
@@ -355,4 +356,5 @@
   .numbers-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
 }

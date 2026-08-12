@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "../components/**/*.{js,ts,jsx,tsx}";
+@source "../app/**/*.{js,ts,jsx,tsx}";
 @import "./about-sections.css";
 
 :root {
@@ -19,6 +21,7 @@
   --hero-min-h: 620px;
 }
 
+@layer components {
 * {
   margin: 0;
   padding: 0;
@@ -707,29 +710,15 @@ nav.main {
   max-width: 300px;
 }
 
-.cn-form {
+.cn-cta {
   margin-left: auto;
   display: flex;
-  background: #fff;
-  border-radius: 10px;
-  padding: 5px;
-  min-width: 380px;
+  align-items: center;
   position: relative;
   z-index: 2;
 }
 
-.cn-form input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font: inherit;
-  font-size: 14px;
-  padding: 0 16px;
-  color: var(--ink);
-  background: transparent;
-}
-
-.cn-form button {
+.cn-register-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -739,16 +728,18 @@ nav.main {
   font-weight: 700;
   font-size: 12.5px;
   letter-spacing: .06em;
-  padding: 13px 22px;
+  padding: 13px 28px;
   border-radius: 7px;
   transition: background var(--trans);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.cn-form button:hover {
+.cn-register-btn:hover {
   background: var(--red-dark);
 }
 
-.cn-form svg {
+.cn-register-btn svg {
   width: 15px;
   height: 15px;
   stroke: #fff;
@@ -2427,9 +2418,8 @@ input:focus-visible {
     padding-top: 36px;
   }
 
-  .cn-form {
+  .cn-cta {
     margin-left: 0;
-    min-width: 0;
     width: 100%;
   }
 }
@@ -3501,3 +3491,4 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+}

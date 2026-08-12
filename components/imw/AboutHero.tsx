@@ -18,10 +18,10 @@ export default function AboutHero() {
         <div className="max-w-3xl">
           {/* Tagline */}
           <div className="mb-4">
-            <span className="text-[#C6112F] text-xs sm:text-sm font-bold tracking-widest uppercase block">
+            <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block">
               ABOUT IMW
             </span>
-            <div className="w-8 h-[2px] bg-[#C6112F] mt-2"></div>
+            <div className="w-8 h-[2px] bg-[#005B82] mt-2"></div>
           </div>
 
           {/* Main Headline */}
@@ -32,7 +32,7 @@ export default function AboutHero() {
 
           {/* Subtext with Vertical Red Accent Line */}
           <div className="flex items-stretch gap-4 max-w-xl">
-            <div className="w-[3px] bg-[#C6112F] rounded-full shrink-0"></div>
+            <div className="w-[3px] bg-[#005B82] rounded-full shrink-0"></div>
             <p className="text-neutral-200 text-base sm:text-lg md:text-xl font-normal leading-relaxed">
               For one week of events, connections <br className="hidden sm:inline" />
               and opportunities that drive the <br className="hidden sm:inline" />

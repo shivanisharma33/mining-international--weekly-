@@ -2,168 +2,18 @@ import React from "react";
 import Image from "next/image";
 
 export default function OurPartnersGrid() {
-  const diamondSponsors = [
-    {
-      name: "AGNICO EAGLE",
-      logo: (
-        <div className="flex items-center justify-center gap-2 font-black text-[#1e293b] text-base tracking-wider">
-          <svg className="w-6 h-6 text-[#eab308]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/>
-          </svg>
-          <span>AGNICO EAGLE</span>
-        </div>
-      ),
-    },
-    {
-      name: "BARRICK",
-      logo: (
-        <div className="flex items-center justify-center gap-1 font-black text-[#1d4ed8] text-lg tracking-widest uppercase border-b-2 border-[#f59e0b] pb-0.5">
-          BARRICK
-        </div>
-      ),
-    },
-    {
-      name: "Teck",
-      logo: (
-        <div className="flex items-center justify-center gap-1 font-extrabold text-[#0f172a] text-2xl tracking-tight">
-          <span>Teck</span>
-          <span className="w-2 h-2 rounded-full bg-[#C6112F]"></span>
-        </div>
-      ),
-    },
-    {
-      name: "KINROSS",
-      logo: (
-        <div className="px-4 py-1.5 border border-[#854d0e] text-[#854d0e] font-serif font-bold text-sm tracking-widest uppercase">
-          KINROSS
-        </div>
-      ),
-    },
-  ];
-
-  const platinumSponsors = [
-    {
-      name: "GLENCORE",
-      logo: (
-        <div className="font-serif font-normal text-neutral-800 text-xl tracking-widest uppercase">
-          GLENCORE
-        </div>
-      ),
-    },
-    {
-      name: "Newmont",
-      logo: (
-        <div className="font-extrabold text-[#1d4ed8] text-lg tracking-wide uppercase">
-          Newmont<span className="text-[#3b82f6]">.</span>
-        </div>
-      ),
-    },
-    {
-      name: "RioTinto",
-      logo: (
-        <div className="font-black text-[#dc2626] text-xl tracking-tight">
-          RioTinto
-        </div>
-      ),
-    },
-    {
-      name: "VALE",
-      logo: (
-        <div className="flex items-center justify-center gap-2 font-black text-[#475569] text-lg tracking-widest">
-          <svg className="w-5 h-5 text-[#0d9488]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 3L2 12l10 9 10-9-10-9zm0 3.5l6.5 6.5-6.5 6.5L5.5 13 12 6.5z"/>
-          </svg>
-          <span>VALE</span>
-        </div>
-      ),
-    },
-  ];
-
-  const goldSponsorsRow1 = [
-    {
-      name: "BHP",
-      logo: (
-        <div className="font-black text-[#ea580c] text-2xl tracking-tighter">
-          BHP
-        </div>
-      ),
-    },
-    {
-      name: "eramet",
-      logo: (
-        <div className="flex items-center justify-center gap-1.5">
-          <svg className="w-5 h-5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 19h20L12 2z"/>
-          </svg>
-          <span className="font-bold text-[#1e3a8a] text-lg">eramet</span>
-        </div>
-      ),
-    },
-    {
-      name: "IAMGOLD",
-      logo: (
-        <div className="flex items-center justify-center gap-1 font-serif font-bold text-[#78350f] text-sm tracking-widest uppercase border-y border-[#78350f] py-0.5">
-          IAMGOLD
-        </div>
-      ),
-    },
-    {
-      name: "lundin mining",
-      logo: (
-        <div className="flex flex-col items-center font-bold text-[#b91c1c] text-xs uppercase leading-tight tracking-wider">
-          <span>lundin</span>
-          <span>mining</span>
-        </div>
-      ),
-    },
-    {
-      name: "metso",
-      logo: (
-        <div className="font-black text-[#0f172a] text-xl tracking-tight lowercase">
-          metso
-        </div>
-      ),
-    },
-  ];
-
-  const goldSponsorsRow2 = [
-    {
-      name: "NATIONAL BANK",
-      logo: (
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-4 h-4 bg-[#dc2626] transform rotate-45"></div>
-          <div className="flex flex-col text-left font-black text-[#1e293b] text-[10px] uppercase leading-tight">
-            <span>NATIONAL</span>
-            <span>BANK</span>
-          </div>
-        </div>
-      ),
-    },
-    {
-      name: "SANDVIK",
-      logo: (
-        <div className="flex items-center justify-center gap-2 font-black text-[#0f172a] text-sm tracking-widest">
-          <svg className="w-4 h-4 text-[#0f172a]" fill="currentColor" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="9"/>
-          </svg>
-          <span>SANDVIK</span>
-        </div>
-      ),
-    },
-    {
-      name: "srk consulting",
-      logo: (
-        <div className="flex items-center justify-center gap-2">
-          <svg className="w-5 h-5 text-[#ea580c]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-          </svg>
-          <div className="flex flex-col text-left text-neutral-500 font-semibold text-[10px] leading-tight">
-            <span className="font-bold text-[#ea580c] text-xs">srk</span>
-            <span>consulting</span>
-          </div>
-        </div>
-      ),
-    },
+  const diamondSponsorsList = [
+    { name: "Group 145", src: "/assets/images/Group-145.svg" },
+    { name: "Sponsor Logo", src: "/assets/images/642e8adf6f6728bf086ca90e_logo.svg" },
+    { name: "Air Borealis", src: "/assets/images/AirBorealis-Logo.png", isDark: true },
+    { name: "Apaton Finance", src: "/assets/images/apaton-finance-logo.svg" },
+    { name: "Canadian North", src: "/assets/images/Canadian-North-logo-main-rgb-1024x319.png" },
+    { name: "Cassels", src: "/assets/images/Cassels-logo-white.svg", isDark: true },
+    { name: "Government Brand", src: "/assets/images/government-brand-22.02.svg" },
+    { name: "Marsh", src: "/assets/images/marsh-logo-white.svg", isDark: true },
+    { name: "MG", src: "/assets/images/mg.webp" },
+    { name: "Pro Masthead", src: "/assets/images/pro-masthead-2011-large.png", isDark: true },
+    { name: "QSL", src: "/assets/images/QSL-logo.svg", isDark: true },
   ];
 
   return (
@@ -172,11 +22,11 @@ export default function OurPartnersGrid() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="w-10 h-[1.5px] bg-[#C6112F]"></div>
-            <h2 className="text-[#C6112F] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+            <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
               OUR PARTNERS
             </h2>
-            <div className="w-10 h-[1.5px] bg-[#C6112F]"></div>
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
           </div>
 
           <p className="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed">
@@ -187,11 +37,11 @@ export default function OurPartnersGrid() {
         {/* TIER 1: FOUNDING PARTNERS */}
         <div className="mb-16">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-            <span className="text-[#C6112F] text-xs sm:text-sm font-extrabold tracking-widest uppercase flex items-center gap-1.5">
+            <div className="w-12 h-[1px] bg-[#005B82]"></div>
+            <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase flex items-center gap-1.5">
               <span>⭐</span> FOUNDING PARTNERS <span>⭐</span>
             </span>
-            <div className="w-12 h-[1px] bg-amber-400"></div>
+            <div className="w-12 h-[1px] bg-[#005B82]"></div>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
@@ -216,95 +66,45 @@ export default function OurPartnersGrid() {
           </div>
         </div>
 
-        {/* TIER 2: DIAMOND SPONSORS */}
-        <div className="mb-14">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-            <span className="text-[#C6112F] text-xs sm:text-sm font-extrabold tracking-widest uppercase flex items-center gap-1.5">
-              <span>💎</span> DIAMOND SPONSORS
-            </span>
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {diamondSponsors.map((sponsor, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl h-24 px-6 flex items-center justify-center border border-neutral-200/80 shadow-xs hover:shadow-md transition-all"
-              >
-                {sponsor.logo}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* TIER 3: PLATINUM SPONSORS */}
-        <div className="mb-14">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-            <span className="text-[#C6112F] text-xs sm:text-sm font-extrabold tracking-widest uppercase flex items-center gap-1.5">
-              <span>⚜️</span> PLATINUM SPONSORS
-            </span>
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {platinumSponsors.map((sponsor, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl h-24 px-6 flex items-center justify-center border border-neutral-200/80 shadow-xs hover:shadow-md transition-all"
-              >
-                {sponsor.logo}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* TIER 4: GOLD SPONSORS */}
+        {/* TIER 2: DIAMOND SPONSORS HEADER */}
         <div>
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-            <span className="text-[#C6112F] text-xs sm:text-sm font-extrabold tracking-widest uppercase flex items-center gap-1.5">
-              <span>🪙</span> GOLD SPONSORS
-            </span>
-            <div className="w-12 h-[1px] bg-amber-400"></div>
-          </div>
-
-          {/* Row 1: 5 cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto mb-4">
-            {goldSponsorsRow1.map((sponsor, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl h-24 px-4 flex items-center justify-center border border-neutral-200/80 shadow-xs hover:shadow-md transition-all"
-              >
-                {sponsor.logo}
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2: 3 cards + 1 callout card */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {goldSponsorsRow2.map((sponsor, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl h-24 px-4 flex items-center justify-center border border-neutral-200/80 shadow-xs hover:shadow-md transition-all"
-              >
-                {sponsor.logo}
-              </div>
-            ))}
-
-            {/* Special Callout Card: And More... */}
-            <div className="bg-white rounded-2xl h-24 px-4 flex flex-col items-center justify-center text-center border border-dashed border-[#C6112F]/40 shadow-xs hover:shadow-md transition-all">
-              <span className="text-[#C6112F] font-extrabold text-sm mb-0.5">
-                And More...
-              </span>
-              <span className="text-neutral-500 text-xs">
-                Join our growing list of partners
+          <div className="flex items-center justify-center gap-4 my-10">
+            <div className="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#005B82] to-[#005B82]"></div>
+            <div className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#005B82]/10 via-[#005B82]/10 to-[#005B82]/10 border border-[#005B82]/50 shadow-sm flex items-center gap-2.5">
+              <svg className="w-5 h-5 text-[#005B82]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 4h10l4 5-9 11L3 9z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 9h18M9.5 4L8 9l4 11 4-11-1.5-5" />
+              </svg>
+              <span className="text-[#131720] dark:text-white font-black text-sm sm:text-base tracking-[0.2em] uppercase">
+                DIAMOND SPONSORS
               </span>
             </div>
+            <div className="w-16 h-[1.5px] bg-gradient-to-l from-transparent via-[#005B82] to-[#005B82]"></div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            {diamondSponsorsList.map((sponsor, idx) => (
+              <div
+                key={idx}
+                className={`group relative rounded-2xl h-32 px-5 py-4 flex items-center justify-center border transition-all duration-300 hover:-translate-y-1.5 shadow-sm hover:shadow-xl hover:shadow-cyan-900/10 overflow-hidden ${sponsor.isDark
+                  ? "bg-[#090d16] border-neutral-800 hover:border-[#005B82]/60"
+                  : "bg-gradient-to-br from-white via-slate-50/50 to-neutral-100/60 border-neutral-200/90 dark:border-neutral-800 hover:border-[#005B82]/60"
+                  }`}
+              >
+                {/* Reflective glow accent */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#005B82]/10 via-transparent to-cyan-500/10 transition-opacity duration-500 pointer-events-none"></div>
+
+                <img
+                  src={sponsor.src}
+                  alt={sponsor.name}
+                  className="max-h-14 max-w-[80%] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
+

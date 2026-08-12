@@ -86,12 +86,12 @@ export default function IMWHeader() {
               </Link>
             </div>
           </nav>
-          <button className="btn-register" style={{ marginLeft: "auto" }}>
+          <Link href="/register" className="btn-register" style={{ marginLeft: "auto" }}>
             <span>REGISTER NOW</span>
             <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-          </button>
+          </Link>
           <button
             className="burger"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -112,6 +112,7 @@ export default function IMWHeader() {
           <Link href="/partners" onClick={() => setIsMobileMenuOpen(false)}>Sponsors</Link>
           <Link href="/#news" onClick={() => setIsMobileMenuOpen(false)}>News</Link>
           <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          <Link href="/register" onClick={() => setIsMobileMenuOpen(false)} className="btn-register" style={{ display: "inline-flex", justifyContent: "center" }}>Register Now</Link>
         </div>
       </header>
     </>
