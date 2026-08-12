@@ -71,11 +71,6 @@ export default function IMWFooter() {
         <div className="ft-bottom">
           <div className="ft-bottom-inner">
             <span>© 2026 International Mining Week. All rights reserved.</span>
-            <div className="ft-legal">
-              <Link href="/privacy">Privacy Policy</Link>
-              <span className="sep">|</span>
-              <Link href="/terms">Terms of Use</Link>
-            </div>
           </div>
         </div>
       </div>

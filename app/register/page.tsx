@@ -63,7 +63,7 @@ export default function RegisterPage() {
   return (
     <>
       <IMWHeader />
-      <main className="flex flex-col flex-grow w-full bg-white font-sans">
+      <main className="flex flex-col flex-grow w-full bg-white font-[family-name:var(--font-roboto)] font-sans">
         {/* ===== HERO WITH IMAGE ===== */}
         <section
           className="relative w-full overflow-hidden pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20"

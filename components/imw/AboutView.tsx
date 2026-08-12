@@ -3,7 +3,6 @@ import AboutHero from "./AboutHero";
 import OurMission from "./OurMission";
 import IMWByTheNumbers from "./IMWByTheNumbers";
 import WhyAttend from "./WhyAttend";
-import HostCity from "./HostCity";
 
 export default function AboutView() {
   return (
@@ -12,7 +11,6 @@ export default function AboutView() {
       <OurMission />
       <IMWByTheNumbers />
       <WhyAttend />
-      <HostCity />
     </div>
   );
 }

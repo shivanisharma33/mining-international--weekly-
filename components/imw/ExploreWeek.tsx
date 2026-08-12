@@ -4,11 +4,12 @@ export default function ExploreWeek() {
   return (
     <section id="explore-the-week" className="relative w-full py-16 sm:py-24 bg-white transition-colors duration-300">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
-        <div className="mb-10 sm:mb-12 text-left">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1f2430] uppercase tracking-wider">
+        <div className="flex items-center justify-center gap-3 mb-12 text-center">
+          <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+          <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
             EXPLORE THE WEEK
           </h2>
-          <div className="w-16 h-[3px] bg-[#005B82] mt-2.5 rounded-full"></div>
+          <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">

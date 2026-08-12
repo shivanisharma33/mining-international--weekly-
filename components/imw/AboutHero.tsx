@@ -18,10 +18,10 @@ export default function AboutHero() {
         <div className="max-w-3xl">
           {/* Tagline */}
           <div className="mb-4">
-            <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block">
+            <div className="w-10 h-[1.5px] bg-[#005B82] mb-2.5"></div>
+            <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
               ABOUT IMW
             </span>
-            <div className="w-8 h-[2px] bg-[#005B82] mt-2"></div>
           </div>
 
           {/* Main Headline */}

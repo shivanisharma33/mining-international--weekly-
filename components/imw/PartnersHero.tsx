@@ -13,7 +13,7 @@ export default function PartnersHero() {
     },
     {
       title: "Elevate",
-      description: "Increase brand visibility and recognition",
+      description: "Increase brand visibility & recognition",
       icon: (
         <svg className="w-7 h-7 text-[#005B82] shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.287a6 6 0 010 7.427M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53L6.75 15.75H3.75a.75.75 0 01-.75-.75v-6a.75.75 0 01.75-.75h3z"></path>
@@ -50,10 +50,10 @@ export default function PartnersHero() {
         <div className="max-w-3xl">
           {/* Top Tagline */}
           <div className="mb-4">
-            <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block">
+            <div className="w-10 h-[1.5px] bg-[#005B82] mb-2.5"></div>
+            <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
               OUR PARTNERS
             </span>
-            <div className="w-8 h-[2px] bg-[#005B82] mt-2"></div>
           </div>
 
           {/* Main Display Headline */}
@@ -86,7 +86,7 @@ export default function PartnersHero() {
           </div>
 
           {/* Bottom 3 Features Grid with Dividers */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl divide-y sm:divide-y-0 sm:divide-x divide-white/20">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl divide-y sm:divide-y-0 sm:divide-x divide-white/20">
             {features.map((item, idx) => (
               <div key={idx} className={`flex items-start gap-3.5 pt-4 sm:pt-0 ${idx > 0 ? "sm:pl-6" : ""}`}>
                 {item.icon}

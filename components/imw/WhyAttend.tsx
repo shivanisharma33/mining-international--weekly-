@@ -14,7 +14,7 @@ export default function WhyAttend() {
     },
     {
       title: "Discover",
-      description: "Explore new ideas, technologies and market opportunities.",
+      description: "Explore new ideas and opportunities.",
       icon: (
         <svg className="w-9 h-9 text-[#005B82]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
@@ -67,19 +67,21 @@ export default function WhyAttend() {
 
           </div>
 
-          {/* Right 4 White Cards */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {/* Right 4 Compact Cards */}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
             {cards.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#0d121f] rounded-2xl py-4.5 px-4 border border-neutral-100 dark:border-neutral-800 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center justify-center gap-2.5"
+                className="bg-white rounded-xl p-4 border border-neutral-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col items-center text-center justify-center gap-2"
               >
-                <div>{card.icon}</div>
+                <div className="w-10 h-10 rounded-lg bg-[#005B82]/10 flex items-center justify-center shrink-0">
+                  {card.icon}
+                </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-black text-neutral-950 dark:text-white mb-1 tracking-tight">
+                  <h3 className="text-base font-extrabold text-neutral-950 mb-1 tracking-tight">
                     {card.title}
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 text-xs leading-relaxed">
+                  <p className="text-neutral-600 text-xs leading-snug">
                     {card.description}
                   </p>
                 </div>

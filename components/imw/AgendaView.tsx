@@ -273,21 +273,7 @@ export default function AgendaView() {
         </div>
       </section>
 
-      {/* DAY TABS */}
-      <div className="day-tabs">
-        <button className={`day-tab all ${agIdx === -1 ? "on" : ""}`} onClick={() => setAgIdx(-1)}>
-          <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-            <rect x="4" y="5" width="16" height="15" rx="2" />
-            <path d="M4 9.5h16M8 3v4M16 3v4" />
-          </svg>{" "}
-          All Days
-        </button>
-        {IMW_AGENDA.map((d, i) => (
-          <button key={i} className={`day-tab ${agIdx === i ? "on" : ""}`} onClick={() => setAgIdx(i)}>
-            {d.tab}
-          </button>
-        ))}
-      </div>
+
 
       {/* AGENDA MAIN */}
       <section className="agenda-main py-10 sm:py-16">
