@@ -4,19 +4,18 @@ import Image from "next/image";
 
 export default function OurPartnersGrid() {
   const diamondSponsorsList = [
-    { name: "Group 145", src: "/assets/images/Group-145.svg", isDark: false },
-    { name: "Sponsor Logo", src: "/assets/images/642e8adf6f6728bf086ca90e_logo.svg", isDark: false },
-    { name: "Air Borealis", src: "/assets/images/AirBorealis-Logo.png", isDark: true },
-    { name: "Apaton Finance", src: "/assets/images/apaton-finance-logo.svg", isDark: false },
-    { name: "Canadian North", src: "/assets/images/Canadian-North-logo-main-rgb-1024x319.png", isDark: false },
-    { name: "Cassels", src: "/assets/images/Cassels-logo-white.svg", isDark: true },
-    { name: "Government Brand", src: "/assets/images/government-brand-22.02.svg", isDark: false },
-    { name: "Marsh", src: "/assets/images/marsh-logo-white.svg", isDark: true },
-    { name: "MG", src: "/assets/images/mg.webp", isDark: false },
-    { name: "2025 Sponsors — THE Event", src: "/assets/images/pro.png", isDark: true },
-    { name: "QSL", src: "/assets/images/QSL-logo.svg", isDark: true },
-    { name: "Investissement Québec", src: "/Investissement Québec revamped _ Emergex.png", isDark: false },
-    { name: "Accepted Offer", src: "/I am delighted to announce that I have accepted an offer____.png", isDark: false },
+    { name: "Mercury Group", src: "/assets/images/mg.webp" },
+    { name: "The Prospector News", src: "/assets/images/pro-masthead-logo.png" },
+    { name: "QSL", src: "/assets/images/qsl-logo-transparent.png" },
+    { name: "Investissement Québec", src: "/assets/images/investissement-quebec-transparent.png" },
+    { name: "McMillan", src: "/assets/images/Group-145.svg" },
+    { name: "Air Borealis", src: "/assets/images/air-borealis-transparent.png" },
+    { name: "Apaton Finance", src: "/assets/images/apaton-finance-logo.svg" },
+    { name: "Canadian North", src: "/assets/images/Canadian-North-logo-main-rgb-1024x319.png" },
+    { name: "Cassels", src: "/assets/images/Cassels-logo-dark.svg" },
+    { name: "Government of Canada", src: "/assets/images/government-brand-22.02.svg" },
+    { name: "Marsh", src: "/assets/images/marsh-logo-transparent.png" },
+    { name: "Crux Investor", src: "/assets/images/642e8adf6f6728bf086ca90e_logo.svg" },
   ];
 
   return (
@@ -79,14 +78,14 @@ export default function OurPartnersGrid() {
             <div className="sponsor-slider-track">
               {/* First set */}
               {diamondSponsorsList.map((sponsor, idx) => (
-                <div key={`a-${idx}`} className={`sponsor-slide ${sponsor.isDark ? 'sponsor-slide-dark' : ''}`}>
-                  <img src={sponsor.src} alt={sponsor.name} className="max-h-14 max-w-[80%] w-auto object-contain" />
+                <div key={`a-${idx}`} className="sponsor-slide">
+                  <img src={sponsor.src} alt={sponsor.name} className="max-h-12 max-w-[82%] w-auto object-contain" />
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
               {diamondSponsorsList.map((sponsor, idx) => (
-                <div key={`b-${idx}`} className={`sponsor-slide ${sponsor.isDark ? 'sponsor-slide-dark' : ''}`}>
-                  <img src={sponsor.src} alt={sponsor.name} className="max-h-14 max-w-[80%] w-auto object-contain" />
+                <div key={`b-${idx}`} className="sponsor-slide">
+                  <img src={sponsor.src} alt={sponsor.name} className="max-h-12 max-w-[82%] w-auto object-contain" />
                 </div>
               ))}
             </div>
@@ -96,3 +95,4 @@ export default function OurPartnersGrid() {
     </section>
   );
 }
+
