@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ExploreWeek() {
   return (
     <section id="explore-the-week" className="relative w-full py-10 sm:py-14 bg-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center gap-3 mb-12 text-center">
           <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
           <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">

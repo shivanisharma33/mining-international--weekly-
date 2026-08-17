@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function PartnerWithUsBanner() {
   return (
     <section className="w-full bg-[#f8f9fa] dark:bg-[#070a10] py-6 sm:py-8 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1440px] 2xl:max-w-[1536px] mx-auto">
         <div className="relative w-full bg-[#070b14] rounded-2xl border border-white/10 shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 overflow-hidden">
           {/* Subtle Topography Overlay Pattern */}
           <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-5 pointer-events-none"></div>

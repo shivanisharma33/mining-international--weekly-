@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function OurMission() {
   return (
     <section className="w-full bg-white py-10 sm:py-14 md:py-16 border-b border-neutral-100 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Heading & Content */}
           <div className="lg:col-span-4 flex flex-col justify-center">
