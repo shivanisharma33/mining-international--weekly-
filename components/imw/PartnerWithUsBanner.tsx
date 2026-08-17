@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PartnerWithUsBanner() {
   return (
-    <section className="w-full bg-[#f8f9fa] dark:bg-[#070a10] py-8 sm:py-12 px-4 sm:px-6 md:px-8 transition-colors duration-300">
+    <section className="w-full bg-[#f8f9fa] dark:bg-[#070a10] py-6 sm:py-8 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="relative w-full bg-[#070b14] rounded-2xl border border-white/10 shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 overflow-hidden">
           {/* Subtle Topography Overlay Pattern */}

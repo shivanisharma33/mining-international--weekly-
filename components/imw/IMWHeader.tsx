@@ -88,7 +88,7 @@ export default function IMWHeader() {
           </nav>
           <Link href="/register" className="btn-register" style={{ marginLeft: "auto" }}>
             <span>REGISTER NOW</span>
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5" style={{ width: "14px", height: "14px" }}>
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </Link>

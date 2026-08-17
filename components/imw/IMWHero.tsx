@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function IMWHero() {
   return (
-    <section className="relative w-full min-h-[500px] sm:min-h-[560px] flex items-center bg-[#070c16] pt-28 sm:pt-36 pb-24 sm:pb-28">
+    <section className="relative w-full min-h-[480px] sm:min-h-[520px] flex items-center bg-[#070c16] pt-24 sm:pt-28 pb-20 sm:pb-24">
       {/* Background Image & Gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -17,7 +17,7 @@ export default function IMWHero() {
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 w-full text-left">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
         <div className="max-w-3xl">
           <span className="text-white text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
             INTERNATIONAL MINING WEEK

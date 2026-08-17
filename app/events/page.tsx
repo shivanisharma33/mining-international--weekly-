@@ -67,10 +67,10 @@ export default function EventsPage() {
       <IMWHeader />
       <main className="flex flex-col flex-grow w-full bg-white dark:bg-[#070b14]">
         {/* Events Hero */}
-        <section className="relative w-full py-16 sm:py-24 bg-[#090d16] text-white overflow-hidden">
+        <section className="relative w-full py-10 sm:py-14 bg-[#090d16] text-white overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/imw_hero.png')" }}></div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#090d16]/80 via-[#090d16]/95 to-[#090d16]"></div>
-          <div className="relative max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 text-center z-10">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
             <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3">
               15+ PARTNER EVENTS ACROSS THE WEEK
             </span>
@@ -84,7 +84,7 @@ export default function EventsPage() {
         </section>
 
         {/* Events Grid */}
-        <section className="w-full py-12 sm:py-16 px-4 sm:px-6 md:px-8 max-w-[1240px] mx-auto">
+        <section className="w-full py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1f2430] dark:text-white uppercase tracking-wider">
@@ -145,7 +145,7 @@ export default function EventsPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center p-8 bg-neutral-50 dark:bg-[#0d121f] rounded-2xl border border-neutral-200 dark:border-neutral-800">
+          <div className="mt-8 text-center p-8 bg-neutral-50 dark:bg-[#0d121f] rounded-2xl border border-neutral-200 dark:border-neutral-800">
             <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">Ready to Attend?</h3>
             <p className="text-neutral-600 dark:text-neutral-400 text-sm max-w-lg mx-auto mb-6">
               Register now to access all partner events or customize your single event pass.

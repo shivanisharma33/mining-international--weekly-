@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CitySection() {
   return (
-    <section className="relative w-full min-h-[460px] sm:min-h-[500px] flex items-center overflow-hidden bg-neutral-900">
+    <section className="relative w-full min-h-[380px] sm:min-h-[420px] flex items-center overflow-hidden bg-neutral-900">
       {/* Bottom Red Line Accent */}
       <div className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#005B82] rounded-full z-20"></div>
 
@@ -19,8 +19,8 @@ export default function CitySection() {
       <div className="absolute inset-y-0 left-0 w-full sm:w-[65%] lg:w-[50%] bg-gradient-to-r from-white dark:from-[#09090b] via-white/80 dark:via-[#09090b]/90 to-transparent pointer-events-none z-0"></div>
 
       {/* Contact Content Box */}
-      <div className="relative z-10 max-w-[1240px] w-full mx-auto px-4 sm:px-6 md:px-8">
-        <div className="max-w-[440px] flex flex-col items-start text-left py-12">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[440px] flex flex-col items-start text-left py-8 sm:py-10">
           <span className="text-[#005B82] text-xs font-bold tracking-[0.25em] uppercase mb-2 block">
             HAVE A QUESTION?
           </span>

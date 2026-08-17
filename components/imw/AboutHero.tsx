@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full min-h-[480px] sm:min-h-[540px] md:min-h-[580px] flex items-center overflow-hidden bg-[#070c16] pt-32 sm:pt-40 pb-16">
+    <section className="relative w-full min-h-[440px] sm:min-h-[480px] md:min-h-[500px] flex items-center overflow-hidden bg-[#070c16] pt-24 sm:pt-28 pb-10">
       {/* Background Image & Gradient Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-90"
@@ -14,7 +14,7 @@ export default function AboutHero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
           {/* Tagline */}
           <div className="mb-4">

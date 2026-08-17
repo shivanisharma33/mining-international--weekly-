@@ -56,9 +56,15 @@
   }
 
   .wrap {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    .wrap {
+      padding: 0 16px;
+    }
   }
 
   h1,
@@ -252,17 +258,17 @@
   .btn-register {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
     color: #fff;
     font-weight: 700;
-    font-size: 13px;
-    letter-spacing: .06em;
-    padding: 12px 22px;
-    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: .05em;
+    padding: 7px 16px;
+    border-radius: 20px;
     border: none;
     flex-shrink: 0;
-    box-shadow: 0 4px 16px rgba(3, 81, 110, 0.28);
+    box-shadow: 0 3px 12px rgba(3, 81, 110, 0.22);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
   }
@@ -472,8 +478,8 @@
   .info-card {
     position: relative;
     z-index: 5;
-    max-width: 1040px;
-    margin: -92px auto 0;
+    max-width: 1280px;
+    margin: -32px auto 0;
     background: #101a2c;
     border: 1px solid #22314e;
     border-radius: 16px;
@@ -521,7 +527,7 @@
 
   /* ============================================================ EXPLORE */
   .explore {
-    padding: 76px 0 30px;
+    padding: 44px 0 24px;
   }
 
   .sec-title {
@@ -619,7 +625,7 @@
 
   /* ============================================================ FOUNDING PARTNERS */
   .founding {
-    padding: 56px 0 70px;
+    padding: 36px 0 40px;
   }
 
   .fp-grid {
@@ -638,28 +644,32 @@
   }
 
   .fp-logo {
-    height: 120px;
+    height: 95px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .fp-item p {
     font-size: 13.5px;
-    line-height: 1.65;
-    max-width: 280px;
+    line-height: 1.5;
+    max-width: 300px;
     margin: 0 auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   /* ============================================================ STAY CONNECTED */
   .connect {
-    padding: 50px 30px 30px 30px;
+    padding: 30px 24px 20px 24px;
   }
 
   .connect-band {
     position: relative;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     background: radial-gradient(120% 160% at 88% 10%, #0d3b52 0%, #072432 42%, #101a2c 100%);
     border-radius: 18px;
@@ -755,7 +765,7 @@
   footer.site {
     background: var(--navy);
     color: #a9b2c2;
-    margin-top: 70px;
+    margin-top: 40px;
   }
 
   .ft {

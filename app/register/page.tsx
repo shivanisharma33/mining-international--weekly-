@@ -66,7 +66,7 @@ export default function RegisterPage() {
       <main className="flex flex-col flex-grow w-full bg-white font-[family-name:var(--font-roboto)] font-sans">
         {/* ===== HERO WITH IMAGE ===== */}
         <section
-          className="relative w-full overflow-hidden pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20"
+          className="relative w-full overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12"
         >
           {/* Background Image */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -79,7 +79,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
               <div>
                 <span className="text-white/80 text-xs font-black tracking-[0.25em] uppercase mb-3 block">
@@ -109,8 +109,8 @@ export default function RegisterPage() {
         </section>
 
         {/* ===== TRACK CARDS — WHITE ===== */}
-        <section className="relative w-full py-14 sm:py-18 bg-white">
-          <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
+        <section className="relative w-full py-8 sm:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-[#0a2540] text-xs font-bold tracking-[0.25em] uppercase mb-2 block">
                 CHOOSE YOUR PARTICIPATION TRACK
@@ -238,10 +238,10 @@ export default function RegisterPage() {
         {/* ===== FORM SECTION — LIGHT BLUE ===== */}
         <section
           id="registration-form-section"
-          className="relative w-full py-16 sm:py-20 md:py-24 border-t border-[#0a2540]/10"
+          className="relative w-full py-10 sm:py-14 md:py-16 border-t border-[#0a2540]/10"
           style={{ background: "linear-gradient(180deg, #dce5ed 0%, #f0f8fc 50%, #ffffff 100%)" }}
         >
-          <div className="max-w-[860px] mx-auto px-4 sm:px-6 md:px-8">
+          <div className="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
             {/* Form Track Switch Buttons */}
             <div className="flex justify-center gap-3 mb-10">
               <button
@@ -717,8 +717,8 @@ export default function RegisterPage() {
         </section>
 
         {/* ===== POLICIES — BLUE ===== */}
-        <section className="relative w-full py-12 sm:py-16 bg-white border-t border-[#0a2540]/10">
-          <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
+        <section className="relative w-full py-8 sm:py-10 bg-white border-t border-[#0a2540]/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div
               className="text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden"
               style={{ background: "linear-gradient(135deg, #0a2540 0%, #0d3b66 50%, #14507a 100%)" }}

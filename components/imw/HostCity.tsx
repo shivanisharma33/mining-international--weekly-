@@ -80,8 +80,8 @@ export default function HostCity() {
   ];
 
   return (
-    <section className="relative w-full bg-white border-b border-neutral-200/60 py-12 sm:py-16 lg:py-20 overflow-hidden">
-      <div className="max-w-[1360px] mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
+    <section className="relative w-full bg-white border-b border-neutral-200/60 py-8 sm:py-12 lg:py-14 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Side: Straight Rectangular Image Container (No curve/rounded corners) */}
           <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[360px] lg:h-[420px] overflow-hidden">
@@ -95,17 +95,17 @@ export default function HostCity() {
           </div>
 
           {/* Right Side: Text Content with Equal Vertical Spacing */}
-          <div className="lg:col-span-7 flex flex-col justify-center text-left space-y-6 pl-0 lg:pl-4">
+          <div className="lg:col-span-7 flex flex-col justify-center text-left space-y-3.5 pl-0 lg:pl-4">
             {/* Block 1: Eyebrow Label with Top Accent Line */}
-            <div className="mb-4">
-              <div className="w-10 h-[1.5px] bg-[#005B82] mb-2.5"></div>
+            <div>
+              <div className="w-10 h-[1.5px] bg-[#005B82] mb-1.5"></div>
               <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
                 OUR HOST CITY
               </span>
             </div>
 
             {/* Block 2: Main Headline */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#131720] tracking-tight leading-[1.08]">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-[#131720] tracking-tight leading-snug">
               Québec City <br />
               <span>A World-Class Destination</span>
             </h2>
@@ -116,20 +116,20 @@ export default function HostCity() {
             </p>
 
             {/* Block 4: Equal 4-Feature Row with Dividers & Equal Spacing */}
-            <div className="pt-2">
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 gap-x-0 w-full divide-y sm:divide-y-0 sm:divide-x divide-neutral-200/90 pt-4 border-t border-neutral-100 sm:border-t-0">
+            <div className="pt-1">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-3 gap-x-0 w-full divide-y sm:divide-y-0 sm:divide-x divide-neutral-200/90 pt-3 border-t border-neutral-100 sm:border-t-0">
                 {highlights.map((item, idx) => (
                   <div
                     key={idx}
-                    className={`flex items-center gap-3 py-1 ${idx === 0
-                        ? "sm:pr-4"
+                    className={`flex items-center gap-1.5 py-1 ${idx === 0
+                        ? "sm:pr-3"
                         : idx === highlights.length - 1
-                          ? "sm:pl-4"
-                          : "sm:px-4"
+                          ? "sm:pl-3"
+                          : "sm:px-3"
                       }`}
                   >
                     {item.icon}
-                    <div className="flex flex-col text-xs sm:text-sm font-extrabold text-[#131720] leading-tight">
+                    <div className="flex flex-col text-xs sm:text-sm font-normal text-[#131720] leading-snug">
                       <span>{item.line1}</span>
                       <span>{item.line2}</span>
                     </div>

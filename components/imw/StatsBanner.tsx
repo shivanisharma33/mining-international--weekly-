@@ -3,8 +3,8 @@ import React from "react";
 export default function StatsBanner() {
   return (
     <div className="relative z-30 w-full bg-white">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
-        <div className="-mt-16 sm:-mt-20 mb-4 sm:mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="-mt-6 sm:-mt-8 mb-4 sm:mb-8">
           <div className="bg-[#0b1424] border border-slate-700/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-800/80">
               {/* Item 1: Date */}

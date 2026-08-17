@@ -251,11 +251,18 @@ export default function AgendaView() {
           className="hero-art absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="hero-scrim"></div>
-        <div className="wrap ag-hero-inner relative z-10">
-          <div className="eyebrow">AGENDA</div>
-          <h1>IMW 2026 Agenda</h1>
-          <p className="pt-dek">Explore the full schedule of sessions, keynotes, panels, and networking events.</p>
-          <div className="ag-hero-btns">
+        <div className="wrap ag-hero-inner relative z-10 py-16 sm:py-20">
+          <span className="text-white text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-3">
+            AGENDA
+          </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
+            IMW 2026 Agenda
+          </h1>
+          <div className="w-14 h-[3px] bg-[#005B82] my-4 rounded-full"></div>
+          <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
+            Explore the full schedule of sessions, keynotes, panels, and networking events.
+          </p>
+          <div className="ag-hero-btns flex flex-wrap items-center gap-3">
             <a className="btn-red" href="#agPdf">
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
                 <rect x="4" y="5" width="16" height="15" rx="2" />
@@ -276,9 +283,9 @@ export default function AgendaView() {
 
 
       {/* AGENDA MAIN */}
-      <section className="agenda-main py-10 sm:py-16">
+      <section className="agenda-main py-6 sm:py-10">
         {/* STANDALONE WIDE FEATURED EVENT CARD (Matches Image 1) */}
-        <div className="wrap mb-12 sm:mb-16">
+        <div className="wrap mb-8 sm:mb-10">
           <div className="feat-card">
             <div className="fc-img">
               <RenderArt theme={featured.art} src={featured.img} />
@@ -336,21 +343,21 @@ export default function AgendaView() {
 
 
         {/* OFFICIAL SCHEDULE — PDF Section */}
-        <div className="wrap ag-pdf mt-16 sm:mt-24" id="agPdf">
+        <div className="wrap ag-pdf mt-8 sm:mt-12" id="agPdf">
           <div className="sec-title">
             <h2>OFFICIAL SCHEDULE — PDF</h2>
           </div>
-          <p className="ag-tickets">
+          <p className="text-center text-xs sm:text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-6 whitespace-nowrap overflow-x-auto">
             Tickets for THE Mining Investment Event, ITFA and QMA are available at{" "}
-            <a href="https://www.internationalminingweek.com" target="_blank" rel="noopener">
+            <a href="https://www.internationalminingweek.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
               internationalminingweek.com
             </a>
             ,{" "}
-            <a href="https://www.itfa.com" target="_blank" rel="noopener">
+            <a href="https://www.itfa.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
               itfa.com
             </a>{" "}
             and{" "}
-            <a href="https://www.amq.ca" target="_blank" rel="noopener">
+            <a href="https://www.amq.ca" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
               amq.ca
             </a>
             .
@@ -433,28 +440,6 @@ export default function AgendaView() {
                 />
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Experience Plan Band */}
-        <div className="wrap mt-12 sm:mt-16">
-          <div className="plan-band">
-            <div className="plan-ic">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.6" strokeLinecap="round">
-                <rect x="4" y="5" width="16" height="15" rx="2" />
-                <path d="M4 9.5h16M8 3v4M16 3v4M8 13.5h2M11 13.5h2M14 13.5h2M8 16.5h2M11 16.5h2" />
-              </svg>
-            </div>
-            <div className="plan-copy">
-              <h3>Plan Your IMW Experience</h3>
-              <p>Build your personalized agenda and make the most of your week in Québec City.</p>
-            </div>
-            <button className="btn-outline-red" onClick={handleDownloadPdf}>
-              VIEW FULL SCHEDULE (PDF){" "}
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 4v11M7.5 11.5L12 16l4.5-4.5M5 19.5h14" />
-              </svg>
-            </button>
           </div>
         </div>
       </section>
