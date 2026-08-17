@@ -66,29 +66,30 @@ export default function RegisterPage() {
       <main className="flex flex-col flex-grow w-full bg-white font-[family-name:var(--font-roboto)] font-sans">
         {/* ===== HERO WITH IMAGE ===== */}
         <section
-          className="relative w-full overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12"
+          className="relative w-full min-h-[480px] sm:min-h-[520px] flex items-center bg-[#070c16] pt-24 sm:pt-28 pb-20 sm:pb-24 overflow-hidden"
         >
-          {/* Background Image */}
+          {/* Background Image & Gradients */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/register_hero.png')" }}
+              className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-95"
+              style={{ backgroundImage: "url('/imw_hero.png')" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0a2540] via-[#0a2540]/85 to-[#0a2540]/50"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a2540] via-[#0d3b66]/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#070c16] via-[#0d1726]/90 to-transparent max-w-[70%]"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070c16] via-[#03516E]/20 to-transparent"></div>
+              <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#03516E]/30 blur-3xl rounded-full pointer-events-none"></div>
             </div>
           </div>
 
-          <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
+          <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
               <div>
-                <span className="text-white/80 text-xs font-black tracking-[0.25em] uppercase mb-3 block">
+                <span className="text-slate-300 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 block">
                   SAVE THE DATE — INVITATION ONLY
                 </span>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-none uppercase">
-                  Registration <span className="text-white/70">Portal</span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1]">
+                  Registration Portal
                 </h1>
-                <div className="w-20 h-[3.5px] bg-white/60 mt-6 rounded-full"></div>
+                <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
               </div>
 
               <div className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 max-w-md shrink-0">

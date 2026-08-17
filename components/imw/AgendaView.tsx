@@ -244,38 +244,47 @@ export default function AgendaView() {
   return (
     <div className="pview on" id="pv-agenda">
       {/* AGENDA HERO */}
-      <section className="ab-hero relative overflow-hidden">
-        <img
-          src="/imw_hero.png"
-          alt="International Mining Week Event Hero"
-          className="hero-art absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="hero-scrim"></div>
-        <div className="wrap ag-hero-inner relative z-10 py-16 sm:py-20">
-          <span className="text-white text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-3">
-            AGENDA
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
-            IMW 2026 Agenda
-          </h1>
-          <div className="w-14 h-[3px] bg-[#005B82] my-4 rounded-full"></div>
-          <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
-            Explore the full schedule of sessions, keynotes, panels, and networking events.
-          </p>
-          <div className="ag-hero-btns flex flex-wrap items-center gap-3">
-            <a className="btn-red" href="#agPdf">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-                <rect x="4" y="5" width="16" height="15" rx="2" />
-                <path d="M4 9.5h16M8 3v4M16 3v4" />
-              </svg>{" "}
-              VIEW FULL SCHEDULE (PDF)
-            </a>
-            <button className="btn-ghost" onClick={handleDownloadPdf}>
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 4v11M7.5 11.5L12 16l4.5-4.5M5 19.5h14" />
-              </svg>{" "}
-              DOWNLOAD AGENDA
-            </button>
+      <section className="relative w-full min-h-[480px] sm:min-h-[520px] flex items-center bg-[#070c16] pt-24 sm:pt-28 pb-20 sm:pb-24 overflow-hidden">
+        {/* Background Image & Gradients */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-95"
+            style={{ backgroundImage: "url('/imw_hero.png')" }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070c16] via-[#0d1726]/90 to-transparent max-w-[70%]"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070c16] via-[#03516E]/20 to-transparent"></div>
+            <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#03516E]/30 blur-3xl rounded-full pointer-events-none"></div>
+          </div>
+        </div>
+
+        {/* Hero Content Container */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full text-left">
+          <div className="max-w-3xl">
+            <span className="text-slate-300 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
+              AGENDA
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
+              IMW 2026 Agenda
+            </h1>
+            <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
+            <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
+              Explore the full schedule of sessions, keynotes, panels, and networking events.
+            </p>
+            <div className="ag-hero-btns flex flex-wrap items-center gap-3">
+              <a className="btn-red" href="#agPdf">
+                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
+                  <rect x="4" y="5" width="16" height="15" rx="2" />
+                  <path d="M4 9.5h16M8 3v4M16 3v4" />
+                </svg>{" "}
+                VIEW FULL SCHEDULE (PDF)
+              </a>
+              <button className="btn-ghost" onClick={handleDownloadPdf}>
+                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 4v11M7.5 11.5L12 16l4.5-4.5M5 19.5h14" />
+                </svg>{" "}
+                DOWNLOAD AGENDA
+              </button>
+            </div>
           </div>
         </div>
       </section>

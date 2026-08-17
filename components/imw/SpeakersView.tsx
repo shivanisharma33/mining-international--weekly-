@@ -271,51 +271,65 @@ export default function SpeakersView() {
   return (
     <div className="pview on" id="pv-speakers">
       {/* SPEAKERS HERO */}
-      <section className="ab-hero sp-hero relative overflow-hidden">
-        <img
-          src="/imw_hero.png"
-          alt="International Mining Week Speakers Hero"
-          className="hero-art absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="hero-scrim"></div>
-        <div className="wrap sp-hero-inner relative z-10">
-          <div className="eyebrow">SPEAKERS</div>
-          <h1>
-            Global Leaders.<br />
-            <span className="rd">Insightful Perspectives.</span>
-          </h1>
-          <p className="pt-dek">Explore the lineup of industry leaders, experts, and visionaries shaping the future of mining.</p>
-          <div className="pt-mini">
-            <div className="pt-mini-item">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round">
-                <circle cx="12" cy="8" r="3.4" />
-                <path d="M5.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5" />
-              </svg>
-              <div>
-                <b>100+</b>
-                <p>Industry Leaders</p>
+      <section className="relative w-full min-h-[480px] sm:min-h-[520px] flex items-center bg-[#070c16] pt-24 sm:pt-28 pb-20 sm:pb-24 overflow-hidden">
+        {/* Background Image & Gradients */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-95"
+            style={{ backgroundImage: "url('/imw_hero.png')" }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070c16] via-[#0d1726]/90 to-transparent max-w-[70%]"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070c16] via-[#03516E]/20 to-transparent"></div>
+            <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-[#03516E]/30 blur-3xl rounded-full pointer-events-none"></div>
+          </div>
+        </div>
+
+        {/* Hero Content Container */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full text-left">
+          <div className="max-w-3xl">
+            <span className="text-slate-300 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
+              SPEAKERS
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
+              Global Leaders.<br />
+              <span>Insightful Perspectives.</span>
+            </h1>
+            <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
+            <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
+              Explore the lineup of industry leaders, experts, and visionaries shaping the future of mining.
+            </p>
+            <div className="pt-mini flex flex-wrap items-center gap-6 pt-2">
+              <div className="pt-mini-item flex items-center gap-3">
+                <svg className="w-6 h-6 text-[#005B82] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+                  <circle cx="12" cy="8" r="3.4" />
+                  <path d="M5.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5" />
+                </svg>
+                <div>
+                  <b className="text-white text-base font-bold block">100+</b>
+                  <p className="text-neutral-300 text-xs">Industry Leaders</p>
+                </div>
               </div>
-            </div>
-            <div className="pt-mini-item">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18" />
-              </svg>
-              <div>
-                <b>15+</b>
-                <p>Countries Represented</p>
+              <div className="pt-mini-item flex items-center gap-3">
+                <svg className="w-6 h-6 text-[#005B82] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18" />
+                </svg>
+                <div>
+                  <b className="text-white text-base font-bold block">15+</b>
+                  <p className="text-neutral-300 text-xs">Countries Represented</p>
+                </div>
               </div>
-            </div>
-            <div className="pt-mini-item">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round">
-                <circle cx="9" cy="8" r="3.2" />
-                <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
-                <circle cx="16.5" cy="9" r="2.6" />
-                <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
-              </svg>
-              <div>
-                <b>Diverse Perspectives</b>
-                <p>Across the Mining Value Chain</p>
+              <div className="pt-mini-item flex items-center gap-3">
+                <svg className="w-6 h-6 text-[#005B82] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+                  <circle cx="9" cy="8" r="3.2" />
+                  <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
+                  <circle cx="16.5" cy="9" r="2.6" />
+                  <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
+                </svg>
+                <div>
+                  <b className="text-white text-base font-bold block">Diverse Perspectives</b>
+                  <p className="text-neutral-300 text-xs">Across the Mining Value Chain</p>
+                </div>
               </div>
             </div>
           </div>
