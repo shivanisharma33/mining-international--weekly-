@@ -79,7 +79,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          <div className="relative z-10 max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="relative z-10 max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
               <div>
                 <span className="text-white/80 text-xs font-black tracking-[0.25em] uppercase mb-3 block">
@@ -110,7 +110,7 @@ export default function RegisterPage() {
 
         {/* ===== TRACK CARDS — WHITE ===== */}
         <section className="relative w-full py-8 sm:py-12 bg-white">
-          <div className="max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-[#0a2540] text-xs font-bold tracking-[0.25em] uppercase mb-2 block">
                 CHOOSE YOUR PARTICIPATION TRACK
@@ -125,8 +125,8 @@ export default function RegisterPage() {
               {/* Card 01: Investor Registration */}
               <div
                 className={`group bg-white border rounded-3xl p-8 sm:p-10 shadow-sm transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${activeTrack === "investor"
-                    ? "border-[#0a2540] ring-2 ring-[#0a2540]/20 shadow-xl"
-                    : "border-neutral-200 hover:border-[#0a2540]/40"
+                  ? "border-[#0a2540] ring-2 ring-[#0a2540]/20 shadow-xl"
+                  : "border-neutral-200 hover:border-[#0a2540]/40"
                   }`}
               >
                 <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#0a2540]"></div>
@@ -169,8 +169,8 @@ export default function RegisterPage() {
                 <button
                   onClick={() => handleTrackSwitch("investor")}
                   className={`w-full py-4 rounded-2xl text-xs font-extrabold tracking-[0.15em] uppercase text-center transition-all duration-300 shadow-md ${activeTrack === "investor"
-                      ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20"
-                      : "bg-[#dce5ed] text-[#0a2540] hover:bg-[#0a2540] hover:text-white"
+                    ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20"
+                    : "bg-[#dce5ed] text-[#0a2540] hover:bg-[#0a2540] hover:text-white"
                     }`}
                 >
                   Register as Investor
@@ -180,8 +180,8 @@ export default function RegisterPage() {
               {/* Card 02: Company Registration */}
               <div
                 className={`group bg-white border rounded-3xl p-8 sm:p-10 shadow-sm transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${activeTrack === "company"
-                    ? "border-[#0a2540] ring-2 ring-[#0a2540]/20 shadow-xl"
-                    : "border-neutral-200 hover:border-[#0a2540]/40"
+                  ? "border-[#0a2540] ring-2 ring-[#0a2540]/20 shadow-xl"
+                  : "border-neutral-200 hover:border-[#0a2540]/40"
                   }`}
               >
                 <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#0a2540]/40 group-hover:bg-[#0a2540] transition-colors"></div>
@@ -224,8 +224,8 @@ export default function RegisterPage() {
                 <button
                   onClick={() => handleTrackSwitch("company")}
                   className={`w-full py-4 rounded-2xl text-xs font-extrabold tracking-[0.15em] uppercase text-center transition-all duration-300 shadow-md ${activeTrack === "company"
-                      ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20"
-                      : "bg-[#dce5ed] text-[#0a2540] hover:bg-[#0a2540] hover:text-white"
+                    ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20"
+                    : "bg-[#dce5ed] text-[#0a2540] hover:bg-[#0a2540] hover:text-white"
                     }`}
                 >
                   Register a Company
@@ -250,8 +250,8 @@ export default function RegisterPage() {
                   setSubmitted(false);
                 }}
                 className={`px-6 py-3 rounded-2xl text-xs font-black uppercase tracking-wider transition-all duration-300 ${activeTrack === "investor"
-                    ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20 scale-105"
-                    : "bg-white text-[#0a2540] border border-[#0a2540]/20 hover:bg-[#0a2540]/5"
+                  ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20 scale-105"
+                  : "bg-white text-[#0a2540] border border-[#0a2540]/20 hover:bg-[#0a2540]/5"
                   }`}
               >
                 Investor Registration Form
@@ -262,8 +262,8 @@ export default function RegisterPage() {
                   setSubmitted(false);
                 }}
                 className={`px-6 py-3 rounded-2xl text-xs font-black uppercase tracking-wider transition-all duration-300 ${activeTrack === "company"
-                    ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20 scale-105"
-                    : "bg-white text-[#0a2540] border border-[#0a2540]/20 hover:bg-[#0a2540]/5"
+                  ? "bg-[#0a2540] text-white shadow-lg shadow-[#0a2540]/20 scale-105"
+                  : "bg-white text-[#0a2540] border border-[#0a2540]/20 hover:bg-[#0a2540]/5"
                   }`}
               >
                 Company Registration Form
@@ -718,7 +718,7 @@ export default function RegisterPage() {
 
         {/* ===== POLICIES — BLUE ===== */}
         <section className="relative w-full py-8 sm:py-10 bg-white border-t border-[#0a2540]/10">
-          <div className="max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
             <div
               className="text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden"
               style={{ background: "linear-gradient(135deg, #0a2540 0%, #0d3b66 50%, #14507a 100%)" }}

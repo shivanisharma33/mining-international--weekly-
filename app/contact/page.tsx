@@ -29,7 +29,7 @@ export default function ContactPage() {
         <section className="relative w-full py-10 sm:py-14 bg-[#090d16] text-white overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/quebec_city_host.png')" }}></div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#090d16]/80 via-[#090d16]/95 to-[#090d16]"></div>
-          <div className="relative max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10 text-center z-10">
+          <div className="relative max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16 text-center z-10">
             <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3">
               GET IN TOUCH
             </span>
@@ -43,7 +43,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Cards & Form */}
-        <section className="w-full py-8 sm:py-10 px-6 sm:px-8 lg:px-10 max-w-[1340px] mx-auto">
+        <section className="w-full py-8 sm:py-10 px-6 sm:px-10 lg:px-16 max-w-[1340px] mx-auto">
           {/* Quick Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-neutral-50 dark:bg-[#0d121f] p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 flex items-start gap-4">

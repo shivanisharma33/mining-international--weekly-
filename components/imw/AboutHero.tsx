@@ -14,7 +14,7 @@ export default function AboutHero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10 w-full">
+      <div className="relative z-10 max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16 w-full">
         <div className="max-w-3xl">
           {/* Tagline */}
           <div className="mb-4">

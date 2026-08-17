@@ -19,7 +19,7 @@ export default function CitySection() {
       <div className="absolute inset-y-0 left-0 w-full sm:w-[65%] lg:w-[50%] bg-gradient-to-r from-white dark:from-[#09090b] via-white/80 dark:via-[#09090b]/90 to-transparent pointer-events-none z-0"></div>
 
       {/* Contact Content Box */}
-      <div className="relative z-10 max-w-[1340px] w-full mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="relative z-10 max-w-[1340px] w-full mx-auto px-6 sm:px-10 lg:px-16">
         <div className="max-w-[440px] flex flex-col items-start text-left py-8 sm:py-10">
           <span className="text-[#005B82] text-xs font-bold tracking-[0.25em] uppercase mb-2 block">
             HAVE A QUESTION?
