@@ -3479,18 +3479,161 @@
     display: block;
   }
 
+  /* ============================================================ RESPONSIVE MEDIA QUERIES */
   @media (max-width: 1024px) {
+    nav.main {
+      display: none;
+    }
+
+    .burger {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .btn-register {
+      margin-left: 0 !important;
+    }
+
+    .explore-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .feat-spk-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
+  @media (max-width: 900px) {
+    .ft {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 36px 0 24px;
+    }
+
+    .ft-bottom-inner {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .fp-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .fp-item + .fp-item {
+      border-left: none;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .fp-item {
+      padding: 0 16px;
+    }
+
+    .info-card {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px 16px;
+      margin-top: 20px;
+    }
+
+    .ic-item + .ic-item {
+      border-left: none;
+      border-top: 1px solid #22314e;
+      padding-top: 16px;
+      padding-left: 0;
+    }
+
+    .ic-item {
+      padding: 0;
+    }
+
+    .feat-card {
+      grid-template-columns: 1fr;
+    }
+
+    .feat-card .fc-img {
+      min-height: 240px;
+    }
+
+    .fc-body {
+      padding: 20px 18px;
+    }
+
+    .spk-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .spk-search {
+      margin-left: 0;
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
   @media (max-width: 640px) {
+    .util-item:nth-child(2),
+    .util-item:nth-child(3) {
+      display: none;
+    }
+
+    .util-inner {
+      height: 36px;
+    }
+
+    .hdr {
+      height: 64px;
+      gap: 12px;
+    }
+
+    .imw-logo-box {
+      padding: 4px 10px 5px 10px;
+    }
+
+    .imw-logo-top {
+      font-size: 14px;
+    }
+
+    .imw-logo-bottom {
+      font-size: 11px;
+    }
+
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .connect-band {
+      padding: 24px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .cn-cta {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .cn-register-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
     .feat-spk-grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
     .spk-rows {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .feat-spk-grid {
       grid-template-columns: 1fr;
     }
   }
