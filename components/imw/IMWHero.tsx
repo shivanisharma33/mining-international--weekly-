@@ -17,7 +17,7 @@ export default function IMWHero() {
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-[1440px] 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
+      <div className="relative z-10 max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10 w-full text-left">
         <div className="max-w-3xl">
           <span className="text-white text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
             INTERNATIONAL MINING WEEK

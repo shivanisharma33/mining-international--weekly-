@@ -42,7 +42,7 @@ export default function IMWByTheNumbers() {
 
   return (
     <section className="w-full bg-[#06090e] text-white py-8 sm:py-10 border-y border-white/10 overflow-hidden">
-      <div className="max-w-[1440px] 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1340px] mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           {/* Left Title Label */}
           <div className="lg:col-span-3">
