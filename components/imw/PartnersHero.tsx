@@ -66,7 +66,7 @@ export default function PartnersHero() {
 
           {/* Body Paragraph */}
           <p className="text-neutral-200 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl mb-8">
-            Our partners play a vital role in making International Mining Week the leading global platform for the mining industry.
+            Our partners play a vital role in making International Mining Week the leading global platform for the mining{"\u00a0"}industry.
           </p>
 
           {/* Action Button for Sponsors PDF */}

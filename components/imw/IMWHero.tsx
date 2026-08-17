@@ -28,7 +28,7 @@ export default function IMWHero() {
           </h1>
           <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
           <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
-            The global mining industry comes together in Quebec City for a week of events, connections and opportunities.
+            The global mining industry comes together in Quebec City for a week of events, connections and{"\u00a0"}opportunities.
           </p>
 
           {/* Action Buttons */}

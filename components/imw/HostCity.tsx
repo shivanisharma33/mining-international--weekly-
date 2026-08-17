@@ -97,11 +97,12 @@ export default function HostCity() {
           {/* Right Side: Text Content with Equal Vertical Spacing */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left space-y-3.5 pl-0 lg:pl-4">
             {/* Block 1: Eyebrow Label with Top Accent Line */}
-            <div>
-              <div className="w-10 h-[1.5px] bg-[#005B82] mb-1.5"></div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
               <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
                 OUR HOST CITY
               </span>
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             </div>
 
             {/* Block 2: Main Headline */}

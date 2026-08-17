@@ -18,7 +18,7 @@ export default function FoundingPartners() {
                 <img src="/founding_amq.png" alt="Association minière du Québec" className="h-[75px] max-w-[210px] w-auto object-contain" />
               </a>
             </div>
-            <p>Representing Québec&apos;s mining industry and supporting a responsible, sustainable future.</p>
+            <p>Representing Québec&apos;s mining industry and supporting a responsible, sustainable{"\u00a0"}future.</p>
           </div>
           <div className="fp-item">
             <div className="fp-logo">
@@ -26,7 +26,7 @@ export default function FoundingPartners() {
                 <img src="/founding_itfa.png" alt="ITFA" className="h-[75px] max-w-[210px] w-auto object-contain" />
               </a>
             </div>
-            <p>Advancing trade, investment, and development across the global extractive sector.</p>
+            <p>Advancing trade, investment and development across the global extractive{"\u00a0"}sector.</p>
           </div>
           <div className="fp-item">
             <div className="fp-logo">
@@ -34,7 +34,7 @@ export default function FoundingPartners() {
                 <img src="/founding_the_event.png" alt="THE Mining Investment Event" className="h-[75px] max-w-[210px] w-auto object-contain" />
               </a>
             </div>
-            <p>Connecting global investors, mining companies, and strategic industry opportunities.</p>
+            <p>Connecting global investors, mining companies and strategic industry{"\u00a0"}opportunities.</p>
           </div>
         </div>
       </div>

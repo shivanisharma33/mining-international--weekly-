@@ -9,11 +9,12 @@ export default function OurMission() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Heading & Content */}
           <div className="lg:col-span-4 flex flex-col justify-center">
-            <div className="mb-3">
-              <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+              <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
                 OUR MISSION
               </span>
-              <div className="w-8 h-[2px] bg-[#005B82] mt-2"></div>
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 tracking-tight leading-[1.1] my-4">
@@ -34,7 +35,7 @@ export default function OurMission() {
             </p>
 
             <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-6">
-              This unique partnership aims to unite global mining firms, related industries, supply chain specialists, investors, and governmental representatives.
+              This unique partnership aims to unite global mining firms, related industries, supply chain specialists, investors and governmental{"\u00a0"}representatives.
             </p>
 
             <div>

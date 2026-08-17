@@ -102,7 +102,7 @@ export default function RegisterPage() {
                 </div>
                 <div className="text-xl sm:text-2xl font-black text-white">June 1–5, 2026</div>
                 <p className="text-white/70 text-xs mt-2 leading-relaxed font-normal">
-                  Canada&apos;s invitation-only Tier 1 Conference for mining companies, accredited investors, family offices, institutions, and funds.
+                  Canada&apos;s invitation-only Tier 1 Conference for mining companies, accredited investors, family offices, institutions and{"\u00a0"}funds.
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function RegisterPage() {
                     Company Registration
                   </h3>
                   <p className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-8">
-                    Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices, and funds.
+                    Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices and{"\u00a0"}funds.
                   </p>
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center gap-3 text-xs sm:text-sm font-bold text-neutral-800">
@@ -685,7 +685,7 @@ export default function RegisterPage() {
                         maxLength={5000}
                         value={companyForm.description}
                         onChange={(e) => setCompanyForm({ ...companyForm, description: e.target.value })}
-                        placeholder="Briefly describe your company, flagship projects, and market focus..."
+                        placeholder="Briefly describe your company, flagship projects and market focus..."
                         className="w-full px-4 py-3.5 rounded-xl border border-neutral-300 focus:border-[#0a2540] focus:ring-2 focus:ring-[#0a2540]/20 text-neutral-900 bg-white text-xs sm:text-sm font-medium outline-none transition-all resize-y"
                       ></textarea>
                     </div>

@@ -49,11 +49,12 @@ export default function WhyAttend() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Header Column */}
           <div className="lg:col-span-4 flex flex-col justify-center">
-            <div className="mb-2">
-              <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+              <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
                 WHY ATTEND
               </span>
-              <div className="w-8 h-[2px] bg-[#005B82] mt-1.5"></div>
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-900 dark:text-white tracking-tight leading-[1.08] my-4">

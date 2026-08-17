@@ -268,7 +268,7 @@ export default function AgendaView() {
             </h1>
             <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
             <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
-              Explore the full schedule of sessions, keynotes, panels, and networking events.
+              Explore the full schedule of sessions, keynotes, panels and networking{"\u00a0"}events.
             </p>
             <div className="ag-hero-btns flex flex-wrap items-center gap-3">
               <a className="btn-red" href="#agPdf">

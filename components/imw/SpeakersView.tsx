@@ -292,11 +292,11 @@ export default function SpeakersView() {
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
               Global Leaders.<br />
-              <span>Insightful Perspectives.</span>
+              <span className="whitespace-nowrap">Insightful Perspectives.</span>
             </h1>
             <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
             <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
-              Explore the lineup of industry leaders, experts, and visionaries shaping the future of mining.
+              Explore the lineup of industry leaders, experts and visionaries shaping the future of{"\u00a0"}mining.
             </p>
             <div className="pt-mini flex flex-wrap items-center gap-6 pt-2">
               <div className="pt-mini-item flex items-center gap-3">
@@ -384,14 +384,6 @@ export default function SpeakersView() {
                     <h3>{s.n}</h3>
                     <div className="spk-title">{s.t}</div>
                     <div className="spk-org">{s.o}</div>
-                    <div className="spk-in">
-                      <a href="#" aria-label={`LinkedIn — ${s.n}`}>
-                        <svg viewBox="0 0 24 24" strokeWidth="1.8" strokeLinejoin="round">
-                          <rect x="4" y="4" width="16" height="16" rx="2" />
-                          <path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0" strokeLinecap="round" />
-                        </svg>
-                      </a>
-                    </div>
                   </article>
                 ))}
               </div>
@@ -438,29 +430,6 @@ export default function SpeakersView() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-          </div>
-
-          <div className="partner-cta">
-            <div className="pc-band">
-              <div className="pc-icon">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round">
-                  <circle cx="9" cy="8" r="3.2" />
-                  <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
-                  <circle cx="16.5" cy="9" r="2.6" />
-                  <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
-                </svg>
-              </div>
-              <div className="pc-copy">
-                <h3>Be Part of the Conversation</h3>
-                <p>Join world-class experts and industry leaders for a week of insightful discussions and forward-looking ideas.</p>
-              </div>
-              <a className="btn-ghost-gold" href="#">
-                REGISTER NOW{" "}
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </section>

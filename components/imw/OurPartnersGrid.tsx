@@ -23,10 +23,12 @@ export default function OurPartnersGrid() {
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="flex items-center justify-center mb-3">
+          <div className="flex items-center justify-center gap-3 mb-3 text-center">
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
               OUR PARTNERS
             </h2>
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
           </div>
 
           <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
@@ -36,10 +38,12 @@ export default function OurPartnersGrid() {
 
         {/* TIER 1: FOUNDING PARTNERS */}
         <div className="mb-16">
-          <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8 text-center">
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             <h3 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
               FOUNDING PARTNERS
             </h3>
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
@@ -63,10 +67,12 @@ export default function OurPartnersGrid() {
 
         {/* TIER 2: DIAMOND SPONSORS */}
         <div>
-          <div className="flex items-center justify-center my-10">
+          <div className="flex items-center justify-center gap-3 my-10 text-center">
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             <h3 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
               DIAMOND SPONSORS
             </h3>
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
           </div>
 
           {/* Auto-scrolling Slider */}

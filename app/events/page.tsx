@@ -12,7 +12,7 @@ export default function EventsPage() {
       date: "June 1 - 3, 2026",
       location: "Château Frontenac & Convention Centre",
       description:
-        "Canada’s premier mining investment event connecting global investors, mining executives, corporate leaders, and government representatives.",
+        "Canada’s premier mining investment event connecting global investors, mining executives, corporate leaders and government representatives.",
       tag: "Featured Event",
     },
     {
@@ -21,7 +21,7 @@ export default function EventsPage() {
       date: "June 2 - 4, 2026",
       location: "Québec City Convention Centre",
       description:
-        "Bringing together key industry leaders to discuss sustainable mining practices, regulatory frameworks, innovation, and community relations.",
+        "Bringing together key industry leaders to discuss sustainable mining practices, regulatory frameworks, innovation and community relations.",
       tag: "Founding Partner Event",
     },
     {
@@ -30,7 +30,7 @@ export default function EventsPage() {
       date: "June 3, 2026",
       location: "Convention Centre - Main Hall",
       description:
-        "Exploring resilient procurement strategies, green logistics, technology integration, and critical mineral supply chain security.",
+        "Exploring resilient procurement strategies, green logistics, technology integration and critical mineral supply chain security.",
       tag: "Special Forum",
     },
     {
@@ -39,7 +39,7 @@ export default function EventsPage() {
       date: "June 4, 2026",
       location: "Innovation Pavilion",
       description:
-        "Showcasing next-generation clean tech, electrification of mining fleets, AI in exploration, and zero-emission mining operations.",
+        "Showcasing next-generation clean tech, electrification of mining fleets, AI in exploration and zero-emission mining operations.",
       tag: "Tech Summit",
     },
     {
@@ -57,7 +57,7 @@ export default function EventsPage() {
       date: "June 4, 2026 (Evening)",
       location: "Grand Ballroom, Québec Convention Centre",
       description:
-        "Celebrate industry excellence, leadership, and sustainability achievements at the official IMW 2026 evening gala dinner.",
+        "Celebrate industry excellence, leadership and sustainability achievements at the official IMW 2026 evening gala dinner.",
       tag: "Gala Event",
     },
   ];
@@ -90,7 +90,7 @@ export default function EventsPage() {
               </h1>
               <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
               <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed">
-                Explore conferences, forums, summits, gala evenings, and field visits taking place throughout International Mining Week.
+                Explore conferences, forums, summits, gala evenings and field visits taking place throughout International Mining{"\u00a0"}Week.
               </p>
             </div>
           </div>

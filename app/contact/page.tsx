@@ -49,7 +49,7 @@ export default function ContactPage() {
               </h1>
               <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
               <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed">
-                Have questions about event programming, registration, partnerships, or media inquiries? Our team is here to assist you.
+                Have questions about event programming, registration, partnerships or media inquiries? Our team is here to assist{"\u00a0"}you.
               </p>
             </div>
           </div>

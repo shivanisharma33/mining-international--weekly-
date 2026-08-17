@@ -21,9 +21,13 @@ export default function CitySection() {
       {/* Contact Content Box */}
       <div className="relative z-10 max-w-[1440px] w-full mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="max-w-[440px] flex flex-col items-start text-left py-8 sm:py-10">
-          <span className="text-[#005B82] text-xs font-bold tracking-[0.25em] uppercase mb-2 block">
-            HAVE A QUESTION?
-          </span>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+            <span className="text-[#005B82] text-xs font-bold tracking-[0.25em] uppercase block">
+              HAVE A QUESTION?
+            </span>
+            <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-black text-[#1a1f2c] dark:text-white leading-[1.2] mb-3">
             Get in Touch
           </h2>

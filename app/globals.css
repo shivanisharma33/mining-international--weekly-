@@ -77,8 +77,20 @@
   h1,
   h2,
   h3,
+  h4,
+  h5,
+  h6,
   .disp {
     font-family: var(--font-roboto), 'Roboto', sans-serif;
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  .pt-dek,
+  .spk-title,
+  .spk-org {
+    text-wrap: pretty;
   }
 
   /* ============================================================ UTILITY BAR */
