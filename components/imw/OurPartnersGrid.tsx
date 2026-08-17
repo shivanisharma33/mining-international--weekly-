@@ -20,7 +20,7 @@ export default function OurPartnersGrid() {
 
   return (
     <section className="w-full bg-[#fcfdfe] py-10 sm:py-14 md:py-16 border-b border-neutral-200/60 transition-colors duration-300">
-      <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center mb-3">

@@ -81,7 +81,7 @@ export default function HostCity() {
 
   return (
     <section className="relative w-full bg-white border-b border-neutral-200/60 py-8 sm:py-12 lg:py-14 overflow-hidden">
-      <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Side: Straight Rectangular Image Container (No curve/rounded corners) */}
           <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[360px] lg:h-[420px] overflow-hidden">

@@ -45,7 +45,7 @@ export default function WhyAttend() {
 
   return (
     <section className="w-full bg-[#fbfcfd] dark:bg-[#070a10] py-6 sm:py-8 border-b border-neutral-200/50 dark:border-neutral-800 transition-colors duration-300">
-      <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Header Column */}
           <div className="lg:col-span-4 flex flex-col justify-center">

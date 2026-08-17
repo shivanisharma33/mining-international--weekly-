@@ -79,7 +79,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          <div className="relative z-10 max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
               <div>
                 <span className="text-white/80 text-xs font-black tracking-[0.25em] uppercase mb-3 block">
@@ -110,7 +110,7 @@ export default function RegisterPage() {
 
         {/* ===== TRACK CARDS — WHITE ===== */}
         <section className="relative w-full py-8 sm:py-12 bg-white">
-          <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-[#0a2540] text-xs font-bold tracking-[0.25em] uppercase mb-2 block">
                 CHOOSE YOUR PARTICIPATION TRACK
@@ -718,7 +718,7 @@ export default function RegisterPage() {
 
         {/* ===== POLICIES — BLUE ===== */}
         <section className="relative w-full py-8 sm:py-10 bg-white border-t border-[#0a2540]/10">
-          <div className="max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
             <div
               className="text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden"
               style={{ background: "linear-gradient(135deg, #0a2540 0%, #0d3b66 50%, #14507a 100%)" }}

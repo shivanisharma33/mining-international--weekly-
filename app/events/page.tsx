@@ -70,7 +70,7 @@ export default function EventsPage() {
         <section className="relative w-full py-10 sm:py-14 bg-[#090d16] text-white overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/imw_hero.png')" }}></div>
           <div className="absolute inset-0 bg-gradient-to-b from-[#090d16]/80 via-[#090d16]/95 to-[#090d16]"></div>
-          <div className="relative max-w-[1340px] mx-auto px-6 sm:px-10 lg:px-16 text-center z-10">
+          <div className="relative max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] text-center z-10">
             <span className="text-[#005B82] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3">
               15+ PARTNER EVENTS ACROSS THE WEEK
             </span>
@@ -84,7 +84,7 @@ export default function EventsPage() {
         </section>
 
         {/* Events Grid */}
-        <section className="w-full py-8 sm:py-10 px-6 sm:px-10 lg:px-16 max-w-[1340px] mx-auto">
+        <section className="w-full py-8 sm:py-10 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1f2430] dark:text-white uppercase tracking-wider">
