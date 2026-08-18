@@ -2,8 +2,8 @@ import React from "react";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full min-h-[480px] sm:min-h-[520px] flex items-center bg-[#070c16] pt-24 sm:pt-28 pb-20 sm:pb-24 overflow-hidden">
-      {/* Background Image & Gradients */}
+    <section className="ab2-hero">
+      {/* Background Image & Gradients (matching Homepage Hero) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-95"
@@ -15,28 +15,10 @@ export default function AboutHero() {
         </div>
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full text-left">
-        <div className="max-w-3xl">
-          <span className="text-slate-300 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
-            ABOUT IMW
-          </span>
-
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
-            Uniting the global <br />
-            <span>mining industry.</span>
-          </h1>
-
-          <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
-
-          {/* Subtext */}
-          <p className="text-neutral-200 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl">
-            For one week of events, connections <br className="hidden sm:inline" />
-            and opportunities that drive the <br className="hidden sm:inline" />
-            future of mining.
-          </p>
-        </div>
+      <div className="ab2-hero-inner max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full">
+        <div className="ab2-kicker">ABOUT IMW</div>
+        <h1>Uniting the global<br /><em>mining industry.</em></h1>
+        <p className="ab2-lede">For one week of events, connections and opportunities that drive the future of mining.</p>
       </div>
     </section>
   );
