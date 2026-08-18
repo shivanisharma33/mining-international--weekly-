@@ -11,11 +11,9 @@ export default function PartnerWithUsBanner() {
 
           {/* Left: Handshake Red Circle & Text */}
           <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6">
-            {/* Red Circle with Handshake Icon */}
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#005B82] flex items-center justify-center shrink-0 shadow-lg">
-              <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
+            {/* Circle with Exact Handshake Icon */}
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#005B82] flex items-center justify-center shrink-0 shadow-lg p-3">
+              <img src="/handshake_icon.png" alt="Partner Handshake" className="w-full h-full object-contain filter invert brightness-200" />
             </div>
 
             <div>

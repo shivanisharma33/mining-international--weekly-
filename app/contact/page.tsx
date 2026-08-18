@@ -97,10 +97,7 @@ export default function ContactPage() {
 
             <div className="bg-neutral-50 dark:bg-[#0d121f] p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#005B82]/10 text-[#005B82] flex items-center justify-center shrink-0">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
+                <i className="fi fi-rs-marker text-xl text-[#005B82] flex items-center justify-center"></i>
               </div>
               <div>
                 <h3 className="font-bold text-neutral-900 dark:text-white text-base mb-1">Venue &amp; Location</h3>

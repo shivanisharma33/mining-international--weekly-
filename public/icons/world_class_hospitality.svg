@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#005B82" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Top penthouse box -->
+  <rect x="170" y="32" width="172" height="36" rx="8" stroke-width="28" />
+  <!-- Main building rectangle -->
+  <rect x="120" y="68" width="272" height="370" rx="24" stroke-width="32" />
+  
+  <!-- Row 1 Windows -->
+  <path d="M 160 144 V 124 C 160 110 172 100 186 100 C 200 100 212 110 212 124 V 144 Z" stroke-width="24"/>
+  <path d="M 236 144 V 124 C 236 110 248 100 262 100 C 276 100 288 110 288 124 V 144 Z" stroke-width="24"/>
+  <path d="M 312 144 V 124 C 312 110 324 100 338 100 C 352 100 364 110 364 124 V 144 Z" stroke-width="24"/>
+
+  <!-- Row 2 Windows -->
+  <path d="M 160 216 V 196 C 160 182 172 172 186 172 C 200 172 212 182 212 196 V 216 Z" stroke-width="24"/>
+  <path d="M 236 216 V 196 C 236 182 248 172 262 172 C 276 172 288 182 288 196 V 216 Z" stroke-width="24"/>
+  <path d="M 312 216 V 196 C 312 182 324 172 338 172 C 352 172 364 182 364 196 V 216 Z" stroke-width="24"/>
+
+  <!-- Row 3 Windows -->
+  <path d="M 160 288 V 268 C 160 254 172 244 186 244 C 200 244 212 254 212 268 V 288 Z" stroke-width="24"/>
+  <path d="M 236 288 V 268 C 236 254 248 244 262 244 C 276 244 288 254 288 268 V 288 Z" stroke-width="24"/>
+  <path d="M 312 288 V 268 C 312 254 324 244 338 244 C 352 244 364 254 364 268 V 288 Z" stroke-width="24"/>
+
+  <!-- Row 4 Windows -->
+  <path d="M 160 360 V 340 C 160 326 172 316 186 316 C 200 316 212 326 212 340 V 360 Z" stroke-width="24"/>
+  <path d="M 236 360 V 340 C 236 326 248 316 262 316 C 276 316 288 326 288 340 V 360 Z" stroke-width="24"/>
+  <path d="M 312 360 V 340 C 312 326 324 316 338 316 C 352 316 364 326 364 340 V 360 Z" stroke-width="24"/>
+
+  <!-- Door at bottom center -->
+  <path d="M 212 438 V 390 C 212 376 226 368 256 368 C 286 368 300 376 300 390 V 438 Z" stroke-width="28"/>
+
+  <!-- Baseline -->
+  <line x1="40" y1="438" x2="472" y2="438" stroke-width="32"/>
+</svg>

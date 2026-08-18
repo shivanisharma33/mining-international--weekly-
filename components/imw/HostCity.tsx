@@ -7,74 +7,52 @@ export default function HostCity() {
       line1: "Historic",
       line2: "Charm",
       icon: (
-        <svg
-          className="w-6 h-6 shrink-0 text-[#005B82]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.5h-15V21"
-          />
-        </svg>
+        <Image
+          src="/icons/bank.png"
+          alt="Historic Charm"
+          width={28}
+          height={28}
+          className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 object-contain"
+        />
       ),
     },
     {
       line1: "Vibrant",
       line2: "Culture",
       icon: (
-        <svg
-          className="w-6 h-6 shrink-0 text-[#005B82]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          viewBox="0 0 24 24"
-        >
-          <circle cx="12" cy="12" r="9" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v8M8 12h8" />
-        </svg>
+        <Image
+          src="/icons/clover-alt.png"
+          alt="Vibrant Culture"
+          width={28}
+          height={28}
+          className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 object-contain"
+        />
       ),
     },
     {
       line1: "World-Class",
       line2: "Hospitality",
       icon: (
-        <svg
-          className="w-6 h-6 shrink-0 text-[#005B82]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 014.5 0z"
-          />
-        </svg>
+        <Image
+          src="/assets/images/hotel (1).png"
+          alt="World-Class Hospitality"
+          width={28}
+          height={28}
+          className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 object-contain"
+        />
       ),
     },
     {
       line1: "Centrally",
       line2: "Connected",
       icon: (
-        <svg
-          className="w-6 h-6 shrink-0 text-[#005B82]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-          />
-        </svg>
+        <Image
+          src="/assets/images/chart-connected.png"
+          alt="Centrally Connected"
+          width={28}
+          height={28}
+          className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 object-contain"
+        />
       ),
     },
   ];
@@ -97,12 +75,11 @@ export default function HostCity() {
           {/* Right Side: Text Content with Equal Vertical Spacing */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left space-y-3.5 pl-0 lg:pl-4">
             {/* Block 1: Eyebrow Label with Top Accent Line */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+            <div>
               <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
                 OUR HOST CITY
               </span>
-              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+              <div className="w-14 h-[3px] bg-[#005B82] mt-2 rounded-full"></div>
             </div>
 
             {/* Block 2: Main Headline */}
@@ -117,8 +94,8 @@ export default function HostCity() {
             </p>
 
             {/* Block 4: Equal 4-Feature Row with Dividers & Equal Spacing */}
-            <div className="pt-1">
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-3 gap-x-0 w-full divide-y sm:divide-y-0 sm:divide-x divide-neutral-200/90 pt-3 border-t border-neutral-100 sm:border-t-0">
+            <div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-3 gap-x-0 w-full divide-y sm:divide-y-0 sm:divide-x divide-neutral-200/90 pt-1">
                 {highlights.map((item, idx) => (
                   <div
                     key={idx}

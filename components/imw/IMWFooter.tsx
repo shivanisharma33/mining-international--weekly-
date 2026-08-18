@@ -59,10 +59,7 @@ export default function IMWFooter() {
                 +1 418 555 1234
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round">
-                  <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
-                  <circle cx="12" cy="11" r="2.3" />
-                </svg>
+                <i className="fi fi-rs-marker text-sm mr-2 inline-flex items-center justify-center"></i>
                 Québec City, Québec, Canada
               </li>
             </ul>

@@ -19,17 +19,11 @@ export default function IMWHeader() {
       <div className="util">
         <div className="wrap util-inner">
           <div className="util-item">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round">
-              <rect x="4" y="5" width="16" height="15" rx="2" />
-              <path d="M4 9.5h16M8 3v4M16 3v4" />
-            </svg>
+            <i className="fi fi-rr-calendar text-sm mr-1.5 flex items-center justify-center"></i>
             June 1–5, 2026
           </div>
           <div className="util-item">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round">
-              <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
-              <circle cx="12" cy="11" r="2.3" />
-            </svg>
+            <i className="fi fi-rs-marker text-sm mr-1.5 flex items-center justify-center"></i>
             Québec City, Canada
           </div>
           <div className="util-item">Canada's Premier Mining Week</div>

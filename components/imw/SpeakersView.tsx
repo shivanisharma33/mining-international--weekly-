@@ -298,40 +298,7 @@ export default function SpeakersView() {
             <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
               Explore the lineup of industry leaders, experts and visionaries shaping the future of{"\u00a0"}mining.
             </p>
-            <div className="pt-mini flex flex-wrap items-center gap-6 pt-2">
-              <div className="pt-mini-item flex items-center gap-3">
-                <svg className="w-6 h-6 text-[#005B82] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-                  <circle cx="12" cy="8" r="3.4" />
-                  <path d="M5.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5" />
-                </svg>
-                <div>
-                  <b className="text-white text-base font-bold block">100+</b>
-                  <p className="text-neutral-300 text-xs">Industry Leaders</p>
-                </div>
-              </div>
-              <div className="pt-mini-item flex items-center gap-3">
-                <svg className="w-6 h-6 text-[#005B82] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18" />
-                </svg>
-                <div>
-                  <b className="text-white text-base font-bold block">15+</b>
-                  <p className="text-neutral-300 text-xs">Countries Represented</p>
-                </div>
-              </div>
-              <div className="pt-mini-item flex items-center gap-3">
-                <svg className="w-6 h-6 text-[#005B82] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-                  <circle cx="9" cy="8" r="3.2" />
-                  <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
-                  <circle cx="16.5" cy="9" r="2.6" />
-                  <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
-                </svg>
-                <div>
-                  <b className="text-white text-base font-bold block">Diverse Perspectives</b>
-                  <p className="text-neutral-300 text-xs">Across the Mining Value Chain</p>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>

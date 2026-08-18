@@ -3,14 +3,10 @@ import Link from "next/link";
 
 export default function StayConnected() {
   return (
-    <div className="connect">
+    <div className="connect wrap">
       <div className="connect-band">
         <div className="cn-icon">
-          <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" />
-            <path d="M16 2v4M8 2v4M3 10h18" />
-            <rect x="8" y="14" width="3" height="3" rx="0.5" />
-          </svg>
+          <i className="fi fi-rr-calendar text-2xl text-[#005B82] flex items-center justify-center"></i>
         </div>
         <div className="cn-copy">
           <h3>Register Now</h3>

@@ -107,7 +107,7 @@ function RenderArt({ theme, src }: { theme: string; src?: string }) {
     <img
       src={imageSrc}
       alt="Featured Event"
-      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+      className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
     />
   );
 }
@@ -271,18 +271,13 @@ export default function AgendaView() {
               Explore the full schedule of sessions, keynotes, panels and networking{"\u00a0"}events.
             </p>
             <div className="ag-hero-btns flex flex-wrap items-center gap-3">
-              <a className="btn-red" href="#agPdf">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-                  <rect x="4" y="5" width="16" height="15" rx="2" />
-                  <path d="M4 9.5h16M8 3v4M16 3v4" />
-                </svg>{" "}
-                VIEW FULL SCHEDULE (PDF)
+              <a className="btn-red flex items-center gap-2" href="#agPdf">
+                <img src="/icons/calendar.png" alt="Calendar" className="w-5 h-5 object-contain shrink-0 brightness-0 invert" />
+                <span>VIEW FULL SCHEDULE (PDF)</span>
               </a>
-              <button className="btn-ghost" onClick={handleDownloadPdf}>
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 4v11M7.5 11.5L12 16l4.5-4.5M5 19.5h14" />
-                </svg>{" "}
-                DOWNLOAD AGENDA
+              <button className="btn-ghost flex items-center gap-2" onClick={handleDownloadPdf}>
+                <img src="/icons/download.svg" alt="Download" className="w-5 h-5 object-contain shrink-0 brightness-0 invert" />
+                <span>DOWNLOAD AGENDA</span>
               </button>
             </div>
           </div>
@@ -293,55 +288,99 @@ export default function AgendaView() {
 
       {/* AGENDA MAIN */}
       <section className="agenda-main py-6 sm:py-10">
-        {/* STANDALONE WIDE FEATURED EVENT CARD (Matches Image 1) */}
-        <div className="wrap mb-8 sm:mb-10">
-          <div className="feat-card">
-            <div className="fc-img">
+        {/* STANDALONE WIDE FEATURED EVENT CARD */}
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mb-8 sm:mb-12">
+          <div className="bg-white border border-neutral-200/90 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 group">
+            {/* Image Column (Height strictly follows right content height) */}
+            <div className="lg:col-span-5 relative min-h-[180px] lg:min-h-0 overflow-hidden">
               <RenderArt theme={featured.art} src={featured.img} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+              {/* Badge on Image */}
+              <div className="absolute top-4 left-4 z-10 flex items-center gap-2 px-3 py-1 rounded-full bg-[#005B82] text-white text-[11px] font-extrabold tracking-wider uppercase shadow-md">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                FEATURED EVENT
+              </div>
             </div>
-            <div className="fc-body">
-              <span className="fc-pill">FEATURED EVENT</span>
-              <h3>{featured.title}</h3>
-              <div className="fc-meta">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-                  <rect x="4" y="5" width="16" height="15" rx="2" />
-                  <path d="M4 9.5h16M8 3v4M16 3v4" />
-                </svg>
-                <span>{featured.date}</span>
+
+            {/* Content Column (Increased width: 7 of 12 cols on desktop) */}
+            <div className="lg:col-span-7 p-5 sm:p-7 lg:p-8 flex flex-col space-y-4">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-black text-[#131720] tracking-tight leading-tight mb-3.5 group-hover:text-[#005B82] transition-colors duration-300">
+                  {featured.title}
+                </h3>
+
+                {/* Metadata Items with Reduced Tight Gaps */}
+                <div className="space-y-2.5">
+                  {/* Date */}
+                  <div className="flex items-center gap-2.5 text-neutral-800 font-semibold text-xs sm:text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#005B82]/10 text-[#005B82] flex items-center justify-center shrink-0 shadow-xs">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                      </svg>
+                    </div>
+                    <span>{featured.date}</span>
+                  </div>
+
+                  {/* Time */}
+                  <div className="flex items-center gap-2.5 text-neutral-800 font-semibold text-xs sm:text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#005B82]/10 text-[#005B82] flex items-center justify-center shrink-0 shadow-xs">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                    </div>
+                    <span>{featured.time}</span>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-start gap-2.5 text-neutral-800 font-semibold text-xs sm:text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#005B82]/10 text-[#005B82] flex items-center justify-center shrink-0 shadow-xs mt-0.5">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <div className="flex flex-col">
+                      <span>{featured.loc}</span>
+                      {featured.addr && (
+                        <span className="text-[11px] text-neutral-500 font-medium mt-0.5">{featured.addr}</span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Contact / Who */}
+                  <div className="flex items-center gap-2.5 text-neutral-800 font-semibold text-xs sm:text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-[#005B82]/10 text-[#005B82] flex items-center justify-center shrink-0 shadow-xs">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    </div>
+                    <span className="text-xs sm:text-sm">{featured.who}</span>
+                  </div>
+                </div>
               </div>
-              <div className="fc-meta">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7.5V12l3 2" />
-                </svg>
-                <span>{featured.time}</span>
-              </div>
-              <div className="fc-meta">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-                  <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
-                  <circle cx="12" cy="11" r="2.3" />
-                </svg>
-                <span>
-                  {featured.loc}
-                  <small>{featured.addr}</small>
-                </span>
-              </div>
-              <div className="fc-meta">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.9" strokeLinecap="round">
-                  <circle cx="9" cy="8" r="3.2" />
-                  <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
-                  <circle cx="16.5" cy="9" r="2.6" />
-                  <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
-                </svg>
-                <span>{featured.who}</span>
-              </div>
-              <div className="fc-about">
-                <b>About this Event</b>
-                <p>{featured.about}</p>
-                <a className="btn-navy" href="#agPdf">
-                  VIEW DETAILS{" "}
-                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
+
+              {/* About & Action Button */}
+              <div className="pt-3 border-t border-neutral-100">
+                <h4 className="text-[11px] font-extrabold uppercase tracking-widest text-[#005B82] mb-1.5">
+                  About this Event
+                </h4>
+                <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+                  {featured.about}
+                </p>
+                <a
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#005B82] text-white text-xs font-extrabold tracking-wider uppercase shadow-md hover:bg-[#004766] hover:shadow-lg hover:gap-3 transition-all duration-300 group/btn"
+                  href="#agPdf"
+                >
+                  <span>VIEW DETAILS</span>
+                  <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </a>
               </div>
@@ -352,25 +391,31 @@ export default function AgendaView() {
 
 
         {/* OFFICIAL SCHEDULE — PDF Section */}
-        <div className="wrap ag-pdf mt-8 sm:mt-12" id="agPdf">
-          <div className="sec-title">
-            <h2>OFFICIAL SCHEDULE — PDF</h2>
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mt-8 sm:mt-12" id="agPdf">
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="inline-flex items-center justify-center gap-3 mb-2 text-center">
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+              <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
+                OFFICIAL SCHEDULE — PDF
+              </h2>
+              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+            </div>
+            <p className="text-xs sm:text-sm font-medium text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+              Tickets for THE Mining Investment Event, ITFA and QMA are available at{" "}
+              <a href="https://www.internationalminingweek.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
+                internationalminingweek.com
+              </a>
+              ,{" "}
+              <a href="https://www.itfa.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
+                itfa.com
+              </a>{" "}
+              and{" "}
+              <a href="https://www.amq.ca" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
+                amq.ca
+              </a>
+              .
+            </p>
           </div>
-          <p className="text-center text-xs sm:text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-6 whitespace-nowrap overflow-x-auto">
-            Tickets for THE Mining Investment Event, ITFA and QMA are available at{" "}
-            <a href="https://www.internationalminingweek.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
-              internationalminingweek.com
-            </a>
-            ,{" "}
-            <a href="https://www.itfa.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
-              itfa.com
-            </a>{" "}
-            and{" "}
-            <a href="https://www.amq.ca" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
-              amq.ca
-            </a>
-            .
-          </p>
 
           <div className="pdfv">
             {/* Sidebar Thumbnails */}

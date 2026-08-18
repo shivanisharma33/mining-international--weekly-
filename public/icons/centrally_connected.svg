@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#005B82" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Outer connecting orbit arc -->
+  <path d="M 256 76 A 180 180 0 1 1 100 346" stroke-width="28" />
+  <path d="M 256 76 A 180 180 0 0 1 412 346" stroke-width="28" />
+
+  <!-- Outer Node 1: Top (256, 76) -->
+  <circle cx="256" cy="76" r="48" fill="#ffffff" stroke-width="28"/>
+
+  <!-- Outer Node 2: Bottom Left (100, 346) -->
+  <circle cx="100" cy="346" r="48" fill="#ffffff" stroke-width="28"/>
+
+  <!-- Outer Node 3: Bottom Right (412, 346) -->
+  <circle cx="412" cy="346" r="48" fill="#ffffff" stroke-width="28"/>
+
+  <!-- Inner Center Circle -->
+  <circle cx="256" cy="256" r="110" stroke-width="32"/>
+
+  <!-- Person head inside central circle -->
+  <circle cx="256" cy="216" r="34" stroke-width="26"/>
+
+  <!-- Person shoulders/torso inside central circle -->
+  <path d="M 194 316 C 194 280 220 262 256 262 C 292 262 318 280 318 316" stroke-width="26"/>
+</svg>

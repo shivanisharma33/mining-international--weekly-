@@ -1,7 +1,7 @@
 @import "tailwindcss";
+@import "./about-sections.css";
 @source "../components/**/*.{js,ts,jsx,tsx}";
 @source "../app/**/*.{js,ts,jsx,tsx}";
-@import "./about-sections.css";
 
 @theme {
   --font-sans: var(--font-roboto), "Roboto", sans-serif;
@@ -683,13 +683,13 @@
 
   /* ============================================================ STAY CONNECTED */
   .connect {
-    padding: 30px 24px 20px 24px;
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
 
   .connect-band {
     position: relative;
-    max-width: 1440px;
-    margin: 0 auto;
+    width: 100%;
     background: radial-gradient(120% 160% at 88% 10%, #0d3b52 0%, #072432 42%, #101a2c 100%);
     border-radius: 18px;
     overflow: hidden;

@@ -16,15 +16,8 @@ export default function ExploreWeek() {
           {/* Card 1: Partner */}
           <Link href="/partners" className="h-full">
             <div className="bg-white border border-neutral-200/90 rounded-2xl p-7 sm:p-9 flex flex-col items-center text-center shadow-xs hover:shadow-xl hover:border-[#005B82]/40 hover:-translate-y-1 transition-all duration-300 group cursor-pointer h-full">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 mb-5 text-neutral-800 group-hover:bg-[#005B82]/10 group-hover:text-[#005B82] transition-all duration-300">
-                <svg className="w-6 h-6 text-neutral-800 group-hover:text-[#005B82] transition-colors" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                  <rect x="3" y="4" width="18" height="16" rx="2.5"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6" strokeLinecap="round"></line>
-                  <line x1="8" y1="2" x2="8" y2="6" strokeLinecap="round"></line>
-                  <line x1="3" y1="9" x2="21" y2="9"></line>
-                  <rect x="7" y="12" width="3" height="2" rx="0.5" fill="currentColor"></rect>
-                  <rect x="14" y="12" width="3" height="2" rx="0.5" fill="currentColor"></rect>
-                </svg>
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 mb-5 p-3.5 group-hover:bg-[#005B82]/10 transition-all duration-300">
+                <img src="/assets/images/hand2.jpg" alt="Partner Handshake" className="w-full h-full object-contain mix-blend-multiply" />
               </div>
               <h3 className="text-lg sm:text-xl font-extrabold text-[#1f2430] group-hover:text-[#005B82] transition-colors mb-1.5">
                 Partner
@@ -39,16 +32,8 @@ export default function ExploreWeek() {
           {/* Card 2: Agenda */}
           <Link href="/agenda" className="h-full">
             <div className="bg-white border border-neutral-200/90 rounded-2xl p-7 sm:p-9 flex flex-col items-center text-center shadow-xs hover:shadow-xl hover:border-[#005B82]/40 hover:-translate-y-1 transition-all duration-300 group cursor-pointer h-full">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 mb-5 text-neutral-800 group-hover:bg-[#005B82]/10 group-hover:text-[#005B82] transition-all duration-300">
-                <svg className="w-6 h-6 text-neutral-800 group-hover:text-[#005B82] transition-colors" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                  <rect x="3" y="4" width="18" height="16" rx="2.5"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6" strokeLinecap="round"></line>
-                  <line x1="8" y1="2" x2="8" y2="6" strokeLinecap="round"></line>
-                  <line x1="3" y1="9" x2="21" y2="9"></line>
-                  <circle cx="8" cy="13" r="1" fill="currentColor"></circle>
-                  <circle cx="12" cy="13" r="1" fill="currentColor"></circle>
-                  <circle cx="16" cy="13" r="1" fill="currentColor"></circle>
-                </svg>
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 mb-5 p-[17px] sm:p-5 group-hover:bg-[#005B82]/10 transition-all duration-300">
+                <img src="/agenda_icon.png" alt="Agenda" className="w-full h-full object-contain mix-blend-multiply" />
               </div>
               <h3 className="text-lg sm:text-xl font-extrabold text-[#1f2430] group-hover:text-[#005B82] transition-colors mb-1.5">
                 Agenda
@@ -82,9 +67,8 @@ export default function ExploreWeek() {
           <Link href="/partners" className="h-full">
             <div className="bg-white border border-neutral-200/90 rounded-2xl p-7 sm:p-9 flex flex-col items-center text-center shadow-xs hover:shadow-xl hover:border-[#005B82]/40 hover:-translate-y-1 transition-all duration-300 group cursor-pointer h-full">
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 mb-5 text-neutral-800 group-hover:bg-[#005B82]/10 group-hover:text-[#005B82] transition-all duration-300">
-                <svg className="w-6 h-6 text-neutral-800 group-hover:text-[#005B82] transition-colors" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 11.5L12 6.5L17 11.5M7 17.5L12 12.5L17 17.5"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path>
+                <svg className="w-6 h-6 text-neutral-800 group-hover:text-[#005B82] transition-colors ml-0.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653Z"></path>
                 </svg>
               </div>
               <h3 className="text-lg sm:text-xl font-extrabold text-[#1f2430] group-hover:text-[#005B82] transition-colors mb-1.5">

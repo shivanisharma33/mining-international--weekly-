@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#005B82" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Pediment roof -->
+  <path d="M40 170 L256 45 L472 170 Z" stroke-width="32"/>
+  <!-- Top horizontal beam -->
+  <line x1="40" y1="210" x2="472" y2="210" stroke-width="32"/>
+  <!-- 4 Columns -->
+  <line x1="115" y1="210" x2="115" y2="390" stroke-width="28"/>
+  <line x1="209" y1="210" x2="209" y2="390" stroke-width="28"/>
+  <line x1="303" y1="210" x2="303" y2="390" stroke-width="28"/>
+  <line x1="397" y1="210" x2="397" y2="390" stroke-width="28"/>
+  <!-- Bottom base beam -->
+  <line x1="40" y1="390" x2="472" y2="390" stroke-width="32"/>
+  <!-- Ground baseline -->
+  <line x1="20" y1="467" x2="492" y2="467" stroke-width="24"/>
+</svg>
