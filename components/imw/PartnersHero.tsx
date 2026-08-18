@@ -16,7 +16,7 @@ export default function PartnersHero() {
     },
     {
       title: "Elevate",
-      description: "Increase brand visibility &\nrecognition",
+      description: "Increase brand visibility\n& recognition",
       icon: (
         <svg className="w-7 h-7 text-[#005B82] shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.287a6 6 0 010 7.427M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53L6.75 15.75H3.75a.75.75 0 01-.75-.75v-6a.75.75 0 01.75-.75h3z"></path>
@@ -90,9 +90,18 @@ export default function PartnersHero() {
           </div>
 
           {/* Bottom 3 Features Grid with Dividers */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl divide-y sm:divide-y-0 sm:divide-x divide-white/20">
+          <div className="flex flex-col sm:flex-row items-start divide-y sm:divide-y-0 sm:divide-x divide-white/20">
             {features.map((item, idx) => (
-              <div key={idx} className={`flex items-start gap-3.5 pt-4 sm:pt-0 ${idx > 0 ? "sm:pl-6" : ""}`}>
+              <div
+                key={idx}
+                className={`flex items-start gap-3 py-3 sm:py-0 ${
+                  idx === 0
+                    ? "sm:pr-4 md:pr-5"
+                    : idx === features.length - 1
+                    ? "sm:pl-4 md:pl-5"
+                    : "sm:px-4 md:px-5"
+                }`}
+              >
                 {item.icon}
                 <div>
                   <h3 className="text-white font-extrabold text-base sm:text-lg mb-1 leading-snug">

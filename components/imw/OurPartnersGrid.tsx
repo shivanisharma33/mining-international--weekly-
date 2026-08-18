@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function OurPartnersGrid() {
   const diamondSponsorsList = [
     { name: "Mercury Group", src: "/assets/images/mg.webp" },
-    { name: "The Prospector News", src: "/assets/images/pro-masthead-logo.png" },
+    { name: "The Prospector News", src: "/assets/images/pro.png" },
     { name: "QSL", src: "/assets/images/qsl-logo-transparent.png" },
     { name: "Investissement Québec", src: "/assets/images/investissement-quebec-transparent.png" },
-    { name: "McMillan", src: "/assets/images/Group-145.svg" },
+    { name: "McMillan", src: "/assets/images/mcm.png" },
     { name: "Air Borealis", src: "/assets/images/air-borealis-transparent.png" },
     { name: "Apaton Finance", src: "/assets/images/apaton-finance-logo.svg" },
     { name: "Canadian North", src: "/assets/images/Canadian-North-logo-main-rgb-1024x319.png" },
@@ -81,17 +81,17 @@ export default function OurPartnersGrid() {
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#fcfdfe] to-transparent z-10 pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#fcfdfe] to-transparent z-10 pointer-events-none"></div>
 
-            <div className="sponsor-slider-track">
+            <div className="sponsor-slider-track items-center">
               {/* First set */}
               {diamondSponsorsList.map((sponsor, idx) => (
-                <div key={`a-${idx}`} className="sponsor-slide">
-                  <img src={sponsor.src} alt={sponsor.name} className="max-h-12 max-w-[82%] w-auto object-contain" />
+                <div key={`a-${idx}`} className="shrink-0 w-32 sm:w-36 h-16 flex items-center justify-center px-2 transition-transform hover:scale-105">
+                  <img src={sponsor.src} alt={sponsor.name} className="max-h-10 max-w-[90%] w-auto object-contain" />
                 </div>
               ))}
               {/* Duplicate set for seamless loop */}
               {diamondSponsorsList.map((sponsor, idx) => (
-                <div key={`b-${idx}`} className="sponsor-slide">
-                  <img src={sponsor.src} alt={sponsor.name} className="max-h-12 max-w-[82%] w-auto object-contain" />
+                <div key={`b-${idx}`} className="shrink-0 w-32 sm:w-36 h-16 flex items-center justify-center px-2 transition-transform hover:scale-105">
+                  <img src={sponsor.src} alt={sponsor.name} className="max-h-10 max-w-[90%] w-auto object-contain" />
                 </div>
               ))}
             </div>
