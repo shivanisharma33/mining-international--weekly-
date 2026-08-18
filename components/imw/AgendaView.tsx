@@ -396,22 +396,23 @@ export default function AgendaView() {
             <div className="inline-flex items-center justify-center gap-3 mb-2 text-center">
               <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
               <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
-                OFFICIAL SCHEDULE — PDF
+                OFFICIAL SCHEDULE
               </h2>
               <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
             </div>
             <p className="text-xs sm:text-sm font-medium text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-              Tickets for THE Mining Investment Event, ITFA and QMA are available at{" "}
-              <a href="https://www.internationalminingweek.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
-                internationalminingweek.com
+              Tickets for THE Mining Investment Event, ITFA and QMA are available at
+              <br />
+              <a href="https://www.themininginvestmentevent.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
+                themininginvestmentevent.com
               </a>
               ,{" "}
-              <a href="https://www.itfa.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
-                itfa.com
+              <a href="https://itfa.org/" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
+                itfa.org
               </a>{" "}
               and{" "}
-              <a href="https://www.amq.ca" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
-                amq.ca
+              <a href="https://amq-inc.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-[#005B82] hover:underline">
+                amq-inc.com
               </a>
               .
             </p>
