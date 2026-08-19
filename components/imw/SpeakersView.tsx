@@ -346,7 +346,6 @@ export default function SpeakersView() {
                       ) : (
                         <PortraitSVG look={s.look} w={220} h={230} />
                       )}
-                      <span className="spk-role">{s.role}</span>
                     </div>
                     <h3>{s.n}</h3>
                     <div className="spk-title">{s.t}</div>
@@ -383,7 +382,6 @@ export default function SpeakersView() {
                   <div className="rt">{s.t}</div>
                   <div className="ro">{s.o}</div>
                 </div>
-                <span className="tag">{s.role}</span>
               </div>
             ))}
           </div>

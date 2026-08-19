@@ -16,7 +16,7 @@ export default function AboutHero() {
       </div>
 
       <div className="ab2-hero-inner max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full">
-        <div className="ab2-kicker">ABOUT IMW</div>
+        <div className="ab2-kicker text-slate-300" style={{ color: "#cbd5e1" }}>ABOUT IMW</div>
         <h1>Uniting the global<br /><em>mining industry.</em></h1>
         <p className="ab2-lede">For one week of events, connections and opportunities that drive the future of mining.</p>
       </div>

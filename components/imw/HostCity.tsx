@@ -93,21 +93,22 @@ export default function HostCity() {
               Rich in history, culture and innovation, Québec City provides the perfect setting for International Mining Week.
             </p>
 
-            {/* Block 4: Equal 4-Feature Row with Dividers & Equal Spacing */}
-            <div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-3 gap-x-0 w-full divide-y sm:divide-y-0 sm:divide-x divide-neutral-200/90 pt-1">
+            {/* Block 4: 4-Feature Row Aligned to Section Margin */}
+            <div className="pt-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 gap-x-0 w-full divide-y sm:divide-y-0 sm:divide-x divide-neutral-200">
                 {highlights.map((item, idx) => (
                   <div
                     key={idx}
-                    className={`flex items-center gap-1.5 py-1 ${idx === 0
-                      ? "sm:pr-3"
-                      : idx === highlights.length - 1
-                        ? "sm:pl-3"
-                        : "sm:px-3"
-                      }`}
+                    className={`flex items-center gap-3 py-2 ${
+                      idx === 0
+                        ? "sm:pr-4 sm:pl-0"
+                        : idx === highlights.length - 1
+                        ? "sm:pl-4 sm:pr-0"
+                        : "sm:px-4"
+                    }`}
                   >
                     {item.icon}
-                    <div className="flex flex-col text-xs sm:text-sm font-normal text-[#131720] leading-snug">
+                    <div className="flex flex-col text-xs sm:text-sm font-semibold text-[#131720] leading-tight">
                       <span>{item.line1}</span>
                       <span>{item.line2}</span>
                     </div>
