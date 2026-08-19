@@ -389,12 +389,18 @@ export default function SpeakersView() {
           <div className={`spk-empty ${showEmpty ? "show" : ""}`}>No speakers match your search.</div>
 
           <div className="spk-viewall">
-            <a className="btn-outline-red" href="#">
+            <button
+              className="btn-outline-red cursor-pointer inline-flex items-center gap-2"
+              onClick={() => {
+                setSpkFilter("all");
+                setSearchTerm("");
+              }}
+            >
               VIEW ALL SPEAKERS{" "}
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </section>

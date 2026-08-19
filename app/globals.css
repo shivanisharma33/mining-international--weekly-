@@ -804,28 +804,25 @@
   .ft-social {
     display: flex;
     gap: 12px;
+    margin-top: 16px;
   }
 
   .ft-social a {
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    background: #1a2740;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background var(--trans);
-  }
-
-  .ft-social a:hover {
-    background: var(--red);
+    color: #94a3b8;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .ft-social svg {
-    width: 16px;
-    height: 16px;
-    stroke: #fff;
-    fill: none;
+    width: 18px;
+    height: 18px;
   }
 
   .ft h4 {
@@ -860,7 +857,7 @@
   .ft-contact svg {
     width: 16px;
     height: 16px;
-    stroke: var(--red);
+    stroke: #005B82;
     flex-shrink: 0;
     margin-top: 2px;
   }

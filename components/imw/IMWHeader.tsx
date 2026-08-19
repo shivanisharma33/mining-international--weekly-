@@ -103,9 +103,9 @@ export default function IMWHeader() {
           <Link href="/agenda" onClick={() => setIsMobileMenuOpen(false)}>Agenda</Link>
           <Link href="/partners" onClick={() => setIsMobileMenuOpen(false)}>Partners</Link>
           <Link href="/speakers" onClick={() => setIsMobileMenuOpen(false)}>Speakers</Link>
-          <Link href="/partners" onClick={() => setIsMobileMenuOpen(false)}>Sponsors</Link>
-          <Link href="/#news" onClick={() => setIsMobileMenuOpen(false)}>News</Link>
-          <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          <Link href="/sponsors" onClick={() => setIsMobileMenuOpen(false)}>Sponsors</Link>
+          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>News</Link>
+          <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
           <Link href="/register" onClick={() => setIsMobileMenuOpen(false)} className="btn-register" style={{ display: "inline-flex", justifyContent: "center" }}>Register Now</Link>
         </div>
       </header>

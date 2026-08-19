@@ -15,7 +15,12 @@ export default function WhyAttend() {
         </div>
         <div className="ab2-b">
           <span className="ab2-b-ic">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round"><circle cx="6" cy="6" r="2.4" /><circle cx="18" cy="6" r="2.4" /><circle cx="6" cy="18" r="2.4" /><circle cx="18" cy="18" r="2.4" /><circle cx="12" cy="12" r="2.4" /><path d="M8 7.5l2.2 2.7M16 7.5l-2.2 2.7M8 16.5l2.2-2.7M16 16.5l-2.2-2.7" /></svg>
+            <img
+              src="/assets/images/connect.png"
+              alt="Connect icon"
+              className="w-[22px] h-[22px] object-contain"
+              style={{ filter: "invert(24%) sepia(85%) saturate(1637%) hue-rotate(174deg) brightness(94%) contrast(101%)" }}
+            />
           </span>
           <b>Connect</b>
           <p>Meet the right people and expand your global network.</p>
@@ -29,7 +34,14 @@ export default function WhyAttend() {
         </div>
         <div className="ab2-b">
           <span className="ab2-b-ic">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 18l5-6 3.5 3L19 7" /><path d="M14.5 7H19v4.5" /></svg>
+            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3.5v9" />
+              <path d="M12 3.5c-2-1.7-5.5-1.7-5.5 1v5.5c3 1.2 5.5 2.5 5.5 2.5" />
+              <path d="M12 3.5c2-1.7 5.5-1.7 5.5 1v5.5c-3 1.2-5.5 2.5-5.5 2.5" />
+              <path d="M5.5 6.5H4C2.6 6.5 1.5 7.6 1.5 9v6c0 1.7 1.3 3 3 3h15c1.7 0 3-1.3 3-3V9c0-1.4-1.1-2.5-2.5-2.5H18.5" />
+              <path d="M12 18v3.5" />
+              <path d="M8 21.5h8" />
+            </svg>
           </span>
           <b>Learn</b>
           <p>Gain insights from industry experts and global leaders.</p>

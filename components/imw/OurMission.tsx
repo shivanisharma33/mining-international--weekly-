@@ -17,7 +17,7 @@ export default function OurMission() {
           </div>
         </div>
         <div className="ab2-ms-body">
-          <div className="ab2-eyebrow ab2-eyebrow-dash">OUR MISSION</div>
+          <div className="ab2-eyebrow">OUR MISSION</div>
           <h2 className="ab2-ms-h">THE Nexus of<br /><em>International Mining</em></h2>
           <p>Join us for North America's first International Mining Week, taking place from June 1 to 5, 2026, in Quebec City, Canada.</p>
           <p>IMW will showcase a collaboration among key partners hosting concurrent activities alongside THE Mining Investment Event.</p>

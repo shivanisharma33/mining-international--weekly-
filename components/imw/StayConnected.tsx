@@ -7,14 +7,14 @@ export default function StayConnected() {
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="relative w-full rounded-2xl sm:rounded-3xl border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] p-7 sm:p-10 lg:p-12 overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#070c16]">
           
-          {/* Background Image & Gradient Overlays matching Hero Section */}
+          {/* Background Image & Lightened Overlays */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="absolute inset-0 bg-cover bg-center opacity-90 transition-opacity duration-700"
               style={{ backgroundImage: "url('/imw_hero.png')" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#070c16] via-[#0d1726]/90 to-[#070c16]/80"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070c16] via-[#03516E]/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#070c16]/85 via-[#070c16]/40 to-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070c16]/60 via-transparent to-transparent"></div>
             </div>
           </div>
 
