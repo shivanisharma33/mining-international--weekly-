@@ -4,60 +4,105 @@ import React, { useState } from "react";
 import IMWHeader from "@/components/imw/IMWHeader";
 import IMWFooter from "@/components/imw/IMWFooter";
 import CitySection from "@/components/imw/CitySection";
+import {
+  IMW_SUBMIT_ERROR_MESSAGE,
+  submitIMWCompanyRegistration,
+  submitIMWInvestorRegistration,
+  type CompanyRegistrationForm,
+  type InvestorRegistrationForm,
+} from "@/lib/imwApi";
+
+const EMPTY_INVESTOR_FORM: InvestorRegistrationForm = {
+  companyName: "",
+  firstName: "",
+  lastName: "",
+  businessTitle: "",
+  city: "",
+  country: "",
+  email: "",
+  phone: "",
+  aum: "",
+  investorType: "Institutional Investor",
+  bio: "",
+  subscribeNews: true,
+};
+
+const EMPTY_COMPANY_FORM: CompanyRegistrationForm = {
+  companyName: "",
+  tickerSymbol: "",
+  firstName: "",
+  lastName: "",
+  executiveTitle: "",
+  city: "",
+  country: "",
+  email: "",
+  phone: "",
+  assetStage: "Exploration & Discovery",
+  showcaseInterest: "1-on-1 Executive Meetings",
+  description: "",
+  subscribeNews: true,
+};
 
 export default function RegisterPage() {
   const [activeTrack, setActiveTrack] = useState<"investor" | "company">("investor");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Form States
-  const [investorForm, setInvestorForm] = useState({
-    companyName: "",
-    firstName: "",
-    lastName: "",
-    businessTitle: "",
-    city: "",
-    country: "",
-    email: "",
-    phone: "",
-    aum: "",
-    investorType: "Institutional Investor",
-    bio: "",
-    subscribeNews: true,
-  });
+  const [investorForm, setInvestorForm] = useState<InvestorRegistrationForm>(EMPTY_INVESTOR_FORM);
 
-  const [companyForm, setCompanyForm] = useState({
-    companyName: "",
-    tickerSymbol: "",
-    firstName: "",
-    lastName: "",
-    executiveTitle: "",
-    city: "",
-    country: "",
-    email: "",
-    phone: "",
-    assetStage: "Exploration & Discovery",
-    showcaseInterest: "1-on-1 Executive Meetings",
-    description: "",
-    subscribeNews: true,
-  });
+  const [companyForm, setCompanyForm] = useState<CompanyRegistrationForm>(EMPTY_COMPANY_FORM);
 
   const handleTrackSwitch = (track: "investor" | "company") => {
+    if (submitting) return;
     setActiveTrack(track);
     setSubmitted(false);
+    setErrorMessage("");
     const formSection = document.getElementById("registration-form-section");
     if (formSection) {
       formSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const handleInvestorSubmit = (e: React.FormEvent) => {
+  const handleInvestorSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return; // guards against double-clicks / slow networks
+    setSubmitting(true);
+    setErrorMessage("");
+    try {
+      await submitIMWInvestorRegistration(investorForm);
+      setSubmitted(true);
+    } catch {
+      setErrorMessage(IMW_SUBMIT_ERROR_MESSAGE);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const handleCompanySubmit = (e: React.FormEvent) => {
+  const handleCompanySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return; // guards against double-clicks / slow networks
+    setSubmitting(true);
+    setErrorMessage("");
+    try {
+      await submitIMWCompanyRegistration(companyForm);
+      setSubmitted(true);
+    } catch {
+      setErrorMessage(IMW_SUBMIT_ERROR_MESSAGE);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const handleSubmitAnother = () => {
+    setSubmitted(false);
+    setErrorMessage("");
+    if (activeTrack === "investor") {
+      setInvestorForm(EMPTY_INVESTOR_FORM);
+    } else {
+      setCompanyForm(EMPTY_COMPANY_FORM);
+    }
   };
 
   return (
@@ -297,7 +342,7 @@ export default function RegisterPage() {
                     .
                   </p>
                   <button
-                    onClick={() => setSubmitted(false)}
+                    onClick={handleSubmitAnother}
                     className="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider"
                   >
                     Submit Another Registration
@@ -495,11 +540,22 @@ export default function RegisterPage() {
                       </label>
                     </div>
 
+                    {errorMessage && (
+                      <div
+                        role="alert"
+                        className="px-4 py-3.5 rounded-xl bg-red-50 border border-red-300 text-red-800 text-xs sm:text-sm font-semibold"
+                      >
+                        {errorMessage}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-2xl bg-[#0a2540] hover:bg-[#0d3b66] text-white text-xs sm:text-sm font-black tracking-[0.15em] uppercase shadow-lg shadow-[#0a2540]/25 transition-all duration-300 flex items-center justify-center gap-3"
+                      disabled={submitting}
+                      aria-busy={submitting}
+                      className="w-full py-4 rounded-2xl bg-[#0a2540] hover:bg-[#0d3b66] text-white text-xs sm:text-sm font-black tracking-[0.15em] uppercase shadow-lg shadow-[#0a2540]/25 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:bg-[#0a2540]"
                     >
-                      <span>Complete Investor Registration</span>
+                      <span>{submitting ? "Submitting…" : "Complete Investor Registration"}</span>
                     </button>
                   </form>
                 </div>
@@ -704,11 +760,22 @@ export default function RegisterPage() {
                       </label>
                     </div>
 
+                    {errorMessage && (
+                      <div
+                        role="alert"
+                        className="px-4 py-3.5 rounded-xl bg-red-50 border border-red-300 text-red-800 text-xs sm:text-sm font-semibold"
+                      >
+                        {errorMessage}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-2xl bg-[#0a2540] hover:bg-[#0d3b66] text-white text-xs sm:text-sm font-black tracking-[0.15em] uppercase shadow-lg shadow-[#0a2540]/25 transition-all duration-300 flex items-center justify-center gap-3"
+                      disabled={submitting}
+                      aria-busy={submitting}
+                      className="w-full py-4 rounded-2xl bg-[#0a2540] hover:bg-[#0d3b66] text-white text-xs sm:text-sm font-black tracking-[0.15em] uppercase shadow-lg shadow-[#0a2540]/25 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:bg-[#0a2540]"
                     >
-                      <span>Complete Company Registration</span>
+                      <span>{submitting ? "Submitting…" : "Complete Company Registration"}</span>
                     </button>
                   </form>
                 </div>
