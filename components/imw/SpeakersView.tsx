@@ -1,6 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  fetchSpeakers,
+  applySpeakerFilters,
+  getSpeakerName,
+  getSpeakerTitle,
+  getSpeakerCompany,
+  getSpeakerImage,
+  IMW_SPEAKER_PUBLISH_TO,
+  type StrapiSpeaker,
+  type SpeakerFilterOptions,
+} from "@/lib/api/speakers";
+import { filterByPublishTo } from "@/lib/api/client";
 
 type SpeakerLook = {
   skin: string;
@@ -11,202 +23,16 @@ type SpeakerLook = {
   bg: number;
 };
 
-type Speaker = {
-  n: string;
-  t: string;
-  o: string;
-  role: string;
-  cats: string[];
-  feat: number;
-  look: SpeakerLook;
-  img?: string;
-};
-
-const IMW_SPEAKERS: Speaker[] = [
-  {
-    n: "Armand MacKenzie",
-    t: "President",
-    o: "First Phosphate Corp",
-    role: "KEYNOTE",
-    cats: ["kn", "ex"],
-    feat: 1,
-    look: { skin: "#d5a688", hair: "#332a24", style: "side", suit: "#1d2433", tie: "#2f4d3a", bg: 214 },
-    img: "/assets/images/Armand+New+BG+(002).webp",
-  },
-  {
-    n: "Jenny-Lou Campbell",
-    t: "Executive Director",
-    o: "Indigenous Centre of Excellence for Mineral Development",
-    role: "KEYNOTE",
-    cats: ["kn"],
-    feat: 1,
-    look: { skin: "#e2b898", hair: "#4a3b30", style: "long", suit: "#22283a", tie: null, bg: 220 },
-    img: "/assets/images/JLC+photo+(square).webp",
-  },
-  {
-    n: "Colin Joudrie",
-    t: "President & CEO",
-    o: "Selkirk Copper Mines Inc",
-    role: "PANELIST",
-    cats: ["pn", "ex"],
-    feat: 1,
-    look: { skin: "#d9ac8c", hair: "#7d6b5c", style: "short", suit: "#20263a", tie: "#8c2333", bg: 208 },
-    img: "/assets/images/Colin-scaled.webp",
-  },
-  {
-    n: "Heng Vuong",
-    t: "Executive VP & CFO",
-    o: "Tacora Resources Inc.",
-    role: "PANELIST",
-    cats: ["pn", "ex"],
-    feat: 1,
-    look: { skin: "#e8c39e", hair: "#2a2126", style: "short", suit: "#1a2130", tie: "#3a4a72", bg: 218 },
-    img: "/assets/images/HengVuong1.webp",
-  },
-  {
-    n: "Susan Smith",
-    t: "Managing Director",
-    o: "Bluesky Strategy Group",
-    role: "MODERATOR",
-    cats: ["pn"],
-    feat: 1,
-    look: { skin: "#e0b494", hair: "#c9a05a", style: "bob", suit: "#232a3c", tie: null, bg: 224 },
-    img: "/assets/images/Susan+Smith.webp",
-  },
-  {
-    n: "Brendan Bell",
-    t: "Chief Executive Officer",
-    o: "Northwest Territories Mining Association",
-    role: "PANELIST",
-    cats: ["pn"],
-    feat: 0,
-    look: { skin: "#d2a284", hair: "#6b5646", style: "short", suit: "#252c3e", tie: "#7a1424", bg: 212 },
-    img: "/assets/images/brendan.webp",
-  },
-  {
-    n: "Todd Russell",
-    t: "President",
-    o: "NunatuKavut Community Council",
-    role: "PANELIST",
-    cats: ["pn"],
-    feat: 0,
-    look: { skin: "#c08e66", hair: "#241d1a", style: "short", suit: "#1d2433", tie: "#2f4d3a", bg: 216 },
-    img: "/assets/images/Todd+Russell.webp",
-  },
-  {
-    n: "Sandy Silver",
-    t: "Special Advisor & Former Premier",
-    o: "Yukon Government",
-    role: "PANELIST",
-    cats: ["pn"],
-    feat: 0,
-    look: { skin: "#d9ac8c", hair: "#9a8f85", style: "side", suit: "#20263a", tie: "#8c2333", bg: 210 },
-    img: "/assets/images/Sandy+Silver.webp",
-  },
-  {
-    n: "Mario Pieries",
-    t: "Global Director, Nuclear",
-    o: "Hatch Ltd.",
-    role: "EXPERT",
-    cats: ["ex"],
-    feat: 0,
-    look: { skin: "#d5a688", hair: "#4a3b30", style: "short", suit: "#1a2130", tie: "#3a4a72", bg: 226 },
-    img: "/assets/images/Mario+P.webp",
-  },
-  {
-    n: "Lyndsay Malchuk",
-    t: "Host & Emcee",
-    o: "Apaton Finance",
-    role: "EMCEE",
-    cats: ["pn"],
-    feat: 0,
-    look: { skin: "#e2b898", hair: "#d9c07a", style: "long", suit: "#232a3c", tie: null, bg: 218 },
-    img: "/assets/images/Lyndsay+malchuk+Headshot+2026.webp",
-  },
-  {
-    n: "Jay Rampersad",
-    t: "VP Engineering & Development",
-    o: "IR.INC",
-    role: "EXPERT",
-    cats: ["ex"],
-    feat: 0,
-    look: { skin: "#c08e66", hair: "#241d1a", style: "short", suit: "#252c3e", tie: "#7a1424", bg: 214 },
-    img: "/assets/images/Jay+Rampersad.webp",
-  },
-  {
-    n: "Francyne Joe",
-    t: "Indigenous Relations Advisor",
-    o: "First Nations Partnership",
-    role: "PANELIST",
-    cats: ["pn"],
-    feat: 0,
-    look: { skin: "#e0b494", hair: "#2a2126", style: "bob", suit: "#1d2433", tie: null, bg: 222 },
-    img: "/assets/images/Francyne+Joe_2016.webp",
-  },
-  {
-    n: "Ehren Cory",
-    t: "Chief Executive Officer",
-    o: "Canada Infrastructure Bank",
-    role: "PANELIST",
-    cats: ["pn", "ex"],
-    feat: 0,
-    look: { skin: "#d9ac8c", hair: "#7d6b5c", style: "side", suit: "#20263a", tie: "#3a4a72", bg: 208 },
-    img: "/assets/images/Ehren+Cory+Headshot+Crop+2026.webp",
-  },
-  {
-    n: "Dr. Willem Jacobs",
-    t: "Head of Mining & Metals",
-    o: "Global Capital",
-    role: "EXPERT",
-    cats: ["ex"],
-    feat: 0,
-    look: { skin: "#d2a284", hair: "#8a7663", style: "bald", suit: "#1a2130", tie: "#8c2333", bg: 228 },
-    img: "/assets/images/drwill.webp",
-  },
-  {
-    n: "Ed Ho",
-    t: "CFA, MSc. Energy Policy & Climate",
-    o: "Deloitte Canada",
-    role: "EXPERT",
-    cats: ["ex"],
-    feat: 0,
-    look: { skin: "#e8c39e", hair: "#332a24", style: "short", suit: "#252c3e", tie: "#2f4d3a", bg: 210 },
-    img: "/assets/images/2026+Ed+Ho+1x1.webp",
-  },
-  {
-    n: "Anton Antonov",
-    t: "Managing Director & Global Head",
-    o: "Global Mining Group",
-    role: "EXPERT",
-    cats: ["ex"],
-    feat: 0,
-    look: { skin: "#d5a688", hair: "#6b5646", style: "side", suit: "#1d2433", tie: "#7a1424", bg: 216 },
-    img: "/assets/images/anton.antonov@marsh.com.webp",
-  },
-  {
-    n: "Jesse McCormick",
-    t: "Senior Vice President",
-    o: "First Nations Major Projects Coalition",
-    role: "MODERATOR",
-    cats: ["pn"],
-    feat: 0,
-    look: { skin: "#c08e66", hair: "#241d1a", style: "short", suit: "#22283a", tie: "#3a4a72", bg: 214 },
-    img: "/assets/images/Headshot+-+Jesse+McCormick.webp",
-  },
-  {
-    n: "Allan Fordyce",
-    t: "Partner, Mining Practice",
-    o: "Global Advisory",
-    role: "EXPERT",
-    cats: ["ex"],
-    feat: 0,
-    look: { skin: "#d9ac8c", hair: "#9a8f85", style: "side", suit: "#20263a", tie: "#8c2333", bg: 220 },
-    img: "/assets/images/Picture1.webp",
-  },
-];
-
-function PortraitSVG({ look, w = 220, h = 230 }: { look: SpeakerLook; w?: number; h?: number }) {
-  const { skin, hair, style, suit, tie, bg } = look;
+function PortraitSVG({ look, w = 220, h = 230 }: { look?: SpeakerLook; w?: number; h?: number }) {
+  const defaultLook: SpeakerLook = {
+    skin: "#d5a688",
+    hair: "#332a24",
+    style: "side",
+    suit: "#1d2433",
+    tie: "#2f4d3a",
+    bg: 214,
+  };
+  const { skin, hair, style, suit, tie, bg } = look || defaultLook;
   const cx = w / 2;
   let hairSvg = null;
 
@@ -232,7 +58,7 @@ function PortraitSVG({ look, w = 220, h = 230 }: { look: SpeakerLook; w?: number
   );
 
   return (
-    <svg viewBox={`0 0 ${w} ${h}`} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox={`0 0 ${w} ${h}`} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
       <defs>
         <linearGradient id={`pb${bg}_${w}`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={`hsl(${bg},22%,88%)`} />
@@ -251,22 +77,66 @@ function PortraitSVG({ look, w = 220, h = 230 }: { look: SpeakerLook; w?: number
 }
 
 export default function SpeakersView() {
+  const [speakers, setSpeakers] = useState<StrapiSpeaker[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // User filters
   const [spkFilter, setSpkFilter] = useState<string>("all");
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>("" );
   const [sortOrder, setSortOrder] = useState<"az" | "za">("az");
 
-  const spkMatch = (s: Speaker) => {
-    const term = searchTerm.trim().toLowerCase();
-    const matchesFilter = spkFilter === "all" || s.cats.includes(spkFilter);
-    const matchesSearch = !term || (s.n + " " + s.t + " " + s.o).toLowerCase().includes(term);
-    return matchesFilter && matchesSearch;
+  const loadSpeakers = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await fetchSpeakers(IMW_SPEAKER_PUBLISH_TO);
+      // Client-side safety guarantee: only International Mining Week
+      setSpeakers(filterByPublishTo(data, IMW_SPEAKER_PUBLISH_TO));
+    } catch (err) {
+      if (process.env.NODE_ENV !== "production") {
+        console.error("[SpeakersView] Failed to fetch speakers:", err);
+      }
+      setError("Unable to load speakers at this time. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadSpeakers();
+  }, [loadSpeakers]);
+
+  // Fixed IMW dataset
+  const imwSpeakers = filterByPublishTo(speakers, IMW_SPEAKER_PUBLISH_TO);
+
+  // Apply user-selected filters
+  const filterOptions: SpeakerFilterOptions = {
+    search: searchTerm,
+    category: spkFilter === "all" ? undefined : spkFilter,
   };
+  const filteredSpeakers = applySpeakerFilters(imwSpeakers, filterOptions);
 
-  const featSpeakers = IMW_SPEAKERS.filter((s) => s.feat && spkMatch(s));
-  const listSpeakers = IMW_SPEAKERS.filter((s) => !s.feat && spkMatch(s));
-  listSpeakers.sort((a, b) => (sortOrder === "az" ? a.n.localeCompare(b.n) : b.n.localeCompare(a.n)));
+  // Sort filtered speakers
+  const sortedSpeakers = [...filteredSpeakers].sort((a, b) => {
+    const nameA = getSpeakerName(a);
+    const nameB = getSpeakerName(b);
+    return sortOrder === "az" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+  });
 
-  const showEmpty = featSpeakers.length === 0 && listSpeakers.length === 0;
+  const featSpeakers = sortedSpeakers.filter((s) => {
+    const cat = (s.category || "").toLowerCase();
+    return cat.includes("keynote") || cat.includes("feat") || cat.includes("kn");
+  });
+  const listSpeakers = sortedSpeakers;
+
+  const showEmpty = !loading && sortedSpeakers.length === 0;
+
+  const handleClearFilters = () => {
+    setSpkFilter("all");
+    setSearchTerm("");
+    setSortOrder("az");
+  };
 
   return (
     <div className="pview on" id="pv-speakers">
@@ -298,25 +168,25 @@ export default function SpeakersView() {
             <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
               Explore the lineup of industry leaders, experts and visionaries shaping the future of{"\u00a0"}mining.
             </p>
-
           </div>
         </div>
       </section>
 
       {/* SPEAKERS BODY */}
-      <section className="agenda-main" style={{ paddingTop: "10px" }}>
+      <section className="agenda-main" style={{ paddingTop: "20px" }}>
         <div className="wrap">
+          {/* Controls Bar */}
           <div className="spk-bar">
             <button className={`spk-pill ${spkFilter === "all" ? "on" : ""}`} onClick={() => setSpkFilter("all")}>
               All Speakers
             </button>
-            <button className={`spk-pill ${spkFilter === "kn" ? "on" : ""}`} onClick={() => setSpkFilter("kn")}>
+            <button className={`spk-pill ${spkFilter === "keynote" ? "on" : ""}`} onClick={() => setSpkFilter("keynote")}>
               Keynotes
             </button>
-            <button className={`spk-pill ${spkFilter === "pn" ? "on" : ""}`} onClick={() => setSpkFilter("pn")}>
+            <button className={`spk-pill ${spkFilter === "panel" ? "on" : ""}`} onClick={() => setSpkFilter("panel")}>
               Panels
             </button>
-            <button className={`spk-pill ${spkFilter === "ex" ? "on" : ""}`} onClick={() => setSpkFilter("ex")}>
+            <button className={`spk-pill ${spkFilter === "expert" ? "on" : ""}`} onClick={() => setSpkFilter("expert")}>
               Industry Experts
             </button>
             <label className="spk-search">
@@ -334,74 +204,134 @@ export default function SpeakersView() {
             </label>
           </div>
 
-          {featSpeakers.length > 0 && (
+          {/* Loading State */}
+          {loading && (
+            <div className="py-16 text-center">
+              <div className="inline-block w-8 h-8 border-4 border-[#005B82] border-t-transparent rounded-full animate-spin mb-4"></div>
+              <p className="text-sm font-semibold text-neutral-600">Loading International Mining Week speakers...</p>
+            </div>
+          )}
+
+          {/* Error State */}
+          {error && !loading && (
+            <div className="my-8 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm text-center">
+              {error}
+            </div>
+          )}
+
+          {/* Featured Speakers (if any) */}
+          {!loading && featSpeakers.length > 0 && (
             <div>
               <div className="spk-label">FEATURED SPEAKERS</div>
               <div className="feat-spk-grid">
-                {featSpeakers.map((s, idx) => (
-                  <article className="spk-card" key={idx}>
-                    <div className="spk-photo h-[230px] overflow-hidden rounded-lg bg-slate-100 relative">
-                      {s.img ? (
-                        <img src={s.img} alt={s.n} className="w-full h-full object-cover object-top" />
-                      ) : (
-                        <PortraitSVG look={s.look} w={220} h={230} />
-                      )}
-                    </div>
-                    <h3>{s.n}</h3>
-                    <div className="spk-title">{s.t}</div>
-                    <div className="spk-org">{s.o}</div>
-                  </article>
-                ))}
+                {featSpeakers.map((s) => {
+                  const name = getSpeakerName(s);
+                  const title = getSpeakerTitle(s);
+                  const comp = getSpeakerCompany(s);
+                  const imgUrl = getSpeakerImage(s);
+
+                  return (
+                    <article className="spk-card" key={s.documentId || s.id}>
+                      <div className="spk-photo h-[230px] overflow-hidden rounded-lg bg-slate-100 relative">
+                        {imgUrl ? (
+                          <img src={imgUrl} alt={name} className="w-full h-full object-cover object-top" />
+                        ) : (
+                          <PortraitSVG w={220} h={230} />
+                        )}
+                      </div>
+                      <h3>{name}</h3>
+                      {title && <div className="spk-title">{title}</div>}
+                      {comp && <div className="spk-org">{comp}</div>}
+                    </article>
+                  );
+                })}
               </div>
             </div>
           )}
 
-          <div className="all-spk-head">
-            <div className="spk-label">ALL SPEAKERS</div>
-            <div className="spk-sort">
-              Sort by:{" "}
-              <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value as "az" | "za")}>
-                <option value="az">A–Z</option>
-                <option value="za">Z–A</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="spk-rows">
-            {listSpeakers.map((s, idx) => (
-              <div className="spk-row" key={idx}>
-                <span className="ph w-14 h-14 rounded-full overflow-hidden flex-shrink-0 bg-slate-100">
-                  {s.img ? (
-                    <img src={s.img} alt={s.n} className="w-full h-full object-cover object-top" />
-                  ) : (
-                    <PortraitSVG look={s.look} w={120} h={120} />
-                  )}
-                </span>
-                <div>
-                  <b>{s.n}</b>
-                  <div className="rt">{s.t}</div>
-                  <div className="ro">{s.o}</div>
+          {/* All Speakers Section */}
+          {!loading && listSpeakers.length > 0 && (
+            <>
+              <div className="all-spk-head">
+                <div className="spk-label">ALL SPEAKERS ({listSpeakers.length})</div>
+                <div className="spk-sort">
+                  Sort by:{" "}
+                  <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value as "az" | "za")}>
+                    <option value="az">A–Z</option>
+                    <option value="za">Z–A</option>
+                  </select>
                 </div>
               </div>
-            ))}
-          </div>
 
-          <div className={`spk-empty ${showEmpty ? "show" : ""}`}>No speakers match your search.</div>
+              <div className="spk-rows">
+                {listSpeakers.map((s) => {
+                  const name = getSpeakerName(s);
+                  const title = getSpeakerTitle(s);
+                  const comp = getSpeakerCompany(s);
+                  const imgUrl = getSpeakerImage(s);
 
-          <div className="spk-viewall">
-            <button
-              className="btn-outline-red cursor-pointer inline-flex items-center gap-2"
-              onClick={() => {
-                setSpkFilter("all");
-                setSearchTerm("");
-              }}
-            >
-              VIEW ALL SPEAKERS{" "}
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </button>
-          </div>
+                  return (
+                    <div className="spk-row" key={s.documentId || s.id}>
+                      <span className="ph w-14 h-14 rounded-full overflow-hidden flex-shrink-0 bg-slate-100 flex items-center justify-center">
+                        {imgUrl ? (
+                          <img src={imgUrl} alt={name} className="w-full h-full object-cover object-top" />
+                        ) : (
+                          <PortraitSVG w={60} h={60} />
+                        )}
+                      </span>
+                      <div>
+                        <b>{name}</b>
+                        {title && <div className="rt">{title}</div>}
+                        {comp && <div className="ro">{comp}</div>}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
+
+          {/* Clean Empty State */}
+          {showEmpty && (
+            <div className="py-16 text-center max-w-md mx-auto">
+              <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-4 text-[#005B82]">
+                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" stroke="currentColor" className="w-8 h-8">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-neutral-800 mb-1">No speakers available</h3>
+              <p className="text-xs text-neutral-500 mb-6">
+                Speakers for International Mining Week will be announced soon.
+              </p>
+              {(searchTerm || spkFilter !== "all") && (
+                <button
+                  type="button"
+                  className="px-4 py-2 rounded-lg bg-[#005B82] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#004766] transition-all"
+                  onClick={handleClearFilters}
+                >
+                  Clear Filters
+                </button>
+              )}
+            </div>
+          )}
+
+          {/* Reset / View All Button */}
+          {!loading && listSpeakers.length > 0 && (
+            <div className="spk-viewall">
+              <button
+                className="btn-outline-red cursor-pointer inline-flex items-center gap-2"
+                onClick={handleClearFilters}
+              >
+                VIEW ALL SPEAKERS{" "}
+                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </div>

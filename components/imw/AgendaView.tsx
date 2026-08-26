@@ -1,7 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { IMW_PDF_PAGES } from "./pdfData";
+import {
+  fetchAgendas,
+  applyAgendaFilters,
+  getDistinctAgendaYears,
+  getDistinctAgendaCities,
+  IMW_AGENDA_PUBLISH_TO,
+  type StrapiAgenda,
+  type AgendaFilterOptions,
+} from "@/lib/api/agendas";
+import { filterByPublishTo } from "@/lib/api/client";
 
 type EventItem = {
   t: string;
@@ -225,20 +235,85 @@ const IMW_AGENDA: DayData[] = [
 ];
 
 export default function AgendaView() {
-  const [agIdx, setAgIdx] = useState<number>(0); // -1 = all days, 0 = Mon, etc.
+  const [agIdx, setAgIdx] = useState<number>(0);
   const [pdfPage, setPdfPage] = useState<number>(0);
   const [pdfZoom, setPdfZoom] = useState<number>(100);
+
+  // Strapi state
+  const [strapiAgendas, setStrapiAgendas] = useState<StrapiAgenda[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // User filters
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedYear, setSelectedYear] = useState<string>("all");
+  const [selectedCity, setSelectedCity] = useState<string>("all");
+
+  const loadAgendas = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await fetchAgendas(IMW_AGENDA_PUBLISH_TO);
+      // Client-side safety guarantee: only International Mining Week
+      setStrapiAgendas(filterByPublishTo(data, IMW_AGENDA_PUBLISH_TO));
+    } catch (err) {
+      if (process.env.NODE_ENV !== "production") {
+        console.error("[AgendaView] Failed to fetch agendas from Strapi:", err);
+      }
+      setError("Unable to load agendas from server at this time.");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadAgendas();
+  }, [loadAgendas]);
+
+  // Enforce IMW source filter
+  const imwAgendas = filterByPublishTo(strapiAgendas, IMW_AGENDA_PUBLISH_TO);
+  const availableYears = getDistinctAgendaYears(imwAgendas);
+  const availableCities = getDistinctAgendaCities(imwAgendas);
+
+  const filterOptions: AgendaFilterOptions = {
+    search: searchQuery,
+    year: selectedYear,
+    city: selectedCity,
+  };
+  const filteredAgendas = applyAgendaFilters(imwAgendas, filterOptions);
+  const primaryStrapiAgenda = filteredAgendas[0] || imwAgendas[0] || null;
+
+  const livePdfUrl = primaryStrapiAgenda?.pdfFile?.url;
+  const livePdfName = primaryStrapiAgenda?.pdfFile?.name || "IMW-2026-Official-Agenda.pdf";
 
   const activeDay = agIdx >= 0 ? IMW_AGENDA[agIdx] : null;
   const featured = activeDay ? activeDay.featured : IMW_AGENDA[0].featured;
 
-  const handleDownloadPdf = () => {
-    const link = document.createElement("a");
-    link.href = IMW_PDF_PAGES[pdfPage];
-    link.download = `IMW-2026-Official-Schedule-Page-${pdfPage + 1}.png`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownloadPdf = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    if (livePdfUrl) {
+      const link = document.createElement("a");
+      link.href = livePdfUrl;
+      link.download = livePdfName;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      const link = document.createElement("a");
+      link.href = IMW_PDF_PAGES[pdfPage];
+      link.download = `IMW-2026-Official-Schedule-Page-${pdfPage + 1}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
+  const handleClearFilters = () => {
+    setSearchQuery("");
+    setSelectedYear("all");
+    setSelectedCity("all");
   };
 
   return (
@@ -284,14 +359,12 @@ export default function AgendaView() {
         </div>
       </section>
 
-
-
       {/* AGENDA MAIN */}
       <section className="agenda-main py-6 sm:py-10">
         {/* STANDALONE WIDE FEATURED EVENT CARD */}
         <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mb-8 sm:mb-12">
           <div className="bg-white border border-neutral-200/90 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 group">
-            {/* Image Column (Height strictly follows right content height) */}
+            {/* Image Column */}
             <div className="lg:col-span-5 relative min-h-[180px] lg:min-h-0 overflow-hidden">
               <RenderArt theme={featured.art} src={featured.img} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
@@ -302,14 +375,14 @@ export default function AgendaView() {
               </div>
             </div>
 
-            {/* Content Column (Increased width: 7 of 12 cols on desktop) */}
+            {/* Content Column */}
             <div className="lg:col-span-7 p-5 sm:p-7 lg:p-8 flex flex-col space-y-4">
               <div>
                 <h3 className="text-xl sm:text-2xl font-black text-[#131720] tracking-tight leading-tight mb-3.5 group-hover:text-[#005B82] transition-colors duration-300">
                   {featured.title}
                 </h3>
 
-                {/* Metadata Items with Reduced Tight Gaps */}
+                {/* Metadata Items */}
                 <div className="space-y-2.5">
                   {/* Date */}
                   <div className="flex items-center gap-2.5 text-neutral-800 font-semibold text-xs sm:text-sm">
@@ -388,8 +461,6 @@ export default function AgendaView() {
           </div>
         </div>
 
-
-
         {/* OFFICIAL SCHEDULE — PDF Section */}
         <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mt-8 sm:mt-12" id="agPdf">
           <div className="text-center mb-6 sm:mb-8">
@@ -417,6 +488,49 @@ export default function AgendaView() {
               .
             </p>
           </div>
+
+          {/* Live Strapi Agenda metadata banner if present */}
+          {primaryStrapiAgenda && (
+            <div className="mb-6 p-4 rounded-2xl bg-sky-50 border border-sky-200/80 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <span className="text-[11px] font-extrabold text-[#005B82] uppercase tracking-wider block">
+                  Live Event Schedule (Strapi)
+                </span>
+                <span className="text-sm font-bold text-neutral-900">
+                  {primaryStrapiAgenda.title}
+                </span>
+                {primaryStrapiAgenda.eventDate && (
+                  <span className="text-xs text-neutral-600 ml-2">
+                    • {primaryStrapiAgenda.eventDate}
+                  </span>
+                )}
+                {primaryStrapiAgenda.city && (
+                  <span className="text-xs text-neutral-600 ml-1">
+                    • {primaryStrapiAgenda.city}, {primaryStrapiAgenda.country}
+                  </span>
+                )}
+              </div>
+              {livePdfUrl && (
+                <a
+                  href={livePdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-[#005B82] hover:bg-[#004766] text-white text-xs font-bold rounded-lg uppercase tracking-wider transition-all inline-flex items-center gap-2"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.2" stroke="currentColor" className="w-4 h-4">
+                    <path d="M12 4v11M7.5 11.5L12 16l4.5-4.5M5 19.5h14" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span>Download Official PDF</span>
+                </a>
+              )}
+            </div>
+          )}
+
+          {error && (
+            <div className="mb-6 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs text-center">
+              {error}
+            </div>
+          )}
 
           <div className="pdfv">
             {/* Sidebar Thumbnails */}
