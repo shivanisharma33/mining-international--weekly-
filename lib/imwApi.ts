@@ -38,6 +38,14 @@ export type CompanyRegistrationForm = {
   subscribeNews: boolean;
 };
 
+export type FreeRegistrationForm = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  companyName?: string;
+  subscribeNews?: boolean;
+};
+
 export type InvestorRegistrationForm = {
   companyName: string;
   firstName: string;
@@ -215,8 +223,18 @@ export async function submitIMWCompanyRegistration(form: CompanyRegistrationForm
   return postToStrapi(COMPANY_ENDPOINT, buildCompanyPayload(form));
 }
 
-export async function submitIMWInvestorRegistration(form: InvestorRegistrationForm) {
-  return postToStrapi(INVESTOR_ENDPOINT, buildInvestorPayload(form));
+export async function submitIMWFreeRegistration(form: FreeRegistrationForm) {
+  return postToStrapi(
+    INVESTOR_ENDPOINT,
+    compact({
+      firstName: text(form.firstName),
+      lastName: text(form.lastName),
+      email: text(form.email),
+      companyName: text(form.companyName || "Attendee"),
+      newsletterOptIn: Boolean(form.subscribeNews ?? true),
+      sourceWebsite: SOURCE_WEBSITE,
+    }),
+  );
 }
 
 export { GENERIC_ERROR as IMW_SUBMIT_ERROR_MESSAGE };

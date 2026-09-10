@@ -13,19 +13,29 @@ export default function OurMission() {
             />
           </div>
           <div className="ab2-ms-chip">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 9.5h16M8 3v4M16 3v4" /></svg>June 1–5, 2026 · Québec City
+            <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 9.5h16M8 3v4M16 3v4" /></svg>May 31 – June 4, 2027 · Québec City
           </div>
         </div>
         <div className="ab2-ms-body">
-          <div className="ab2-eyebrow">OUR MISSION</div>
-          <h2 className="ab2-ms-h">THE Nexus of<br /><em>International Mining</em></h2>
-          <p>Join us for North America's first International Mining Week, taking place from June 1 to 5, 2026, in Quebec City, Canada.</p>
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#005B82]/8 border border-[#005B82]/20 shadow-xs backdrop-blur-xs mb-2">
+            <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12 2L2 12l10 10 10-10L12 2z" />
+            </svg>
+            <span className="text-[#005B82] text-xs font-extrabold tracking-[0.22em] uppercase">
+              OUR MISSION
+            </span>
+            <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12 2L2 12l10 10 10-10L12 2z" />
+            </svg>
+          </div>
+          <h2 className="ab2-ms-h mt-2">THE Nexus of<br /><em>International Mining</em></h2>
+          <p>Join us for North America's first International Mining Week, taking place from May 31 to June 4, 2027, in Quebec City, Canada.</p>
           <p>IMW will showcase a collaboration among key partners hosting concurrent activities alongside THE Mining Investment Event.</p>
           <p>This unique partnership aims to unite global mining firms, related industries, supply chain specialists, investors, and governmental representatives.</p>
           <div className="ab2-ms-meta">
             <div className="ab2-ms-mi">
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 9.5h16M8 3v4M16 3v4" /></svg>
-              <div><em>DATE</em><b>June 1–5, 2026</b></div>
+              <div><em>DATE</em><b>May 31 – June 4, 2027</b></div>
             </div>
             <div className="ab2-ms-mi">
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" /><circle cx="12" cy="11" r="2.4" /></svg>

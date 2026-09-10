@@ -58,7 +58,7 @@ export default function HostCity() {
   ];
 
   return (
-    <section className="relative w-full bg-white border-b border-neutral-200/60 py-8 sm:py-12 lg:py-14 overflow-hidden">
+    <section className="relative w-full bg-white pt-10 sm:pt-14 pb-0 sm:pb-0 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Side: Straight Rectangular Image Container (No curve/rounded corners) */}
@@ -74,12 +74,19 @@ export default function HostCity() {
 
           {/* Right Side: Text Content with Equal Vertical Spacing */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left space-y-3.5 pl-0 lg:pl-4">
-            {/* Block 1: Eyebrow Label with Top Accent Line */}
+            {/* Block 1: Eyebrow Label */}
             <div>
-              <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase block">
-                OUR HOST CITY
-              </span>
-              <div className="w-14 h-[3px] bg-[#005B82] mt-2 rounded-full"></div>
+              <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#005B82]/8 border border-[#005B82]/20 shadow-xs backdrop-blur-xs mb-1">
+                <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M12 2L2 12l10 10 10-10L12 2z" />
+                </svg>
+                <span className="text-[#005B82] text-xs font-extrabold tracking-[0.22em] uppercase">
+                  OUR HOST CITY
+                </span>
+                <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M12 2L2 12l10 10 10-10L12 2z" />
+                </svg>
+              </div>
             </div>
 
             {/* Block 2: Main Headline */}

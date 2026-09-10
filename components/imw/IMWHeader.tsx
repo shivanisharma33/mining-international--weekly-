@@ -20,7 +20,7 @@ export default function IMWHeader() {
         <div className="wrap util-inner">
           <div className="util-item">
             <i className="fi fi-rr-calendar text-sm mr-1.5 flex items-center justify-center"></i>
-            June 1–5, 2026
+            May 31 – June 4, 2027
           </div>
           <div className="util-item">
             <i className="fi fi-rs-marker text-sm mr-1.5 flex items-center justify-center"></i>

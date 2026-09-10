@@ -124,12 +124,12 @@ function RenderArt({ theme, src }: { theme: string; src?: string }) {
 
 const IMW_AGENDA: DayData[] = [
   {
-    tab: "Mon, June 1",
-    head: "Monday, June 1, 2026",
+    tab: "Mon, May 31",
+    head: "Monday, May 31, 2027",
     events: [
       { t: "7:00 AM", ic: "golf", title: "ICONIC GOLF TOURNAMENT", sub: "La Tempête Golf Club", desc: "Kick off International Mining Week with the Iconic Golf Tournament at La Tempête — a full day of premium golf and networking.", tag: "Featured Event" },
       { t: "12:00 PM", ic: "hand", title: "INVESTOR WELCOME LUNCH", sub: "By Invitation Only", desc: "An exclusive gathering of investors, executives and special guests.", tag: "Networking" },
-      { t: "2:00 PM", ic: "people", title: "OPENING CEREMONY", sub: "Québec City Convention Centre", desc: "Official opening of International Mining Week 2026.", tag: "Plenary Session" },
+      { t: "2:00 PM", ic: "people", title: "OPENING CEREMONY", sub: "Québec City Convention Centre", desc: "Official opening of International Mining Week 2027.", tag: "Plenary Session" },
       { t: "2:30 PM", ic: "podium", title: "KEYNOTE ADDRESS", sub: "Global Outlook for the Mining Industry", desc: "Insights from global leaders on the future of mining.", tag: "Keynote" },
       { t: "4:00 PM", ic: "panel", title: "PANEL DISCUSSION", sub: "Capital, Commodities & Critical Minerals", desc: "Exploring investment trends and the future of critical minerals.", tag: "Panel" },
       { t: "6:00 PM", ic: "drink", title: "NETWORKING RECEPTION", sub: "Red Cloud Connect Lounge", desc: "Connect with industry leaders and peers in a relaxed setting.", tag: "Networking" },
@@ -137,7 +137,7 @@ const IMW_AGENDA: DayData[] = [
     featured: {
       art: "golf",
       title: "ICONIC GOLF TOURNAMENT",
-      date: "Monday, June 1, 2026",
+      date: "Monday, May 31, 2027",
       time: "7:00 AM – 4:00 PM",
       loc: "La Tempête Golf Club",
       addr: "Québec City, QC — Tickets Available",
@@ -146,8 +146,8 @@ const IMW_AGENDA: DayData[] = [
     },
   },
   {
-    tab: "Tue, June 2",
-    head: "Tuesday, June 2, 2026",
+    tab: "Tue, June 1",
+    head: "Tuesday, June 1, 2027",
     events: [
       { t: "7:00 AM", ic: "meet", title: "REGISTRATION & BREAKFAST", sub: "Centre des Congrès de Québec – Food Hall", desc: "Registration, buffet breakfast and 1×1 meeting check-in.", tag: "Networking" },
       { t: "8:00 AM", ic: "podium", title: "OPENING KEYNOTES", sub: "Government & Industry Leaders", desc: "Ministers and executives open THE Event's Producers & Developers day.", tag: "Keynote" },
@@ -159,7 +159,7 @@ const IMW_AGENDA: DayData[] = [
     featured: {
       art: "stage",
       title: "IMW PLENARY SESSIONS — NATIONAL INDIGENOUS SYMPOSIUM",
-      date: "Tuesday, June 2, 2026",
+      date: "Tuesday, June 1, 2027",
       time: "9:00 AM – 4:30 PM",
       loc: "Beaufort Room, 2nd Floor",
       addr: "Quebec Hilton",
@@ -168,8 +168,8 @@ const IMW_AGENDA: DayData[] = [
     },
   },
   {
-    tab: "Wed, June 3",
-    head: "Wednesday, June 3, 2026",
+    tab: "Wed, June 2",
+    head: "Wednesday, June 2, 2027",
     events: [
       { t: "7:00 AM", ic: "meet", title: "REGISTRATION & BREAKFAST", sub: "Lobby Area – Food Hall", desc: "Registration, breakfast and 1×1 meetings throughout the day.", tag: "Networking" },
       { t: "8:05 AM", ic: "podium", title: "QUÉBEC CRITICAL MINERALS STRATEGY", sub: "Keynote – Room 400C", desc: "Québec's strategy for the development of critical and strategic minerals.", tag: "Keynote" },
@@ -182,7 +182,7 @@ const IMW_AGENDA: DayData[] = [
     featured: {
       art: "gala",
       title: "IMW AFTER DARK",
-      date: "Wednesday, June 3, 2026",
+      date: "Wednesday, June 2, 2027",
       time: "9:00 PM – Midnight",
       loc: "Loggia",
       addr: "Centre des congrès de Québec",
@@ -191,8 +191,8 @@ const IMW_AGENDA: DayData[] = [
     },
   },
   {
-    tab: "Thu, June 4",
-    head: "Thursday, June 4, 2026",
+    tab: "Thu, June 3",
+    head: "Thursday, June 3, 2027",
     events: [
       { t: "8:05 AM", ic: "podium", title: "KEYNOTE: APART FROM GOLD, WHAT ELSE?", sub: "Adrian Day Asset Management", desc: "A contrarian look at value across the metals complex.", tag: "Keynote" },
       { t: "9:45 AM", ic: "panel", title: "YUKON SPOTLIGHT", sub: "Regional Exploration Showcase", desc: "Explorers and developers active across the Yukon.", tag: "Spotlight" },
@@ -204,7 +204,7 @@ const IMW_AGENDA: DayData[] = [
     featured: {
       art: "gala",
       title: "QMA GALA & DISTINCTION AWARDS",
-      date: "Thursday, June 4, 2026",
+      date: "Thursday, June 3, 2027",
       time: "6:00 PM – 11:00 PM",
       loc: "Quebec Hilton",
       addr: "1100 Boul. René-Lévesque E, Québec",
@@ -213,18 +213,18 @@ const IMW_AGENDA: DayData[] = [
     },
   },
   {
-    tab: "Fri, June 5",
-    head: "Friday, June 5, 2026",
+    tab: "Fri, June 4",
+    head: "Friday, June 4, 2027",
     events: [
       { t: "9:00 AM", ic: "tour", title: "MINE SITE & FACILITY TOURS", sub: "Regional Site Visits", desc: "Guided visits to operating mines and processing facilities.", tag: "Tour" },
       { t: "10:00 AM", ic: "meet", title: "PARTNER EVENTS & WORKSHOPS", sub: "Various Venues", desc: "Specialized workshops hosted by IMW partner organizations.", tag: "Workshops" },
       { t: "12:30 PM", ic: "hand", title: "CLOSING LUNCH", sub: "Networking Lunch", desc: "A final opportunity to connect before the week wraps.", tag: "Networking" },
-      { t: "2:00 PM", ic: "flag", title: "IMW CLOSING CEREMONY", sub: "Highlights & 2027 Announcement", desc: "Week highlights, awards and the road to IMW 2027.", tag: "Plenary Session" },
+      { t: "2:00 PM", ic: "flag", title: "IMW CLOSING CEREMONY", sub: "Highlights & 2028 Announcement", desc: "Week highlights, awards and the road to IMW 2028.", tag: "Plenary Session" },
     ],
     featured: {
       art: "tour",
       title: "MINE SITE & FACILITY TOURS",
-      date: "Friday, June 5, 2026",
+      date: "Friday, June 4, 2027",
       time: "9:00 AM – 12:00 PM",
       loc: "Departures from QCC",
       addr: "Centre des Congrès de Québec",
@@ -284,7 +284,7 @@ export default function AgendaView() {
   const primaryStrapiAgenda = filteredAgendas[0] || imwAgendas[0] || null;
 
   const livePdfUrl = primaryStrapiAgenda?.pdfFile?.url;
-  const livePdfName = primaryStrapiAgenda?.pdfFile?.name || "IMW-2026-Official-Agenda.pdf";
+  const livePdfName = primaryStrapiAgenda?.pdfFile?.name || "IMW-2027-Official-Agenda.pdf";
 
   const activeDay = agIdx >= 0 ? IMW_AGENDA[agIdx] : null;
   const featured = activeDay ? activeDay.featured : IMW_AGENDA[0].featured;
@@ -303,7 +303,7 @@ export default function AgendaView() {
     } else {
       const link = document.createElement("a");
       link.href = IMW_PDF_PAGES[pdfPage];
-      link.download = `IMW-2026-Official-Schedule-Page-${pdfPage + 1}.png`;
+      link.download = `IMW-2027-Official-Schedule-Page-${pdfPage + 1}.png`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -339,7 +339,7 @@ export default function AgendaView() {
               AGENDA
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
-              IMW 2026 Agenda
+              IMW 2027 Agenda
             </h1>
             <div className="w-14 h-[3px] bg-[#005B82] my-5 rounded-full"></div>
             <p className="text-neutral-200 text-sm sm:text-base md:text-lg font-normal max-w-xl leading-relaxed mb-8">
@@ -360,9 +360,9 @@ export default function AgendaView() {
       </section>
 
       {/* AGENDA MAIN */}
-      <section className="agenda-main py-6 sm:py-10">
+      <section className="agenda-main pt-10 sm:pt-14 pb-0 sm:pb-0">
         {/* STANDALONE WIDE FEATURED EVENT CARD */}
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mb-8 sm:mb-12">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mb-10 sm:mb-14">
           <div className="bg-white border border-neutral-200/90 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 group">
             {/* Image Column */}
             <div className="lg:col-span-5 relative min-h-[180px] lg:min-h-0 overflow-hidden">
@@ -462,14 +462,22 @@ export default function AgendaView() {
         </div>
 
         {/* OFFICIAL SCHEDULE — PDF Section */}
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mt-8 sm:mt-12" id="agPdf">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mt-10 sm:mt-14" id="agPdf">
           <div className="text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center justify-center gap-3 mb-2 text-center">
-              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
-              <h2 className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-widest uppercase">
-                OFFICIAL SCHEDULE
-              </h2>
-              <div className="w-10 h-[1.5px] bg-[#005B82]"></div>
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+              <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-[#005B82]/40"></div>
+              <div className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-1.5 rounded-full bg-[#005B82]/8 border border-[#005B82]/20 shadow-xs backdrop-blur-xs">
+                <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M12 2L2 12l10 10 10-10L12 2z" />
+                </svg>
+                <h2 className="text-[#005B82] text-xs sm:text-[13px] font-extrabold tracking-[0.22em] uppercase">
+                  OFFICIAL SCHEDULE
+                </h2>
+                <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M12 2L2 12l10 10 10-10L12 2z" />
+                </svg>
+              </div>
+              <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-[#005B82]/40"></div>
             </div>
             <p className="text-xs sm:text-sm font-medium text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Tickets for THE Mining Investment Event, ITFA and QMA are available at

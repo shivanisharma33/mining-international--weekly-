@@ -34,7 +34,7 @@ export default function StayConnected() {
                   <line x1="8" y1="2" x2="8" y2="6" strokeLinecap="round" />
                   <line x1="3" y1="9" x2="21" y2="9" />
                 </svg>
-                June 1–5, 2026
+                May 31 – June 4, 2027
               </span>
               <span className="text-[#4a5c74] font-bold">•</span>
               <span className="inline-flex items-center gap-1.5">

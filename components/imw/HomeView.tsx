@@ -9,9 +9,9 @@ export default function HomeView() {
   return (
     <div className="w-full flex flex-col" id="pv-home">
       <IMWHero />
+      <FoundingPartners />
       <StatsBanner />
       <ExploreWeek />
-      <FoundingPartners />
       <HostCity />
     </div>
   );

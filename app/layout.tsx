@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "International Mining Week — June 1–5, 2026 · Québec City",
+  title: "International Mining Week — May 31 – June 4, 2027 · Québec City",
   description: "The global mining industry comes together in Québec City for a week of events, connections and opportunities.",
   icons: {
     icon: "/favicon.ico",

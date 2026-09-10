@@ -6,7 +6,17 @@ export default function WhyAttend() {
     <section className="ab2-sec" id="ab2-why">
       <div className="ab2-bento">
         <div className="ab2-b-intro">
-          <div className="ab2-eyebrow text-slate-300" style={{ color: "#cbd5e1" }}>WHY ATTEND</div>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 shadow-xs mb-2 self-start">
+            <svg className="w-2.5 h-2.5 text-sky-400 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12 2L2 12l10 10 10-10L12 2z" />
+            </svg>
+            <span className="text-sky-200 text-[11px] font-extrabold tracking-[0.22em] uppercase">
+              WHY ATTEND
+            </span>
+            <svg className="w-2.5 h-2.5 text-sky-400 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12 2L2 12l10 10 10-10L12 2z" />
+            </svg>
+          </div>
           <h3>A Week.<br />Unlimited Value.</h3>
           <p>From conferences and summits to networking receptions and site visits, IMW delivers unmatched value for every participant.</p>
           <Link className="btn-outline-red" href="/agenda">

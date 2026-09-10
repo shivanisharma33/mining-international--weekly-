@@ -9,7 +9,7 @@ export default function EventsPage() {
     {
       title: "THE Mining Investment Event",
       category: "Investment & Capital",
-      date: "June 1 - 3, 2026",
+      date: "May 31 - June 2, 2027",
       location: "Château Frontenac & Convention Centre",
       description:
         "Canada’s premier mining investment event connecting global investors, mining executives, corporate leaders and government representatives.",
@@ -18,7 +18,7 @@ export default function EventsPage() {
     {
       title: "Association minière du Québec (AMQ) Conference",
       category: "Industry & Governance",
-      date: "June 2 - 4, 2026",
+      date: "June 1 - 3, 2027",
       location: "Québec City Convention Centre",
       description:
         "Bringing together key industry leaders to discuss sustainable mining practices, regulatory frameworks, innovation and community relations.",
@@ -27,7 +27,7 @@ export default function EventsPage() {
     {
       title: "Global Extractive Supply Chain Forum",
       category: "Supply Chain & Operations",
-      date: "June 3, 2026",
+      date: "June 2, 2027",
       location: "Convention Centre - Main Hall",
       description:
         "Exploring resilient procurement strategies, green logistics, technology integration and critical mineral supply chain security.",
@@ -36,7 +36,7 @@ export default function EventsPage() {
     {
       title: "Mining Innovation & Sustainability Summit",
       category: "Technology & Environment",
-      date: "June 4, 2026",
+      date: "June 3, 2027",
       location: "Innovation Pavilion",
       description:
         "Showcasing next-generation clean tech, electrification of mining fleets, AI in exploration and zero-emission mining operations.",
@@ -45,7 +45,7 @@ export default function EventsPage() {
     {
       title: "Guided Regional Mine Visits",
       category: "Excursions & Site Visits",
-      date: "June 5, 2026",
+      date: "June 4, 2027",
       location: "Departs from Convention Centre",
       description:
         "Exclusive site tours to leading Quebec mining operations and research facilities with expert guides and transportation provided.",
@@ -54,10 +54,10 @@ export default function EventsPage() {
     {
       title: "International Mining Week Gala & Awards",
       category: "Networking & Gala",
-      date: "June 4, 2026 (Evening)",
+      date: "June 3, 2027 (Evening)",
       location: "Grand Ballroom, Québec Convention Centre",
       description:
-        "Celebrate industry excellence, leadership and sustainability achievements at the official IMW 2026 evening gala dinner.",
+        "Celebrate industry excellence, leadership and sustainability achievements at the official IMW 2027 evening gala dinner.",
       tag: "Gala Event",
     },
   ];
@@ -83,7 +83,7 @@ export default function EventsPage() {
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full text-left">
             <div className="max-w-3xl">
               <span className="text-slate-300 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
-                15+ PARTNER EVENTS ACROSS THE WEEK
+                MANY PARTNER EVENTS ACROSS THE WEEK
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
                 Events &amp; Conferences
@@ -97,7 +97,7 @@ export default function EventsPage() {
         </section>
 
         {/* Events Grid */}
-        <section className="w-full py-8 sm:py-10 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
+        <section className="w-full pt-10 sm:pt-14 pb-0 sm:pb-0 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1f2430] dark:text-white uppercase tracking-wider">
@@ -167,7 +167,7 @@ export default function EventsPage() {
               href="/register"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#005B82] hover:bg-[#023B50] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md"
             >
-              <span>REGISTER FOR IMW 2026</span>
+              <span>REGISTER FOR IMW 2027</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
               </svg>

@@ -55,7 +55,7 @@ export default function PartnersHero() {
         <div className="max-w-3xl">
           {/* Top Tagline */}
           <span className="text-slate-300 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase block mb-4">
-            OUR PARTNERS
+            The Nexus of International Mining
           </span>
 
           {/* Main Display Headline */}
@@ -94,13 +94,12 @@ export default function PartnersHero() {
             {features.map((item, idx) => (
               <div
                 key={idx}
-                className={`flex items-start gap-3 py-3 sm:py-0 ${
-                  idx === 0
+                className={`flex items-start gap-3 py-3 sm:py-0 ${idx === 0
                     ? "sm:pr-4 md:pr-5"
                     : idx === features.length - 1
-                    ? "sm:pl-4 md:pl-5"
-                    : "sm:px-4 md:px-5"
-                }`}
+                      ? "sm:pl-4 md:pl-5"
+                      : "sm:px-4 md:px-5"
+                  }`}
               >
                 {item.icon}
                 <div>

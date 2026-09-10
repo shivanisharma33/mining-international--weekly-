@@ -9,11 +9,9 @@ export default function AboutView() {
     <div className="w-full flex flex-col" id="pv-about">
       <AboutHero />
       <IMWByTheNumbers />
-      <div className="ab2-shell max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full">
-        <div className="ab2-flow">
-          <OurMission />
-          <WhyAttend />
-        </div>
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] w-full flex flex-col space-y-10 sm:space-y-14 pt-10 sm:pt-14 pb-0">
+        <OurMission />
+        <WhyAttend />
       </div>
     </div>
   );

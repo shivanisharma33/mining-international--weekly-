@@ -173,7 +173,7 @@ export default function SpeakersView() {
       </section>
 
       {/* SPEAKERS BODY */}
-      <section className="agenda-main" style={{ paddingTop: "20px" }}>
+      <section className="agenda-main pt-10 sm:pt-14 pb-0 sm:pb-0">
         <div className="wrap">
           {/* Controls Bar */}
           <div className="spk-bar">

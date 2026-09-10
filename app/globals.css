@@ -3848,7 +3848,7 @@
 .ab2-shell {
   width: 100%;
   margin: 0 auto;
-  padding-top: 72px;
+  padding-top: 0;
   padding-bottom: 0;
 }
 
@@ -3857,7 +3857,7 @@
 }
 
 .ab2-sec {
-  padding: 6px 0 36px;
+  padding: 0;
 }
 
 .ab2-eyebrow {
@@ -4259,10 +4259,6 @@
 }
 
 @media (max-width: 1080px) {
-  .ab2-shell {
-    padding-top: 56px;
-  }
-
   .ab2-ribbon-in {
     grid-template-columns: 1fr 1fr;
     gap: 22px 0;
