@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StatsBanner() {
   return (
-    <div className="relative z-10 w-full bg-white pb-0 sm:pb-0">
+    <div className="relative z-10 w-full bg-white pb-10 sm:pb-14">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="bg-[#0b1424] border border-slate-700/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-800/80">

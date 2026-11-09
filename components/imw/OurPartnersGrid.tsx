@@ -70,16 +70,28 @@ export default function OurPartnersGrid() {
     <section className="w-full bg-[#fcfdfe] pt-10 sm:pt-14 pb-0 sm:pb-0 transition-colors duration-300">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-4xl mx-auto mb-14">
+          {/* Eyebrow: Choose Your Participation Track */}
+          <span className="text-[#005B82] text-xs sm:text-sm font-extrabold tracking-[0.25em] uppercase block mb-3">
+            CHOOSE YOUR PARTICIPATION TRACK
+          </span>
+
+          {/* Headline: Tier 1 Access for Investors & Companies */}
+          <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-neutral-900 tracking-tight leading-tight">
+            Tier 1 Access for Investors &amp; Companies
+          </h2>
+
+          {/* Subtle Horizontal Divider */}
+          <div className="w-full max-w-2xl mx-auto h-[1px] bg-gradient-to-r from-transparent via-neutral-200 to-transparent my-7 sm:my-8"></div>
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
             <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-[#005B82]/40"></div>
             <div className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-1.5 rounded-full bg-[#005B82]/8 border border-[#005B82]/20 shadow-xs backdrop-blur-xs">
               <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2L2 12l10 10 10-10L12 2z" />
               </svg>
-              <h2 className="text-[#005B82] text-xs sm:text-[13px] font-extrabold tracking-[0.22em] uppercase">
+              <h3 className="text-[#005B82] text-xs sm:text-[13px] font-extrabold tracking-[0.22em] uppercase">
                 THE NEXUS OF INTERNATIONAL MINING
-              </h2>
+              </h3>
               <svg className="w-2.5 h-2.5 text-[#005B82] fill-current shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2L2 12l10 10 10-10L12 2z" />
               </svg>

@@ -58,7 +58,7 @@ export default function HostCity() {
   ];
 
   return (
-    <section className="relative w-full bg-white pt-10 sm:pt-14 pb-0 sm:pb-0 overflow-hidden">
+    <section className="relative w-full bg-white pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Side: Straight Rectangular Image Container (No curve/rounded corners) */}

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WhyAttend() {
   return (
-    <section className="ab2-sec" id="ab2-why">
+    <section className="ab2-sec pb-12 sm:pb-16 lg:pb-20" id="ab2-why">
       <div className="ab2-bento">
         <div className="ab2-b-intro">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 shadow-xs mb-2 self-start">

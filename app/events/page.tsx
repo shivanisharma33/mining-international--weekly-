@@ -97,7 +97,7 @@ export default function EventsPage() {
         </section>
 
         {/* Events Grid */}
-        <section className="w-full pt-10 sm:pt-14 pb-0 sm:pb-0 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
+        <section className="w-full pt-10 sm:pt-14 pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1f2430] dark:text-white uppercase tracking-wider">

@@ -360,7 +360,7 @@ export default function AgendaView() {
       </section>
 
       {/* AGENDA MAIN */}
-      <section className="agenda-main pt-10 sm:pt-14 pb-0 sm:pb-0">
+      <section className="agenda-main pt-10 sm:pt-14 pb-16 sm:pb-20 lg:pb-24">
         {/* STANDALONE WIDE FEATURED EVENT CARD */}
         <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw] mb-10 sm:mb-14">
           <div className="bg-white border border-neutral-200/90 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 group">

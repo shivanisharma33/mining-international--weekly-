@@ -56,7 +56,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Cards & Form */}
-        <section className="w-full pt-10 sm:pt-14 pb-0 sm:pb-0 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
+        <section className="w-full pt-10 sm:pt-14 pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-10 lg:px-[4.5vw] max-w-[1440px] mx-auto">
           {/* Quick Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-neutral-50 dark:bg-[#0d121f] p-6 sm:p-8 rounded-2xl border border-neutral-200 dark:border-neutral-800 flex items-start gap-4">

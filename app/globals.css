@@ -784,7 +784,7 @@
   footer.site {
     background: var(--navy);
     color: #a9b2c2;
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .ft {

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function IMWFooter() {
   return (
-    <footer className="site">
+    <footer className="site !mt-0">
       <div className="wrap">
         <div className="ft">
           <div className="ft-brand">

@@ -26,7 +26,7 @@ export default function FoundingPartners() {
   ];
 
   return (
-    <section className="w-full bg-white pt-10 sm:pt-14 pb-4 sm:pb-6" id="founding">
+    <section className="w-full bg-white pt-10 sm:pt-14 pb-10 sm:pb-14" id="founding">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         {/* Section Header */}
         <div className="flex items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">

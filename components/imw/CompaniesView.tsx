@@ -105,7 +105,7 @@ export default function CompaniesView() {
       </section>
 
       {/* FILTER CONTROLS & CONTENT */}
-      <section className="w-full pt-10 sm:pt-14 pb-0 sm:pb-0 bg-[#fcfdfe]">
+      <section className="w-full pt-10 sm:pt-14 pb-16 sm:pb-20 lg:pb-24 bg-[#fcfdfe]">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
           {/* Controls Bar */}
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-4 bg-white rounded-2xl border border-neutral-200 shadow-sm mb-8">

@@ -68,7 +68,7 @@ export default function ExploreWeek() {
   ];
 
   return (
-    <section id="explore-the-week" className="relative w-full pt-10 sm:pt-14 pb-0 sm:pb-0 bg-white transition-colors duration-300">
+    <section id="explore-the-week" className="relative w-full pt-14 sm:pt-20 lg:pt-24 pb-10 sm:pb-14 lg:pb-16 bg-white transition-colors duration-300">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[4.5vw]">
         {/* Section Header */}
         <div className="flex items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
