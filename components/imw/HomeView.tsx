@@ -3,7 +3,6 @@ import IMWHero from "./IMWHero";
 import StatsBanner from "./StatsBanner";
 import ExploreWeek from "./ExploreWeek";
 import FoundingPartners from "./FoundingPartners";
-import HostCity from "./HostCity";
 
 export default function HomeView() {
   return (
@@ -12,7 +11,6 @@ export default function HomeView() {
       <FoundingPartners />
       <StatsBanner />
       <ExploreWeek />
-      <HostCity />
     </div>
   );
 }
